@@ -1,0 +1,1046 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next gemini use-motion" lang="zh-CN">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+  
+  
+    
+      
+    
+    
+      
+    
+  <script src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
+  <link href="//cdn.bootcss.com/pace/1.0.2/themes/blue/pace-theme-flash.min.css" rel="stylesheet">
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+  <link href="//cdn.jsdelivr.net/fancybox/2.1.5/jquery.fancybox.min.css" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+  
+
+<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="图书管理系统," />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="hotYan's Blog" type="application/atom+xml" />
+
+
+
+
+
+
+<meta name="description" content="实现具体功能 [待更新] 可能会觉得我们是不是应该快要成功了？？？好,现在我们来到了山脚啦~">
+<meta name="keywords" content="图书管理系统">
+<meta property="og:type" content="article">
+<meta property="og:title" content="图书管理系统四">
+<meta property="og:url" content="http://github.com/2018/06/19/图书管理系统四/index.html">
+<meta property="og:site_name" content="hotYan&#39;s Blog">
+<meta property="og:description" content="实现具体功能 [待更新] 可能会觉得我们是不是应该快要成功了？？？好,现在我们来到了山脚啦~">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2018-06-27T15:59:43.170Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="图书管理系统四">
+<meta name="twitter:description" content="实现具体功能 [待更新] 可能会觉得我们是不是应该快要成功了？？？好,现在我们来到了山脚啦~">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"always","offset":12,"b2t":true,"scrollpercent":true,"onmobile":false},
+    fancybox: true,
+    tabs: false,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: 'Author'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://github.com/2018/06/19/图书管理系统四/"/>
+
+
+
+
+
+  <title>图书管理系统四 | hotYan's Blog</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">hotYan's Blog</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <h1 class="site-subtitle" itemprop="description">程序媛</h1>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            Home
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            About
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            Tags
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            Categories
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            Archives
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://github.com/2018/06/19/图书管理系统四/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="hotYan">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/../images/avata.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="hotYan's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">图书管理系统四</h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-06-19T23:49:33+08:00">
+                2018-06-19
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Express-ejs-Mysql图书管理系统/" itemprop="url" rel="index">
+                    <span itemprop="name">Express+ejs+Mysql图书管理系统</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+            <span class="post-meta-divider">|</span>
+            <span class="page-pv"><i class="fa fa-eye"></i>
+            <span class="busuanzi-value" id="busuanzi_value_page_pv" ></span>
+            </span>
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h2 id="实现具体功能-待更新"><a href="#实现具体功能-待更新" class="headerlink" title="实现具体功能 [待更新]"></a>实现具体功能 <span style="font-size:.5em">[待更新]</span></h2><blockquote>
+<p>可能会觉得我们是不是应该快要成功了？？？好,现在我们来到了山脚啦~</p>
+</blockquote>
+<a id="more"></a>
+<h2 id="链接自取"><a href="#链接自取" class="headerlink" title="链接自取"></a>链接自取</h2><blockquote>
+<p>个人比较喜欢先甩参考链接,可以选择直接去看参考链接,以下内容作为我的个人记录,以我的角度去记录,总结。作为一个强迫症患者跟前端小白,个人觉得记录的比较详细啦~</p>
+<ul>
+<li><a href="http://www.alloyteam.com/2015/03/sexpressmysql/" target="_blank" rel="noopener">参考教程1</a></li>
+<li><a href="https://www.xiabingbao.com/node/2017/02/20/node-express-forum.html" target="_blank" rel="noopener">参考教程2</a>(划重点!) </li>
+</ul>
+</blockquote>
+<p>【注意】虽然前期看了教程1之后，功能没有实现，但是给教程2奠定一定的知识储备,建议都看看。  </p>
+<hr>
+<h2 id="一、你可能必须先看一下以下教程"><a href="#一、你可能必须先看一下以下教程" class="headerlink" title="一、你可能必须先看一下以下教程"></a>一、你可能必须先看一下以下教程</h2><p>仔细看看<a href="http://blog.fens.me/nodejs-express4/" target="_blank" rel="noopener">Node.js开发框架Express4.x</a> 下的以下部分</p>
+<pre><code>2. 目录结构
+3. package.json项目配置
+4. app.js核心文件
+5.Bootstrap界面框架(选看,里面涉及到的重复代码前面讲过)
+6. 路由功能
+</code></pre><h2 id="二、跟着参考教程2完成注册-登录"><a href="#二、跟着参考教程2完成注册-登录" class="headerlink" title="二、跟着参考教程2完成注册/登录"></a>二、跟着<a href="https://www.xiabingbao.com/node/2017/02/20/node-express-forum.html" target="_blank" rel="noopener">参考教程2</a>完成注册/登录</h2><pre><code>看了很多网上的教程吧,只有教程2让我成功了,作者写的也非常用心超级仔细！！！！我只跟着敲了用户注册登录,其他就无师自通啦~
+</code></pre><h2 id="三、写在后面"><a href="#三、写在后面" class="headerlink" title="三、写在后面"></a>三、写在后面</h2><pre><code>看了所有推荐的链接,基本上就没有什么问题啦。知识本身不难,难得是我们要在网上找到靠谱的教程。
+</code></pre><h2 id="四、根据项目记录下一些具体的细节"><a href="#四、根据项目记录下一些具体的细节" class="headerlink" title="四、根据项目记录下一些具体的细节"></a>四、根据项目记录下一些具体的细节</h2><blockquote>
+<h3 id="保持用户登录状态-app-js"><a href="#保持用户登录状态-app-js" class="headerlink" title="保持用户登录状态(app.js)"></a>保持用户登录状态(app.js)</h3></blockquote>
+<ul>
+<li><p>加载依赖库  </p>
+<pre><code>var cookieParser = require(&apos;cookie-parser&apos;);  
+var session = require(&apos;express-session&apos;);
+</code></pre></li>
+<li><p>定义cookie解析器</p>
+<pre><code>app.use(cookieParser());
+app.use(session({
+    secret: &apos;hotyan&apos;,  // 用来对session id相关的cookie进行签名
+    saveUninitialized: true,  // 是否自动保存未初始化的会话，建议false
+    resave: false,  // 是否每次都重新保存会话，建议false
+    cookie: {maxAge:  60*60 * 1000 } // 有效期，单位是毫秒
+}))
+</code></pre></li>
+</ul>
+<ul>
+<li><p>在app.js文件下添加自定义中间件,实现保持用户登录状态</p>
+<pre><code>app.use(function(req, res, next){
+    // 如果session中存在，则说明已经登录
+    if( req.session.hotyan ){
+        res.locals.hotyan = {
+            UserId : req.session.hotyan.UserId,
+            UserName : req.session.hotyan.UserName
+        }
+    }else{
+        res.locals.hotyan = {};
+    }
+    next();//此处必须有
+})
+</code></pre></li>
+</ul>
+<blockquote>
+<h3 id="数据库连接-models-db-js"><a href="#数据库连接-models-db-js" class="headerlink" title="数据库连接(models/db.js)"></a>数据库连接(models/db.js)</h3></blockquote>
+<pre><code>var mysql = require(&apos;mysql&apos;);
+var pool = mysql.createPool({
+    host: &apos;localhost&apos;,
+    user: &apos;root&apos;,
+    password: &apos;XXXXXX&apos;,
+    database: &apos;XXXXXX&apos;
+});
+module.exports = pool;  
+</code></pre><blockquote>
+<h3 id="Mysql语句-方法总结于教程2"><a href="#Mysql语句-方法总结于教程2" class="headerlink" title="Mysql语句(方法总结于教程2)"></a>Mysql语句(方法总结于教程2)</h3></blockquote>
+<p>以对图书管理员进行增删改查为例,新建(SQL/adminSql.js)文件,将需要的Mysql语句全部独立出来。</p>
+<pre><code>//对bookadmin进行增删改查
+var admin = {
+    /**添加图书管理员 */
+    insert :&apos;INSERT INTO `bookadmin` SET `BAId`=?, `BAName`=? ,`BAPassword`=?,`BAPhone`=?,`BAEmail`=?&apos;,
+    /**修改图书管理员信息 */
+    update : &apos;UPDATE `bookadmin` SET `BAName`=? ,`BAPhone`=?,`BAEmail`=? WHERE `BAId`=?&apos;,
+    /**删除图书管理员 */
+    delete: &apos;DELETE FROM `bookadmin` WHERE `BAId`=?&apos;,
+    /**精确查看图书管理员信息 */
+    queryById : &apos;SELECT * FROM `bookadmin` WHERE `BAId`=?&apos;,
+    /**查看全部图书管理员信息 */
+    queryAll : &apos;SELECT * FROM `bookadmin` &apos;
+};
+module.exports = admin;
+</code></pre><blockquote>
+<h3 id="实现功能的函数放置在-models-users-js"><a href="#实现功能的函数放置在-models-users-js" class="headerlink" title="实现功能的函数放置在(models/users.js)"></a>实现功能的函数放置在(models/users.js)</h3></blockquote>
+<ul>
+<li><p>1、加载依赖文件</p>
+<pre><code>var pool = require(&apos;./db&apos;), // 连接数据库
+    admin = require(&apos;../SQL/adminSql&apos;),//图书管理员的Mysql语句
+    crypto = require(&apos;crypto&apos;); // 对密码进行加密
+</code></pre></li>
+</ul>
+<ul>
+<li><p>2、以添加图书管理员为例学习如何使用封装的函数</p>
+<pre><code>adminadd: function (BAId, BAName, BAPassword, BAPhone, BAEmail, cb) {
+        pool.getConnection(function (err, connection) {
+            if (err) throw err;
+            connection.query(admin.insert, [BAId, BAName, BAPassword, BAPhone, BAEmail], function (err, result) {
+                if (err) throw err;
+                cb(result);
+                connection.release();
+            })
+        })
+    }
+</code></pre><p>  注意:建议了解一下query()方法,参数可2可3,query(mysql语句,内容数组,回调函数）;我把Mysql语句独立了出去,看了教程2就知道。  </p>
+</li>
+</ul>
+<blockquote>
+<h3 id="表单提交POST请求"><a href="#表单提交POST请求" class="headerlink" title="表单提交POST请求"></a>表单提交POST请求</h3></blockquote>
+<p> 以添加图书管理员为例</p>
+<pre><code>&lt;form action=&quot;/badAddAdmin&quot; method=&quot;POST&quot; class=&quot;ad_data&quot;&gt;//注意1
+    &lt;div class=&quot;data&quot;&gt;
+        &lt;label&gt;管理号&lt;/label&gt;
+        &lt;input type=&quot;text&quot; placeholder=&quot;输入图书管理员编号&quot; name=&quot;BAId&quot; /&gt;//注意2
+    &lt;/div&gt;   
+    ...     
+    &lt;div class=&quot;data&quot;&gt;
+        &lt;label&gt;邮箱&lt;/label&gt;
+        &lt;input type=&quot;text&quot; placeholder=&quot;输入图书管理员邮箱&quot; name=&quot;BAEmail&quot; /&gt;
+    &lt;/div&gt;
+    &lt;input class=&quot;add_btn&quot; type=&quot;submit&quot; value=&quot;确认添加&quot; /&gt;//注意3    
+&lt;/form&gt;
+</code></pre><p>注意三个地方: </p>
+<pre><code>1.action=&quot;/badAddAdmin&quot; method=&quot;POST&quot;  
+2.name=&quot;BAId&quot;
+3.type=&quot;submit&quot;
+</code></pre><blockquote>
+<h3 id="在-routes-index-js-中添加POST代码"><a href="#在-routes-index-js-中添加POST代码" class="headerlink" title="在(routes/index.js)中添加POST代码"></a>在(routes/index.js)中添加POST代码</h3></blockquote>
+<p>以添加图书管理员界面为例:</p>
+<pre><code>router.post(&apos;/badAddAdmin&apos;, function (req, res, next) {
+    /*获取表单传来的数据*/
+    var BAId = req.body.BAId || &apos;&apos;,
+        BAName = req.body.BAName || &apos;&apos;,
+        BAPassword = req.body.BAPassword || &apos;&apos;,
+        BAPhone = req.body.BAPhone || &apos;&apos;,
+        BAEmail = req.body.BAEmail || &apos;&apos;;
+    /*调用密码加密函数*/
+    var password_hash = user_m.hash(BAPassword);
+    /*调用添加图书管理员函数*/
+    user_m.adminadd(BAId, BAName, password_hash, BAPhone, BAEmail, function (result) {
+        console.log(&quot;添加成功&quot;);
+        res.redirect(&apos;/badAddAdmin&apos;);
+    })
+})
+</code></pre><blockquote>
+<h3 id="ejs循环渲染-查看界面需要"><a href="#ejs循环渲染-查看界面需要" class="headerlink" title="ejs循环渲染(查看界面需要)"></a>ejs循环渲染(查看界面需要)</h3></blockquote>
+<pre><code>/*(routes/index.js)中代码*/
+router.post(&apos;/badCheckAdmin&apos;, function (req, res, next) {
+    console.log(req.body);
+    var BAId = req.body.BAId;
+    user_m.adminId(BAId, function (result) {
+        console.log(&quot;精确查看成功&quot;);
+        res.render(&apos;badCheckAdmin&apos;, {
+            title: &apos;查看图书管理员信息&apos;,
+            datas: result     //返回json数据,
+        })
+    })
+});
+</code></pre><p>【注意】返回json数据,需要依赖模块body-parser,此处建议了解一下res.render()  </p>
+<pre><code>/*(views/badCheckAdmin.ejs)中渲染代码*/
+&lt;tbody&gt;
+    &lt;% for(var i=0;i&lt; datas.length;i++){ %&gt;
+    &lt;tr&gt;
+        &lt;td &gt;
+        &lt;%= datas[i].BAId %&gt;
+        &lt;/td&gt;
+        &lt;td&gt;
+        &lt;%= datas[i].BAName %&gt;
+        &lt;/td&gt;
+        &lt;td&gt;
+        &lt;%= datas[i].BAPhone %&gt;
+        &lt;/td&gt;
+        &lt;td&gt;
+        &lt;%= datas[i].BAEmail %&gt;
+        &lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;% }%&gt;
+&lt;/tbody&gt;
+</code></pre><blockquote>
+<h3 id="日期格式YYYY-MM-DD"><a href="#日期格式YYYY-MM-DD" class="headerlink" title="日期格式YYYY-MM-DD"></a>日期格式YYYY-MM-DD</h3><p>在(routes/index.js)文件中</p>
+</blockquote>
+<pre><code>/*加载依赖模块*/
+var time = require(&apos;silly-datetime&apos;)
+
+/*在需要的地方使用,以注册时间为例*/
+RegTime = time.format(new Date(), &apos;YYYY-MM-DD&apos;);
+</code></pre><blockquote>
+<h3 id="图书应该归还日期-30天后"><a href="#图书应该归还日期-30天后" class="headerlink" title="图书应该归还日期(30天后)"></a>图书应该归还日期(30天后)</h3></blockquote>
+<pre><code>/******在(models/users.js)中添加date方法*******/
+date: function (AddDay) {
+    var date = new Date();
+
+        /*****获取AddDay天后的日期 ********/
+        date.setDate(date.getDate() + AddDay);
+
+    var Y = date.getFullYear(),
+            /***** 获取当前月份的日期，不足10补0 *****/
+        M = (date.getMonth() + 1) &lt; 10 ? &quot;0&quot; + (date.getMonth() + 1) : (date.getMonth() + 1),
+            /****获取当前几号，不足10补0  ****/
+        D = date.getDate() &lt; 10 ? &quot;0&quot; + date.getDate() : date.getDate();
+
+    return Y + &quot;-&quot; + M + &quot;-&quot; + D;
+}
+
+/*******在(routes/index.js)借书界面调用date方法********/
+var ShouldTime = user_m.date(30);
+</code></pre>
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+    
+    <div>
+      
+        <div>
+    
+        <div style="text-align:center;color: #555;font-size:14px;"> - END - </div>
+    
+</div>
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/图书管理系统/" rel="tag"><i class="fa fa-tag"></i> 图书管理系统</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/06/19/Mysql命令小结/" rel="next" title="Mysql命令小结">
+                <i class="fa fa-chevron-left"></i> Mysql命令小结
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/06/21/CSS-属性继承/" rel="prev" title="CSS_属性继承">
+                CSS_属性继承 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="/../images/avata.gif"
+                alt="hotYan" />
+            
+              <p class="site-author-name" itemprop="name">hotYan</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">16</span>
+                  <span class="site-state-item-name">posts</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">7</span>
+                  <span class="site-state-item-name">categories</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">19</span>
+                  <span class="site-state-item-name">tags</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+            <div class="feed-link motion-element">
+              <a href="/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/hotYan" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-github"></i>GitHub</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="mailto:15823566422@163.com" target="_blank" title="E-Mail">
+                      
+                        <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#实现具体功能-待更新"><span class="nav-text">实现具体功能 [待更新]</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#链接自取"><span class="nav-text">链接自取</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#一、你可能必须先看一下以下教程"><span class="nav-text">一、你可能必须先看一下以下教程</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#二、跟着参考教程2完成注册-登录"><span class="nav-text">二、跟着参考教程2完成注册/登录</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#三、写在后面"><span class="nav-text">三、写在后面</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#四、根据项目记录下一些具体的细节"><span class="nav-text">四、根据项目记录下一些具体的细节</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#保持用户登录状态-app-js"><span class="nav-text">保持用户登录状态(app.js)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#数据库连接-models-db-js"><span class="nav-text">数据库连接(models/db.js)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Mysql语句-方法总结于教程2"><span class="nav-text">Mysql语句(方法总结于教程2)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#实现功能的函数放置在-models-users-js"><span class="nav-text">实现功能的函数放置在(models/users.js)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#表单提交POST请求"><span class="nav-text">表单提交POST请求</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#在-routes-index-js-中添加POST代码"><span class="nav-text">在(routes/index.js)中添加POST代码</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ejs循环渲染-查看界面需要"><span class="nav-text">ejs循环渲染(查看界面需要)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#日期格式YYYY-MM-DD"><span class="nav-text">日期格式YYYY-MM-DD</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#图书应该归还日期-30天后"><span class="nav-text">图书应该归还日期(30天后)</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+        <div class="back-to-top">
+          <i class="fa fa-arrow-up"></i>
+          
+            <span id="scrollpercent"><span>0</span>%</span>
+          
+        </div>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+<div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">hotYan</span>
+
+  
+</div>
+
+
+
+
+
+
+
+
+
+
+        
+<div class="busuanzi-count">
+  <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+    <span class="site-uv">
+      <i class="fa fa-user"></i>
+      <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
+      
+    </span>
+  
+
+  
+    <span class="site-pv">
+      <i class="fa fa-eye"></i>
+      <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
+      
+    </span>
+  
+</div>
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="//cdn.jsdelivr.net/jquery/2.1.3/jquery.min.js"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="//cdn.jsdelivr.net/fastclick/1.0.6/fastclick.min.js"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="//cdn.jsdelivr.net/jquery.lazyload/1.9.3/jquery.lazyload.min.js"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="//cdn.jsdelivr.net/velocity/1.2.3/velocity.min.js"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="//cdn.jsdelivr.net/velocity/1.2.3/velocity.ui.min.js"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="//cdn.jsdelivr.net/fancybox/2.1.5/jquery.fancybox.pack.js"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+  
+  
+
+  
+
+  
+
+  
+
+  
+  <！ - 页面点击小红心 - > 
+<script type =“text/javascript” src =“/js/src/love.js” > </ script>
+
+</body>
+</html>

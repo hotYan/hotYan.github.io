@@ -5,7 +5,7 @@
     
   <url>
     <loc>https://hotkang.cn/2018/06/28/%E5%9C%A8GitHub-Pages%E4%B8%8A%E9%83%A8%E7%BD%B2%E8%87%AA%E5%B7%B1%E7%9A%84%E7%AE%80%E5%8E%86/</loc>
-    <lastmod>2018-07-10T11:05:14.553Z</lastmod>
+    <lastmod>2018-07-10T11:29:23.117Z</lastmod>
     <data>
         <display>
         <title>在GitHub Pages上部署自己的简历</title>
@@ -263,11 +263,11 @@
         <title>图书管理系统三</title>
         <pubTime>2018-06-11T15:24:23.000Z</pubTime>
         
+        <tag>Homebrew</tag>
+         
         <tag>图书管理系统</tag>
          
         <tag>Mysql</tag>
-         
-        <tag>Homebrew</tag>
          
         <tag>node.js</tag>
          

@@ -5,9 +5,9 @@
   <subtitle>程序媛</subtitle>
   <link href="/atom.xml" rel="self"/>
   
-  <link href="http://github.com/"/>
+  <link href="https://hotkang.cn/"/>
   <updated>2018-07-08T08:14:48.421Z</updated>
-  <id>http://github.com/</id>
+  <id>https://hotkang.cn/</id>
   
   <author>
     <name>hotYan</name>
@@ -18,12 +18,12 @@
   
   <entry>
     <title>在GitHub Pages上部署自己的简历</title>
-    <link href="http://github.com/2018/06/28/%E5%9C%A8GitHub-Pages%E4%B8%8A%E9%83%A8%E7%BD%B2%E8%87%AA%E5%B7%B1%E7%9A%84%E7%AE%80%E5%8E%86/"/>
-    <id>http://github.com/2018/06/28/在GitHub-Pages上部署自己的简历/</id>
+    <link href="https://hotkang.cn/2018/06/28/%E5%9C%A8GitHub-Pages%E4%B8%8A%E9%83%A8%E7%BD%B2%E8%87%AA%E5%B7%B1%E7%9A%84%E7%AE%80%E5%8E%86/"/>
+    <id>https://hotkang.cn/2018/06/28/在GitHub-Pages上部署自己的简历/</id>
     <published>2018-06-28T09:11:27.000Z</published>
     <updated>2018-07-08T08:14:48.421Z</updated>
     
-    <content type="html"><![CDATA[<h2 id="GitHub-Pages-待更新"><a href="#GitHub-Pages-待更新" class="headerlink" title="GitHub Pages [待更新]"></a>GitHub Pages <span style="font-size:.5em">[待更新]</span></h2><blockquote><p>如何将自己的简历上传GitHub？？当我有这个想法的时候，Google了一下,有一篇教程以什么“室友”“实验楼”开头？？知乎有？CSDN有？简书还有？？主要是并没有解决我的问题,看到就有点烦了。还出现什么一篇相同的教程,被不同的人放置在不同的地方？？？</p></blockquote><a id="more"></a><h2 id="链接自取"><a href="#链接自取" class="headerlink" title="链接自取"></a>链接自取</h2><blockquote><p>个人比较喜欢先甩参考链接,可以选择直接去看参考链接。</p><ul><li><a href="https://pages.github.com/" target="_blank" rel="noopener">GitHub Pages</a>  </li></ul></blockquote><p>看了很多教程,发现官网是说的最简洁明了又清楚的,最终解决了我的问题。建议打开<a href="https://pages.github.com/" target="_blank" rel="noopener">GitHub Pages</a>,两边参考着看更简单易懂。</p><hr><h2 id="一、什么是GitHub-Pages"><a href="#一、什么是GitHub-Pages" class="headerlink" title="一、什么是GitHub Pages"></a>一、什么是GitHub Pages</h2><ol><li><p>GitHub Pages是一个静态站点托管服务,旨在直接从GitHub存储库托管我们的个人,组织或项目页面。不支持服务器端代码，例如PHP，Ruby或Python。   </p></li><li><p>我们可以使用Jekyll Theme Chooser在线创建和发布GitHub Pages网站。我们也可以在本地工作，使用【GitHub Desktop】或【命令行】。  </p></li></ol><p>注意:  </p><ul><li><strong><a href="https://desktop.github.com/" target="_blank" rel="noopener">GitHub Desktop</a></strong>:一个上传项目到github的软件。不想用命令行的不二选择。  </li><li><strong><a href="https://help.github.com/articles/adding-an-existing-project-to-github-using-the-command-line/" target="_blank" rel="noopener">命令行</a></strong>:指使用git命令上传项目  </li></ul><p>【PS:不会命令行没关系，谁敢说自己连一个软件都不会用呀？】  </p><h2 id="二、GitHub-Pages-提供什么"><a href="#二、GitHub-Pages-提供什么" class="headerlink" title="二、GitHub Pages 提供什么"></a>二、GitHub Pages 提供什么</h2><p>在官网上有这样一句话:  </p><pre><code>You get one site per GitHub account and organization,and unlimited project sites. </code></pre><p>意思是:</p><pre><code>GitHub Pages为每个GitHub帐户/组织提供一个【站点】,以及无限制的【项目站点】。</code></pre><blockquote><p>注意:<br>1.我们只能有一个【User or organization site】;但是我们可以有很多【Project site】。 </p><p>2.部署简历用【User or organization site】简直是大材小用,用【Project site】就可以了。  </p><p>3.【User or organization site】可以拿来部署个人博客,点击<a href="https://hotyan.github.io/categories/hotYan-%E5%8D%9A%E5%AE%A2%E4%B9%8B%E8%B7%AF/" target="_blank" rel="noopener">用hexo搭建github博客</a>了解如何搭建个人博客。</p></blockquote><h2 id="三、准备工作"><a href="#三、准备工作" class="headerlink" title="三、准备工作"></a>三、准备工作</h2><p>1、默认已有GitHub账号,并已创建好存储库或会创建存储库。</p><ul><li>没有GitHub账号？？<a href="https://github.com/">点击注册</a>   </li><li>没有存储库？？<a href="https://help.github.com/articles/creating-a-new-repository/" target="_blank" rel="noopener">了解如何创建</a>     </li></ul><p>2、默认已有html简历,命名为 index.html   </p><ul><li>没有简历？？<a href="http://cv.qiaobutang.com/" target="_blank" rel="noopener">制作并下载</a></li></ul><h2 id="四、简历部署"><a href="#四、简历部署" class="headerlink" title="四、简历部署"></a>四、简历部署</h2><blockquote><p>创建新存储库 </p></blockquote><ol><li><p>点击右上角 <strong>+</strong> 选择 <strong>New repository</strong></p></li><li><p>填写 <strong>Repository name</strong> 并勾选 <strong>Initialize this repository with a README</strong></p></li><li>点击 <strong>Create repository</strong> 完成创建</li></ol><blockquote><p>上传简历  </p></blockquote><ol><li><p>在新建的存储库点击 <strong>Upload files</strong></p></li><li><p>点击 <strong>choose your files</strong> 上传你的 <strong>index.html</strong> 文件</p></li><li>点击 <strong>Commit changes</strong> 完成上传  </li></ol><blockquote><p>部署</p></blockquote><ol><li><p>点击 <strong>Settings</strong> 下滑到 <strong>GitHub Pages</strong> 部分</p></li><li><p>修改 <strong>Source</strong> 为 <strong>master branch</strong> 并点击 <strong>Save</strong></p></li><li>再次下滑到 <strong>GitHub Pages</strong> 部分就会看到一个链接</li></ol><blockquote><p>成功  </p></blockquote><ol><li><p>如果不成功,再次修改 <strong>Source</strong> 为 <strong>master branch</strong> 并点击 <strong>Save</strong></p></li><li><p>点击链接就可以看到部署的简历</p></li><li>将简历链接写在你的README.md或者任何地方</li></ol><h2 id="五、创建【User-or-organization-site】"><a href="#五、创建【User-or-organization-site】" class="headerlink" title="五、创建【User or organization site】"></a>五、创建【User or organization site】</h2><blockquote><p>跟创建一般存储库流程一样,只是因为我们每个用户只有一个【User or organization site】,所以存储库的名称比较唯一,必须是<strong>username.github.io</strong> 格式,其中username是我们在GitHub上的用户名（或组织名称  </p></blockquote><p>如果不正确则不起作用，因此请确保正确无误。</p>]]></content>
+    <content type="html"><![CDATA[<h2 id="GitHub-Pages-待更新"><a href="#GitHub-Pages-待更新" class="headerlink" title="GitHub Pages [待更新]"></a>GitHub Pages <span style="font-size:.5em">[待更新]</span></h2><blockquote><p>如何将自己的简历上传GitHub？？当我有这个想法的时候，Google了一下,有一篇教程以什么“室友”“实验楼”开头？？知乎有？CSDN有？简书还有？？主要是并没有解决我的问题,看到就有点烦了。还出现什么一篇相同的教程,被不同的人放置在不同的地方？？？</p></blockquote><a id="more"></a><h2 id="链接自取"><a href="#链接自取" class="headerlink" title="链接自取"></a>链接自取</h2><blockquote><p>个人比较喜欢先甩参考链接,可以选择直接去看参考链接。</p><ul><li><a href="https://pages.github.com/" target="_blank" rel="noopener">GitHub Pages</a>  </li></ul></blockquote><p>看了很多教程,发现官网是说的最简洁明了又清楚的,最终解决了我的问题。建议打开<a href="https://pages.github.com/" target="_blank" rel="noopener">GitHub Pages</a>,两边参考着看更简单易懂。</p><hr><h2 id="一、什么是GitHub-Pages"><a href="#一、什么是GitHub-Pages" class="headerlink" title="一、什么是GitHub Pages"></a>一、什么是GitHub Pages</h2><ol><li><p>GitHub Pages是一个静态站点托管服务,旨在直接从GitHub存储库托管我们的个人,组织或项目页面。不支持服务器端代码，例如PHP，Ruby或Python。   </p></li><li><p>我们可以使用Jekyll Theme Chooser在线创建和发布GitHub Pages网站。我们也可以在本地工作，使用【GitHub Desktop】或【命令行】。  </p></li></ol><p>注意:  </p><ul><li><strong><a href="https://desktop.github.com/" target="_blank" rel="noopener">GitHub Desktop</a></strong>:一个上传项目到github的软件。不想用命令行的不二选择。  </li><li><strong><a href="https://help.github.com/articles/adding-an-existing-project-to-github-using-the-command-line/" target="_blank" rel="noopener">命令行</a></strong>:指使用git命令上传项目  </li></ul><p>【PS:不会命令行没关系，谁敢说自己连一个软件都不会用呀？】  </p><h2 id="二、GitHub-Pages-提供什么"><a href="#二、GitHub-Pages-提供什么" class="headerlink" title="二、GitHub Pages 提供什么"></a>二、GitHub Pages 提供什么</h2><p>在官网上有这样一句话:  </p><pre><code>You get one site per GitHub account and organization,and unlimited project sites. </code></pre><p>意思是:</p><pre><code>GitHub Pages为每个GitHub帐户/组织提供一个【站点】,以及无限制的【项目站点】。</code></pre><blockquote><p>注意:<br>1.我们只能有一个【User or organization site】;但是我们可以有很多【Project site】。 </p><p>2.部署简历用【User or organization site】简直是大材小用,用【Project site】就可以了。  </p><p>3.【User or organization site】可以拿来部署个人博客,点击<a href="https://hotyan.github.io/categories/hotYan-%E5%8D%9A%E5%AE%A2%E4%B9%8B%E8%B7%AF/" target="_blank" rel="noopener">用hexo搭建github博客</a>了解如何搭建个人博客。</p></blockquote><h2 id="三、准备工作"><a href="#三、准备工作" class="headerlink" title="三、准备工作"></a>三、准备工作</h2><p>1、默认已有GitHub账号,并已创建好存储库或会创建存储库。</p><ul><li>没有GitHub账号？？<a href="https://github.com/" target="_blank" rel="noopener">点击注册</a>   </li><li>没有存储库？？<a href="https://help.github.com/articles/creating-a-new-repository/" target="_blank" rel="noopener">了解如何创建</a>     </li></ul><p>2、默认已有html简历,命名为 index.html   </p><ul><li>没有简历？？<a href="http://cv.qiaobutang.com/" target="_blank" rel="noopener">制作并下载</a></li></ul><h2 id="四、简历部署"><a href="#四、简历部署" class="headerlink" title="四、简历部署"></a>四、简历部署</h2><blockquote><p>创建新存储库 </p></blockquote><ol><li><p>点击右上角 <strong>+</strong> 选择 <strong>New repository</strong></p></li><li><p>填写 <strong>Repository name</strong> 并勾选 <strong>Initialize this repository with a README</strong></p></li><li>点击 <strong>Create repository</strong> 完成创建</li></ol><blockquote><p>上传简历  </p></blockquote><ol><li><p>在新建的存储库点击 <strong>Upload files</strong></p></li><li><p>点击 <strong>choose your files</strong> 上传你的 <strong>index.html</strong> 文件</p></li><li>点击 <strong>Commit changes</strong> 完成上传  </li></ol><blockquote><p>部署</p></blockquote><ol><li><p>点击 <strong>Settings</strong> 下滑到 <strong>GitHub Pages</strong> 部分</p></li><li><p>修改 <strong>Source</strong> 为 <strong>master branch</strong> 并点击 <strong>Save</strong></p></li><li>再次下滑到 <strong>GitHub Pages</strong> 部分就会看到一个链接</li></ol><blockquote><p>成功  </p></blockquote><ol><li><p>如果不成功,再次修改 <strong>Source</strong> 为 <strong>master branch</strong> 并点击 <strong>Save</strong></p></li><li><p>点击链接就可以看到部署的简历</p></li><li>将简历链接写在你的README.md或者任何地方</li></ol><h2 id="五、创建【User-or-organization-site】"><a href="#五、创建【User-or-organization-site】" class="headerlink" title="五、创建【User or organization site】"></a>五、创建【User or organization site】</h2><blockquote><p>跟创建一般存储库流程一样,只是因为我们每个用户只有一个【User or organization site】,所以存储库的名称比较唯一,必须是<strong>username.github.io</strong> 格式,其中username是我们在GitHub上的用户名（或组织名称  </p></blockquote><p>如果不正确则不起作用，因此请确保正确无误。</p>]]></content>
     
     <summary type="html">
     
@@ -33,19 +33,19 @@
     
     </summary>
     
-      <category term="GitHub" scheme="http://github.com/categories/GitHub/"/>
+      <category term="GitHub" scheme="https://hotkang.cn/categories/GitHub/"/>
     
     
-      <category term="GitHub Pages" scheme="http://github.com/tags/GitHub-Pages/"/>
+      <category term="GitHub Pages" scheme="https://hotkang.cn/tags/GitHub-Pages/"/>
     
-      <category term="简历" scheme="http://github.com/tags/%E7%AE%80%E5%8E%86/"/>
+      <category term="简历" scheme="https://hotkang.cn/tags/%E7%AE%80%E5%8E%86/"/>
     
   </entry>
   
   <entry>
     <title>CSS_属性继承</title>
-    <link href="http://github.com/2018/06/21/CSS-%E5%B1%9E%E6%80%A7%E7%BB%A7%E6%89%BF/"/>
-    <id>http://github.com/2018/06/21/CSS-属性继承/</id>
+    <link href="https://hotkang.cn/2018/06/21/CSS-%E5%B1%9E%E6%80%A7%E7%BB%A7%E6%89%BF/"/>
+    <id>https://hotkang.cn/2018/06/21/CSS-属性继承/</id>
     <published>2018-06-21T10:29:02.000Z</published>
     <updated>2018-07-08T08:38:42.839Z</updated>
     
@@ -59,19 +59,19 @@
     
     </summary>
     
-      <category term="好记性不如烂笔头" scheme="http://github.com/categories/%E5%A5%BD%E8%AE%B0%E6%80%A7%E4%B8%8D%E5%A6%82%E7%83%82%E7%AC%94%E5%A4%B4/"/>
+      <category term="好记性不如烂笔头" scheme="https://hotkang.cn/categories/%E5%A5%BD%E8%AE%B0%E6%80%A7%E4%B8%8D%E5%A6%82%E7%83%82%E7%AC%94%E5%A4%B4/"/>
     
     
-      <category term="CSS" scheme="http://github.com/tags/CSS/"/>
+      <category term="CSS" scheme="https://hotkang.cn/tags/CSS/"/>
     
-      <category term="属性继承" scheme="http://github.com/tags/%E5%B1%9E%E6%80%A7%E7%BB%A7%E6%89%BF/"/>
+      <category term="属性继承" scheme="https://hotkang.cn/tags/%E5%B1%9E%E6%80%A7%E7%BB%A7%E6%89%BF/"/>
     
   </entry>
   
   <entry>
     <title>图书管理系统四</title>
-    <link href="http://github.com/2018/06/19/%E5%9B%BE%E4%B9%A6%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F%E5%9B%9B/"/>
-    <id>http://github.com/2018/06/19/图书管理系统四/</id>
+    <link href="https://hotkang.cn/2018/06/19/%E5%9B%BE%E4%B9%A6%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F%E5%9B%9B/"/>
+    <id>https://hotkang.cn/2018/06/19/图书管理系统四/</id>
     <published>2018-06-19T15:49:33.000Z</published>
     <updated>2018-07-08T07:41:46.930Z</updated>
     
@@ -85,17 +85,17 @@
     
     </summary>
     
-      <category term="Express+ejs+Mysql图书管理系统" scheme="http://github.com/categories/Express-ejs-Mysql%E5%9B%BE%E4%B9%A6%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F/"/>
+      <category term="Express+ejs+Mysql图书管理系统" scheme="https://hotkang.cn/categories/Express-ejs-Mysql%E5%9B%BE%E4%B9%A6%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F/"/>
     
     
-      <category term="图书管理系统" scheme="http://github.com/tags/%E5%9B%BE%E4%B9%A6%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F/"/>
+      <category term="图书管理系统" scheme="https://hotkang.cn/tags/%E5%9B%BE%E4%B9%A6%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F/"/>
     
   </entry>
   
   <entry>
     <title>Mysql命令小结</title>
-    <link href="http://github.com/2018/06/19/Mysql%E5%91%BD%E4%BB%A4%E5%B0%8F%E7%BB%93/"/>
-    <id>http://github.com/2018/06/19/Mysql命令小结/</id>
+    <link href="https://hotkang.cn/2018/06/19/Mysql%E5%91%BD%E4%BB%A4%E5%B0%8F%E7%BB%93/"/>
+    <id>https://hotkang.cn/2018/06/19/Mysql命令小结/</id>
     <published>2018-06-19T14:04:20.000Z</published>
     <updated>2018-06-27T16:01:44.649Z</updated>
     
@@ -109,23 +109,23 @@
     
     </summary>
     
-      <category term="Mysql" scheme="http://github.com/categories/Mysql/"/>
+      <category term="Mysql" scheme="https://hotkang.cn/categories/Mysql/"/>
     
     
-      <category term="图书管理系统" scheme="http://github.com/tags/%E5%9B%BE%E4%B9%A6%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F/"/>
+      <category term="图书管理系统" scheme="https://hotkang.cn/tags/%E5%9B%BE%E4%B9%A6%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F/"/>
     
-      <category term="Express" scheme="http://github.com/tags/Express/"/>
+      <category term="Express" scheme="https://hotkang.cn/tags/Express/"/>
     
-      <category term="ejs" scheme="http://github.com/tags/ejs/"/>
+      <category term="ejs" scheme="https://hotkang.cn/tags/ejs/"/>
     
-      <category term="Mysql" scheme="http://github.com/tags/Mysql/"/>
+      <category term="Mysql" scheme="https://hotkang.cn/tags/Mysql/"/>
     
   </entry>
   
   <entry>
     <title>图书管理系统三</title>
-    <link href="http://github.com/2018/06/11/%E5%9B%BE%E4%B9%A6%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F%E4%B8%89/"/>
-    <id>http://github.com/2018/06/11/图书管理系统三/</id>
+    <link href="https://hotkang.cn/2018/06/11/%E5%9B%BE%E4%B9%A6%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F%E4%B8%89/"/>
+    <id>https://hotkang.cn/2018/06/11/图书管理系统三/</id>
     <published>2018-06-11T15:24:23.000Z</published>
     <updated>2018-07-08T07:42:24.256Z</updated>
     
@@ -139,23 +139,23 @@
     
     </summary>
     
-      <category term="Mysql" scheme="http://github.com/categories/Mysql/"/>
+      <category term="Mysql" scheme="https://hotkang.cn/categories/Mysql/"/>
     
     
-      <category term="图书管理系统" scheme="http://github.com/tags/%E5%9B%BE%E4%B9%A6%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F/"/>
+      <category term="图书管理系统" scheme="https://hotkang.cn/tags/%E5%9B%BE%E4%B9%A6%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F/"/>
     
-      <category term="Mysql" scheme="http://github.com/tags/Mysql/"/>
+      <category term="Mysql" scheme="https://hotkang.cn/tags/Mysql/"/>
     
-      <category term="Homebrew" scheme="http://github.com/tags/Homebrew/"/>
+      <category term="Homebrew" scheme="https://hotkang.cn/tags/Homebrew/"/>
     
-      <category term="node.js" scheme="http://github.com/tags/node-js/"/>
+      <category term="node.js" scheme="https://hotkang.cn/tags/node-js/"/>
     
   </entry>
   
   <entry>
     <title>图书管理系统二</title>
-    <link href="http://github.com/2018/06/11/%E5%9B%BE%E4%B9%A6%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F%E4%BA%8C/"/>
-    <id>http://github.com/2018/06/11/图书管理系统二/</id>
+    <link href="https://hotkang.cn/2018/06/11/%E5%9B%BE%E4%B9%A6%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F%E4%BA%8C/"/>
+    <id>https://hotkang.cn/2018/06/11/图书管理系统二/</id>
     <published>2018-06-11T15:24:16.000Z</published>
     <updated>2018-07-08T07:42:54.558Z</updated>
     
@@ -169,23 +169,23 @@
     
     </summary>
     
-      <category term="Express+ejs+Mysql图书管理系统" scheme="http://github.com/categories/Express-ejs-Mysql%E5%9B%BE%E4%B9%A6%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F/"/>
+      <category term="Express+ejs+Mysql图书管理系统" scheme="https://hotkang.cn/categories/Express-ejs-Mysql%E5%9B%BE%E4%B9%A6%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F/"/>
     
     
-      <category term="图书管理系统" scheme="http://github.com/tags/%E5%9B%BE%E4%B9%A6%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F/"/>
+      <category term="图书管理系统" scheme="https://hotkang.cn/tags/%E5%9B%BE%E4%B9%A6%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F/"/>
     
-      <category term="Express" scheme="http://github.com/tags/Express/"/>
+      <category term="Express" scheme="https://hotkang.cn/tags/Express/"/>
     
-      <category term="ejs" scheme="http://github.com/tags/ejs/"/>
+      <category term="ejs" scheme="https://hotkang.cn/tags/ejs/"/>
     
-      <category term="Mysql" scheme="http://github.com/tags/Mysql/"/>
+      <category term="Mysql" scheme="https://hotkang.cn/tags/Mysql/"/>
     
   </entry>
   
   <entry>
     <title>图书管理系统一</title>
-    <link href="http://github.com/2018/06/11/%E5%9B%BE%E4%B9%A6%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F%E4%B8%80/"/>
-    <id>http://github.com/2018/06/11/图书管理系统一/</id>
+    <link href="https://hotkang.cn/2018/06/11/%E5%9B%BE%E4%B9%A6%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F%E4%B8%80/"/>
+    <id>https://hotkang.cn/2018/06/11/图书管理系统一/</id>
     <published>2018-06-11T15:24:02.000Z</published>
     <updated>2018-07-08T07:43:33.994Z</updated>
     
@@ -199,23 +199,23 @@
     
     </summary>
     
-      <category term="Express+ejs+Mysql图书管理系统" scheme="http://github.com/categories/Express-ejs-Mysql%E5%9B%BE%E4%B9%A6%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F/"/>
+      <category term="Express+ejs+Mysql图书管理系统" scheme="https://hotkang.cn/categories/Express-ejs-Mysql%E5%9B%BE%E4%B9%A6%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F/"/>
     
     
-      <category term="图书管理系统" scheme="http://github.com/tags/%E5%9B%BE%E4%B9%A6%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F/"/>
+      <category term="图书管理系统" scheme="https://hotkang.cn/tags/%E5%9B%BE%E4%B9%A6%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F/"/>
     
-      <category term="Express" scheme="http://github.com/tags/Express/"/>
+      <category term="Express" scheme="https://hotkang.cn/tags/Express/"/>
     
-      <category term="ejs" scheme="http://github.com/tags/ejs/"/>
+      <category term="ejs" scheme="https://hotkang.cn/tags/ejs/"/>
     
-      <category term="node.js" scheme="http://github.com/tags/node-js/"/>
+      <category term="node.js" scheme="https://hotkang.cn/tags/node-js/"/>
     
   </entry>
   
   <entry>
     <title>烂笔头之JS</title>
-    <link href="http://github.com/2018/05/31/%E7%83%82%E7%AC%94%E5%A4%B4%E4%B9%8BJS/"/>
-    <id>http://github.com/2018/05/31/烂笔头之JS/</id>
+    <link href="https://hotkang.cn/2018/05/31/%E7%83%82%E7%AC%94%E5%A4%B4%E4%B9%8BJS/"/>
+    <id>https://hotkang.cn/2018/05/31/烂笔头之JS/</id>
     <published>2018-05-31T11:13:13.000Z</published>
     <updated>2018-07-07T18:36:32.714Z</updated>
     
@@ -229,21 +229,21 @@
     
     </summary>
     
-      <category term="好记性不如烂笔头" scheme="http://github.com/categories/%E5%A5%BD%E8%AE%B0%E6%80%A7%E4%B8%8D%E5%A6%82%E7%83%82%E7%AC%94%E5%A4%B4/"/>
+      <category term="好记性不如烂笔头" scheme="https://hotkang.cn/categories/%E5%A5%BD%E8%AE%B0%E6%80%A7%E4%B8%8D%E5%A6%82%E7%83%82%E7%AC%94%E5%A4%B4/"/>
     
     
-      <category term="notes" scheme="http://github.com/tags/notes/"/>
+      <category term="notes" scheme="https://hotkang.cn/tags/notes/"/>
     
-      <category term="JS" scheme="http://github.com/tags/JS/"/>
+      <category term="JS" scheme="https://hotkang.cn/tags/JS/"/>
     
-      <category term="面试" scheme="http://github.com/tags/%E9%9D%A2%E8%AF%95/"/>
+      <category term="面试" scheme="https://hotkang.cn/tags/%E9%9D%A2%E8%AF%95/"/>
     
   </entry>
   
   <entry>
     <title>烂笔头之CSS</title>
-    <link href="http://github.com/2018/05/31/%E7%83%82%E7%AC%94%E5%A4%B4%E4%B9%8BCSS/"/>
-    <id>http://github.com/2018/05/31/烂笔头之CSS/</id>
+    <link href="https://hotkang.cn/2018/05/31/%E7%83%82%E7%AC%94%E5%A4%B4%E4%B9%8BCSS/"/>
+    <id>https://hotkang.cn/2018/05/31/烂笔头之CSS/</id>
     <published>2018-05-31T11:12:32.000Z</published>
     <updated>2018-06-26T11:59:55.219Z</updated>
     
@@ -257,25 +257,25 @@
     
     </summary>
     
-      <category term="好记性不如烂笔头" scheme="http://github.com/categories/%E5%A5%BD%E8%AE%B0%E6%80%A7%E4%B8%8D%E5%A6%82%E7%83%82%E7%AC%94%E5%A4%B4/"/>
+      <category term="好记性不如烂笔头" scheme="https://hotkang.cn/categories/%E5%A5%BD%E8%AE%B0%E6%80%A7%E4%B8%8D%E5%A6%82%E7%83%82%E7%AC%94%E5%A4%B4/"/>
     
     
-      <category term="CSS" scheme="http://github.com/tags/CSS/"/>
+      <category term="CSS" scheme="https://hotkang.cn/tags/CSS/"/>
     
-      <category term="notes" scheme="http://github.com/tags/notes/"/>
+      <category term="notes" scheme="https://hotkang.cn/tags/notes/"/>
     
-      <category term="面试" scheme="http://github.com/tags/%E9%9D%A2%E8%AF%95/"/>
+      <category term="面试" scheme="https://hotkang.cn/tags/%E9%9D%A2%E8%AF%95/"/>
     
   </entry>
   
   <entry>
     <title>用nvm装node.js</title>
-    <link href="http://github.com/2018/05/30/%E7%94%A8nvm%E8%A3%85node-js/"/>
-    <id>http://github.com/2018/05/30/用nvm装node-js/</id>
+    <link href="https://hotkang.cn/2018/05/30/%E7%94%A8nvm%E8%A3%85node-js/"/>
+    <id>https://hotkang.cn/2018/05/30/用nvm装node-js/</id>
     <published>2018-05-30T14:23:44.000Z</published>
     <updated>2018-07-08T07:45:35.227Z</updated>
     
-    <content type="html"><![CDATA[<h2 id="关于node安装-持续完善"><a href="#关于node安装-持续完善" class="headerlink" title="关于node安装  [持续完善]"></a>关于node安装  <span style="font-size:.5em">[持续完善]</span></h2><blockquote><p>本地安装？全局安装？nvm安装？傻傻分不清楚？<br>使用 nvm 管理不同版本的 node 与 npm</p></blockquote><a id="more"></a><h2 id="链接自取"><a href="#链接自取" class="headerlink" title="链接自取"></a>链接自取</h2><blockquote><p>个人比较喜欢先甩参考链接,可以选择直接去看参考链接。 </p><ul><li>了解<a href="https://github.com/creationix/nvm">NVM</a>  </li><li>了解<a href="https://nodejs.org/en/" target="_blank" rel="noopener">Node.js</a>  </li><li>了解<a href="https://nodejs.org/en/download/package-manager/" target="_blank" rel="noopener">通过包管理器安装Node.js</a>NVM部分  </li><li>了解<a href="https://www.npmjs.com/get-npm" target="_blank" rel="noopener">NPM</a>  </li><li><a href="https://www.runoob.com/w3cnote/nvm-manager-node-versions.html" target="_blank" rel="noopener">本文参考链接</a> </li></ul></blockquote><hr><h2 id="一、卸载全局安装的-node"><a href="#一、卸载全局安装的-node" class="headerlink" title="一、卸载全局安装的 node"></a>一、卸载全局安装的 node</h2><p>在官网下载的 node 安装包,运行后会自动安装在全局目录,使用过程中经常会遇到一些权限问题,用以下方法卸载全局安装的 node。(不需要卸载则跳过此步骤)</p><blockquote><p>删除 node 和 node_modules 相关的文件和文件夹  </p></blockquote><p>打开Finder,按 shift+command+G 来打开前往文件夹的窗口,分别进入下列目录,删除 node 和 node_modules 相关的文件和文件夹</p><pre><code>/usr/local/lib/usr/local/include</code></pre><blockquote><p>如果你是使用的 brew install node 安装的,还需要在终端中执行以下命令来卸载</p></blockquote><pre><code>$ brew uninstall node </code></pre><blockquote><p>检查 node 和 node_modules 相关文件/文件夹是否删除成功    </p></blockquote><p>检查个人主文件夹下面的所有的 local、lib 以及 include 文件夹，并且删除所有与 node 和 node_modules 相关的文件以及文件夹</p><blockquote><p>进入 /usr/local/bin 并删除 node 可执行文件  </p></blockquote><blockquote><p>你可能还需要在终端中输入一些额外的指令  </p></blockquote><pre><code>$ sudo rm /usr/local/bin/npm$ sudo rm /usr/local/share/man/man1/node.1$ sudo rm /usr/local/lib/dtrace/node.d$ sudo rm -rf ~/.npm$ sudo rm -rf ~/.node-gyp$ sudo rm /opt/local/bin/node$ sudo rm /opt/local/include/node$ sudo rm -rf /opt/local/lib/node_modules</code></pre><h2 id="二、OSX-安装-NVM"><a href="#二、OSX-安装-NVM" class="headerlink" title="二、OSX 安装 NVM"></a>二、OSX 安装 NVM</h2><blockquote><p>用 X-Code 的命令行工具  </p></blockquote><p>运行以下命令</p><pre><code>$ xcode-select --install$ curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.0/install.sh | bash</code></pre><h2 id="三、安装多版本-node"><a href="#三、安装多版本-node" class="headerlink" title="三、安装多版本 node"></a>三、安装多版本 node</h2><p>查看远程服务器上所有的可用版本  </p><pre><code>$ nvm ls-remote</code></pre><p>安装最新版 Node    </p><pre><code>$ nvm install node </code></pre><p>安装某一版本(4.2.2)   </p><pre><code>$ nvm install 4.2.2</code></pre><p>安装4.2 系列的最新的一个版本   </p><pre><code>$ nvm install 4.2</code></pre><p>nvm 遵守语义化版本命名规则,nvm 会寻找 4.2.x 中最高的版本来安装。</p><h2 id="四、在不同版本间切换"><a href="#四、在不同版本间切换" class="headerlink" title="四、在不同版本间切换"></a>四、在不同版本间切换</h2><p>每当安装了一个新版本 Node 后,全局环境会自动把这个新版本设置为默认。</p><blockquote><p>nvm 提供 nvm use 命令用于版本切换  </p></blockquote><p>切换到最新版：</p><pre><code>$ nvm use node</code></pre><p>切换到 4.2.2：</p><pre><code>$ nvm use 4.2.2</code></pre><p>切换到最新的 4.2.x：</p><pre><code>$ nvm use 4.2</code></pre><p>每次执行切换的时候，系统都会把 node 的可执行文件链接放到特定版本的文件上。</p><h2 id="五、用-nvm-给不同的版本号设置别名"><a href="#五、用-nvm-给不同的版本号设置别名" class="headerlink" title="五、用 nvm 给不同的版本号设置别名"></a>五、用 nvm 给不同的版本号设置别名</h2><p>给4.2.2 版本号起个别名hotyan-version  </p><pre><code>$ nvm alias hotyan-version 4.2.2</code></pre><p>运行:</p><pre><code>$ nvm use hotyan-version</code></pre><p>取消别名：</p><pre><code>$ nvm unalias hotyan-version  </code></pre><h2 id="六、列出已安装实例"><a href="#六、列出已安装实例" class="headerlink" title="六、列出已安装实例"></a>六、列出已安装实例</h2><pre><code>$ nvm ls</code></pre><h2 id="七、确认某个版本Node的路径"><a href="#七、确认某个版本Node的路径" class="headerlink" title="七、确认某个版本Node的路径"></a>七、确认某个版本Node的路径</h2><pre><code>$ nvm which 4.2.2</code></pre><h2 id="八、检查是否成功安装node和npm"><a href="#八、检查是否成功安装node和npm" class="headerlink" title="八、检查是否成功安装node和npm"></a>八、检查是否成功安装node和npm</h2><p>当成功下载Node.js时,会自动安装npm。<br>检查Node</p><pre><code>$ node -v</code></pre><p>确认npm</p><pre><code>$ npm -v</code></pre>]]></content>
+    <content type="html"><![CDATA[<h2 id="关于node安装-持续完善"><a href="#关于node安装-持续完善" class="headerlink" title="关于node安装  [持续完善]"></a>关于node安装  <span style="font-size:.5em">[持续完善]</span></h2><blockquote><p>本地安装？全局安装？nvm安装？傻傻分不清楚？<br>使用 nvm 管理不同版本的 node 与 npm</p></blockquote><a id="more"></a><h2 id="链接自取"><a href="#链接自取" class="headerlink" title="链接自取"></a>链接自取</h2><blockquote><p>个人比较喜欢先甩参考链接,可以选择直接去看参考链接。 </p><ul><li>了解<a href="https://github.com/creationix/nvm" target="_blank" rel="noopener">NVM</a>  </li><li>了解<a href="https://nodejs.org/en/" target="_blank" rel="noopener">Node.js</a>  </li><li>了解<a href="https://nodejs.org/en/download/package-manager/" target="_blank" rel="noopener">通过包管理器安装Node.js</a>NVM部分  </li><li>了解<a href="https://www.npmjs.com/get-npm" target="_blank" rel="noopener">NPM</a>  </li><li><a href="https://www.runoob.com/w3cnote/nvm-manager-node-versions.html" target="_blank" rel="noopener">本文参考链接</a> </li></ul></blockquote><hr><h2 id="一、卸载全局安装的-node"><a href="#一、卸载全局安装的-node" class="headerlink" title="一、卸载全局安装的 node"></a>一、卸载全局安装的 node</h2><p>在官网下载的 node 安装包,运行后会自动安装在全局目录,使用过程中经常会遇到一些权限问题,用以下方法卸载全局安装的 node。(不需要卸载则跳过此步骤)</p><blockquote><p>删除 node 和 node_modules 相关的文件和文件夹  </p></blockquote><p>打开Finder,按 shift+command+G 来打开前往文件夹的窗口,分别进入下列目录,删除 node 和 node_modules 相关的文件和文件夹</p><pre><code>/usr/local/lib/usr/local/include</code></pre><blockquote><p>如果你是使用的 brew install node 安装的,还需要在终端中执行以下命令来卸载</p></blockquote><pre><code>$ brew uninstall node </code></pre><blockquote><p>检查 node 和 node_modules 相关文件/文件夹是否删除成功    </p></blockquote><p>检查个人主文件夹下面的所有的 local、lib 以及 include 文件夹，并且删除所有与 node 和 node_modules 相关的文件以及文件夹</p><blockquote><p>进入 /usr/local/bin 并删除 node 可执行文件  </p></blockquote><blockquote><p>你可能还需要在终端中输入一些额外的指令  </p></blockquote><pre><code>$ sudo rm /usr/local/bin/npm$ sudo rm /usr/local/share/man/man1/node.1$ sudo rm /usr/local/lib/dtrace/node.d$ sudo rm -rf ~/.npm$ sudo rm -rf ~/.node-gyp$ sudo rm /opt/local/bin/node$ sudo rm /opt/local/include/node$ sudo rm -rf /opt/local/lib/node_modules</code></pre><h2 id="二、OSX-安装-NVM"><a href="#二、OSX-安装-NVM" class="headerlink" title="二、OSX 安装 NVM"></a>二、OSX 安装 NVM</h2><blockquote><p>用 X-Code 的命令行工具  </p></blockquote><p>运行以下命令</p><pre><code>$ xcode-select --install$ curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.0/install.sh | bash</code></pre><h2 id="三、安装多版本-node"><a href="#三、安装多版本-node" class="headerlink" title="三、安装多版本 node"></a>三、安装多版本 node</h2><p>查看远程服务器上所有的可用版本  </p><pre><code>$ nvm ls-remote</code></pre><p>安装最新版 Node    </p><pre><code>$ nvm install node </code></pre><p>安装某一版本(4.2.2)   </p><pre><code>$ nvm install 4.2.2</code></pre><p>安装4.2 系列的最新的一个版本   </p><pre><code>$ nvm install 4.2</code></pre><p>nvm 遵守语义化版本命名规则,nvm 会寻找 4.2.x 中最高的版本来安装。</p><h2 id="四、在不同版本间切换"><a href="#四、在不同版本间切换" class="headerlink" title="四、在不同版本间切换"></a>四、在不同版本间切换</h2><p>每当安装了一个新版本 Node 后,全局环境会自动把这个新版本设置为默认。</p><blockquote><p>nvm 提供 nvm use 命令用于版本切换  </p></blockquote><p>切换到最新版：</p><pre><code>$ nvm use node</code></pre><p>切换到 4.2.2：</p><pre><code>$ nvm use 4.2.2</code></pre><p>切换到最新的 4.2.x：</p><pre><code>$ nvm use 4.2</code></pre><p>每次执行切换的时候，系统都会把 node 的可执行文件链接放到特定版本的文件上。</p><h2 id="五、用-nvm-给不同的版本号设置别名"><a href="#五、用-nvm-给不同的版本号设置别名" class="headerlink" title="五、用 nvm 给不同的版本号设置别名"></a>五、用 nvm 给不同的版本号设置别名</h2><p>给4.2.2 版本号起个别名hotyan-version  </p><pre><code>$ nvm alias hotyan-version 4.2.2</code></pre><p>运行:</p><pre><code>$ nvm use hotyan-version</code></pre><p>取消别名：</p><pre><code>$ nvm unalias hotyan-version  </code></pre><h2 id="六、列出已安装实例"><a href="#六、列出已安装实例" class="headerlink" title="六、列出已安装实例"></a>六、列出已安装实例</h2><pre><code>$ nvm ls</code></pre><h2 id="七、确认某个版本Node的路径"><a href="#七、确认某个版本Node的路径" class="headerlink" title="七、确认某个版本Node的路径"></a>七、确认某个版本Node的路径</h2><pre><code>$ nvm which 4.2.2</code></pre><h2 id="八、检查是否成功安装node和npm"><a href="#八、检查是否成功安装node和npm" class="headerlink" title="八、检查是否成功安装node和npm"></a>八、检查是否成功安装node和npm</h2><p>当成功下载Node.js时,会自动安装npm。<br>检查Node</p><pre><code>$ node -v</code></pre><p>确认npm</p><pre><code>$ npm -v</code></pre>]]></content>
     
     <summary type="html">
     
@@ -285,21 +285,21 @@
     
     </summary>
     
-      <category term="Install" scheme="http://github.com/categories/Install/"/>
+      <category term="Install" scheme="https://hotkang.cn/categories/Install/"/>
     
     
-      <category term="node.js" scheme="http://github.com/tags/node-js/"/>
+      <category term="node.js" scheme="https://hotkang.cn/tags/node-js/"/>
     
-      <category term="nvm" scheme="http://github.com/tags/nvm/"/>
+      <category term="nvm" scheme="https://hotkang.cn/tags/nvm/"/>
     
-      <category term="npm" scheme="http://github.com/tags/npm/"/>
+      <category term="npm" scheme="https://hotkang.cn/tags/npm/"/>
     
   </entry>
   
   <entry>
     <title>用hexo搭建github博客二</title>
-    <link href="http://github.com/2018/05/29/%E7%94%A8hexo%E6%90%AD%E5%BB%BAgithub%E5%8D%9A%E5%AE%A2%E4%BA%8C/"/>
-    <id>http://github.com/2018/05/29/用hexo搭建github博客二/</id>
+    <link href="https://hotkang.cn/2018/05/29/%E7%94%A8hexo%E6%90%AD%E5%BB%BAgithub%E5%8D%9A%E5%AE%A2%E4%BA%8C/"/>
+    <id>https://hotkang.cn/2018/05/29/用hexo搭建github博客二/</id>
     <published>2018-05-29T07:39:01.000Z</published>
     <updated>2018-07-08T09:41:08.059Z</updated>
     
@@ -313,23 +313,23 @@
     
     </summary>
     
-      <category term="hotYan_博客之路" scheme="http://github.com/categories/hotYan-%E5%8D%9A%E5%AE%A2%E4%B9%8B%E8%B7%AF/"/>
+      <category term="hotYan_博客之路" scheme="https://hotkang.cn/categories/hotYan-%E5%8D%9A%E5%AE%A2%E4%B9%8B%E8%B7%AF/"/>
     
     
-      <category term="hexo" scheme="http://github.com/tags/hexo/"/>
+      <category term="hexo" scheme="https://hotkang.cn/tags/hexo/"/>
     
-      <category term="博客" scheme="http://github.com/tags/%E5%8D%9A%E5%AE%A2/"/>
+      <category term="博客" scheme="https://hotkang.cn/tags/%E5%8D%9A%E5%AE%A2/"/>
     
   </entry>
   
   <entry>
     <title>用hexo搭建github博客一</title>
-    <link href="http://github.com/2018/05/29/%E7%94%A8hexo%E6%90%AD%E5%BB%BAgithub%E5%8D%9A%E5%AE%A2%E4%B8%80/"/>
-    <id>http://github.com/2018/05/29/用hexo搭建github博客一/</id>
+    <link href="https://hotkang.cn/2018/05/29/%E7%94%A8hexo%E6%90%AD%E5%BB%BAgithub%E5%8D%9A%E5%AE%A2%E4%B8%80/"/>
+    <id>https://hotkang.cn/2018/05/29/用hexo搭建github博客一/</id>
     <published>2018-05-29T07:38:51.000Z</published>
     <updated>2018-07-08T07:44:13.079Z</updated>
     
-    <content type="html"><![CDATA[<h2 id="搭建博客-待完善"><a href="#搭建博客-待完善" class="headerlink" title="搭建博客 [待完善]"></a>搭建博客 <span style="font-size:.5em">[待完善]</span></h2><blockquote><p>一直想搭个人博客,却无从下手？？</p></blockquote><a id="more"></a><h2 id="链接自取"><a href="#链接自取" class="headerlink" title="链接自取"></a>链接自取</h2><blockquote><p>个人比较喜欢先甩参考链接,可以选择直接去看参考链接。</p><ul><li><a href="http://dmkf.xyz/2017/03/12/6272440/" target="_blank" rel="noopener">参考教程1</a>  </li><li><a href="https://sunny73.github.io/2018/02/10/Build-my-first-blog/" target="_blank" rel="noopener">参考教程2</a>  </li><li><a href="https://hexo.io/docs/" target="_blank" rel="noopener">Hexo官网文档</a></li></ul></blockquote><p>【注意】第二个链接也是参考第一个写的,第一个链接加载超级慢,可以选择看第二个</p><hr><h2 id="一、准备工作"><a href="#一、准备工作" class="headerlink" title="一、准备工作"></a>一、准备工作</h2><blockquote><p>1.默认已有GitHub账号  </p></blockquote><ul><li>没有GitHub账号？？<a href="https://github.com/">点击注册</a>  </li></ul><blockquote><p>2.默认已安装Git  </p></blockquote><ul><li>没有安装Git？？<a href="https://git-scm.com/book/zh/v2/%E8%B5%B7%E6%AD%A5-%E5%AE%89%E8%A3%85-Git" target="_blank" rel="noopener">了解如何安装</a></li></ul><blockquote><p>3.默认已安装 Node.js  </p></blockquote><ul><li>没有安装Node.js??<a href="https://hotyan.github.io/2018/05/30/%E7%94%A8nvm%E8%A3%85node-js/" target="_blank" rel="noopener">了解如何安装</a></li></ul><blockquote><p>4.Install Hexo    </p></blockquote><ul><li><p>全局下载hexo</p><pre><code>$ npm install -g hexo-cli</code></pre></li><li><p>查看是否成功  </p><pre><code>$ hexo</code></pre></li></ul><p>进入<a href="https://hexo.io/docs/" target="_blank" rel="noopener">Hexo官网文档</a>了解更多</p><h2 id="二、初始化博客"><a href="#二、初始化博客" class="headerlink" title="二、初始化博客"></a>二、初始化博客</h2><pre><code>$ hexo init HotYan_Bolg //创建一个放在博客项目的文件$ cd HotYan_Bolg       //进入该文件$ npm install       //安装依赖包</code></pre><p><br>进入HotYan_Bolg,已自动生成以下文件</p><pre><code>.├── _config.yml├── package.json├── scaffolds├── source|   ├── _drafts|   └── _posts└── themes</code></pre><h2 id="三、本地搭建"><a href="#三、本地搭建" class="headerlink" title="三、本地搭建"></a>三、本地搭建</h2><blockquote><p>1.修改_config.yml文件  </p></blockquote><p>根据个人情况修改以下部分:</p><pre><code>/*修改前*/# Sitetitle: # The title of your websitesubtitle: # The subtitle of your websitedescription: # The description of your websiteauthor: # Your namelanguage: # The language of your websitetimezone:/*修改后*/# Sitetitle: hotYan&apos;s Blog subtitle: 爱美的程序媛description: 毒鸡汤Yankeywords:author: hotYanlanguage: zh-CNtimezone: Asia/Shanghai</code></pre><p>【每一项的填写,其 <strong>:</strong> 后面都要保留一个空格,下同。】</p><blockquote><p>2.本地运行  </p></blockquote><pre><code>$ cd  HotYan_Blog //进入博客文件夹目录$ hexo generate // 生成文件$ hexo server   //本地部署/*简写如下*/$ hexo g$ hexo s</code></pre><p>可在浏览器输入地址 <a href="http://host:4000" target="_blank" rel="noopener">http://host:4000</a> 进行查看</p><h2 id="四、配置远程环境-线上运行"><a href="#四、配置远程环境-线上运行" class="headerlink" title="四、配置远程环境,线上运行"></a>四、配置远程环境,线上运行</h2><p>【不一定要线上运行可跳过此步骤】</p><blockquote><p>1.github新建一个库</p></blockquote><pre><code>库名格式为: username.github.io //非常重要！！！</code></pre><p>你可能想了解一下<a href="https://pages.github.com/" target="_blank" rel="noopener">GitHub Pages</a></p><blockquote><p>2.配置_config.yml文件</p><ul><li>配置统一资源定位符（个人域名）  </li></ul></blockquote><pre><code>/*配置前*/# URL## If your site is put in a subdirectory, .....url: http://yoursite.com/child/*配置后*/  # URL## If your site is put in a subdirectory,......url: http://github.com</code></pre><ul><li><p>配置部署  </p><pre><code># Deployment## Docs: https://hexo.io/docs/deployment.htmldeploy:    type: git     /*repo项是之前Github上创建好的仓库地址*/    repo: https://github.com/hotYan/hotYan.github.io.git    branch: master</code></pre></li></ul><blockquote><p>3.线上运行  </p></blockquote><pre><code>$ cd  HotYan_Blog //进入博客文件夹目录$ hexo generate // 生成文件$ hexo deploy   // 线上部署/*简写如下*/$ hexo g$ hexo d</code></pre><p>可在浏览器输入博客地址 <a href="https://hotyan.github.io/" target="_blank" rel="noopener">https://hotyan.github.io/</a> 进行查看</p><h2 id="五、修改主题"><a href="#五、修改主题" class="headerlink" title="五、修改主题"></a>五、修改主题</h2><p>1.<a href="https://github.com/iissnan/hexo-theme-next">下载Next主题</a>  </p><p>2.下载后,将压缩包解压缩,复制其中名称为next的文件夹到你博客文件的themes下  </p><p>3.修改博客文件根目录下的_config.yml,将主题改为next</p><pre><code># Extensions## Plugins: https://hexo.io/plugins/## Themes: https://hexo.io/themes/# theme: landscape    theme: next   </code></pre><h2 id="六、更新Hexo部署"><a href="#六、更新Hexo部署" class="headerlink" title="六、更新Hexo部署"></a>六、更新Hexo部署</h2><pre><code>$ cd  HotYan_Blog //进入博客文件夹目录$ hexo clean    // 清理缓存$ hexo generate // 生成文件$ hexo deploy   // 线上部署/*简写如下*/$ hexo clean$ hexo g$ hexo d</code></pre><h2 id="七、创建新文章"><a href="#七、创建新文章" class="headerlink" title="七、创建新文章"></a>七、创建新文章</h2><blockquote><p>1.创建  </p></blockquote><pre><code>$ cd  HotYan_Blog   //进入博客文件夹目录$ hexo new &quot;用hexo搭建github博客一&quot;  // 新建一篇文章</code></pre><p>可在博客文件夹下的source/_post查看你新建的markdown文件  </p><blockquote><p>2.编写内容</p></blockquote><p>如果不清楚如何编写markdown文件,你可能需要先了解一下。</p><ul><li><a href="https://github.com/younghz/Markdown">参考链接1</a></li><li><a href="http://xianbai.me/learn-md/article/syntax/blockquotes.html" target="_blank" rel="noopener">参考链接2</a></li></ul><blockquote><p>3.更新Hexo部署(同上六)</p></blockquote>]]></content>
+    <content type="html"><![CDATA[<h2 id="搭建博客-待完善"><a href="#搭建博客-待完善" class="headerlink" title="搭建博客 [待完善]"></a>搭建博客 <span style="font-size:.5em">[待完善]</span></h2><blockquote><p>一直想搭个人博客,却无从下手？？</p></blockquote><a id="more"></a><h2 id="链接自取"><a href="#链接自取" class="headerlink" title="链接自取"></a>链接自取</h2><blockquote><p>个人比较喜欢先甩参考链接,可以选择直接去看参考链接。</p><ul><li><a href="http://dmkf.xyz/2017/03/12/6272440/" target="_blank" rel="noopener">参考教程1</a>  </li><li><a href="https://sunny73.github.io/2018/02/10/Build-my-first-blog/" target="_blank" rel="noopener">参考教程2</a>  </li><li><a href="https://hexo.io/docs/" target="_blank" rel="noopener">Hexo官网文档</a></li></ul></blockquote><p>【注意】第二个链接也是参考第一个写的,第一个链接加载超级慢,可以选择看第二个</p><hr><h2 id="一、准备工作"><a href="#一、准备工作" class="headerlink" title="一、准备工作"></a>一、准备工作</h2><blockquote><p>1.默认已有GitHub账号  </p></blockquote><ul><li>没有GitHub账号？？<a href="https://github.com/" target="_blank" rel="noopener">点击注册</a>  </li></ul><blockquote><p>2.默认已安装Git  </p></blockquote><ul><li>没有安装Git？？<a href="https://git-scm.com/book/zh/v2/%E8%B5%B7%E6%AD%A5-%E5%AE%89%E8%A3%85-Git" target="_blank" rel="noopener">了解如何安装</a></li></ul><blockquote><p>3.默认已安装 Node.js  </p></blockquote><ul><li>没有安装Node.js??<a href="https://hotyan.github.io/2018/05/30/%E7%94%A8nvm%E8%A3%85node-js/" target="_blank" rel="noopener">了解如何安装</a></li></ul><blockquote><p>4.Install Hexo    </p></blockquote><ul><li><p>全局下载hexo</p><pre><code>$ npm install -g hexo-cli</code></pre></li><li><p>查看是否成功  </p><pre><code>$ hexo</code></pre></li></ul><p>进入<a href="https://hexo.io/docs/" target="_blank" rel="noopener">Hexo官网文档</a>了解更多</p><h2 id="二、初始化博客"><a href="#二、初始化博客" class="headerlink" title="二、初始化博客"></a>二、初始化博客</h2><pre><code>$ hexo init HotYan_Bolg //创建一个放在博客项目的文件$ cd HotYan_Bolg       //进入该文件$ npm install       //安装依赖包</code></pre><p><br>进入HotYan_Bolg,已自动生成以下文件</p><pre><code>.├── _config.yml├── package.json├── scaffolds├── source|   ├── _drafts|   └── _posts└── themes</code></pre><h2 id="三、本地搭建"><a href="#三、本地搭建" class="headerlink" title="三、本地搭建"></a>三、本地搭建</h2><blockquote><p>1.修改_config.yml文件  </p></blockquote><p>根据个人情况修改以下部分:</p><pre><code>/*修改前*/# Sitetitle: # The title of your websitesubtitle: # The subtitle of your websitedescription: # The description of your websiteauthor: # Your namelanguage: # The language of your websitetimezone:/*修改后*/# Sitetitle: hotYan&apos;s Blog subtitle: 爱美的程序媛description: 毒鸡汤Yankeywords:author: hotYanlanguage: zh-CNtimezone: Asia/Shanghai</code></pre><p>【每一项的填写,其 <strong>:</strong> 后面都要保留一个空格,下同。】</p><blockquote><p>2.本地运行  </p></blockquote><pre><code>$ cd  HotYan_Blog //进入博客文件夹目录$ hexo generate // 生成文件$ hexo server   //本地部署/*简写如下*/$ hexo g$ hexo s</code></pre><p>可在浏览器输入地址 <a href="http://host:4000" target="_blank" rel="noopener">http://host:4000</a> 进行查看</p><h2 id="四、配置远程环境-线上运行"><a href="#四、配置远程环境-线上运行" class="headerlink" title="四、配置远程环境,线上运行"></a>四、配置远程环境,线上运行</h2><p>【不一定要线上运行可跳过此步骤】</p><blockquote><p>1.github新建一个库</p></blockquote><pre><code>库名格式为: username.github.io //非常重要！！！</code></pre><p>你可能想了解一下<a href="https://pages.github.com/" target="_blank" rel="noopener">GitHub Pages</a></p><blockquote><p>2.配置_config.yml文件</p><ul><li>配置统一资源定位符（个人域名）  </li></ul></blockquote><pre><code>/*配置前*/# URL## If your site is put in a subdirectory, .....url: http://yoursite.com/child/*配置后*/  # URL## If your site is put in a subdirectory,......url: http://github.com</code></pre><ul><li><p>配置部署  </p><pre><code># Deployment## Docs: https://hexo.io/docs/deployment.htmldeploy:    type: git     /*repo项是之前Github上创建好的仓库地址*/    repo: https://github.com/hotYan/hotYan.github.io.git    branch: master</code></pre></li></ul><blockquote><p>3.线上运行  </p></blockquote><pre><code>$ cd  HotYan_Blog //进入博客文件夹目录$ hexo generate // 生成文件$ hexo deploy   // 线上部署/*简写如下*/$ hexo g$ hexo d</code></pre><p>可在浏览器输入博客地址 <a href="https://hotyan.github.io/" target="_blank" rel="noopener">https://hotyan.github.io/</a> 进行查看</p><h2 id="五、修改主题"><a href="#五、修改主题" class="headerlink" title="五、修改主题"></a>五、修改主题</h2><p>1.<a href="https://github.com/iissnan/hexo-theme-next" target="_blank" rel="noopener">下载Next主题</a>  </p><p>2.下载后,将压缩包解压缩,复制其中名称为next的文件夹到你博客文件的themes下  </p><p>3.修改博客文件根目录下的_config.yml,将主题改为next</p><pre><code># Extensions## Plugins: https://hexo.io/plugins/## Themes: https://hexo.io/themes/# theme: landscape    theme: next   </code></pre><h2 id="六、更新Hexo部署"><a href="#六、更新Hexo部署" class="headerlink" title="六、更新Hexo部署"></a>六、更新Hexo部署</h2><pre><code>$ cd  HotYan_Blog //进入博客文件夹目录$ hexo clean    // 清理缓存$ hexo generate // 生成文件$ hexo deploy   // 线上部署/*简写如下*/$ hexo clean$ hexo g$ hexo d</code></pre><h2 id="七、创建新文章"><a href="#七、创建新文章" class="headerlink" title="七、创建新文章"></a>七、创建新文章</h2><blockquote><p>1.创建  </p></blockquote><pre><code>$ cd  HotYan_Blog   //进入博客文件夹目录$ hexo new &quot;用hexo搭建github博客一&quot;  // 新建一篇文章</code></pre><p>可在博客文件夹下的source/_post查看你新建的markdown文件  </p><blockquote><p>2.编写内容</p></blockquote><p>如果不清楚如何编写markdown文件,你可能需要先了解一下。</p><ul><li><a href="https://github.com/younghz/Markdown" target="_blank" rel="noopener">参考链接1</a></li><li><a href="http://xianbai.me/learn-md/article/syntax/blockquotes.html" target="_blank" rel="noopener">参考链接2</a></li></ul><blockquote><p>3.更新Hexo部署(同上六)</p></blockquote>]]></content>
     
     <summary type="html">
     
@@ -339,19 +339,19 @@
     
     </summary>
     
-      <category term="hotYan_博客之路" scheme="http://github.com/categories/hotYan-%E5%8D%9A%E5%AE%A2%E4%B9%8B%E8%B7%AF/"/>
+      <category term="hotYan_博客之路" scheme="https://hotkang.cn/categories/hotYan-%E5%8D%9A%E5%AE%A2%E4%B9%8B%E8%B7%AF/"/>
     
     
-      <category term="hexo" scheme="http://github.com/tags/hexo/"/>
+      <category term="hexo" scheme="https://hotkang.cn/tags/hexo/"/>
     
-      <category term="博客" scheme="http://github.com/tags/%E5%8D%9A%E5%AE%A2/"/>
+      <category term="博客" scheme="https://hotkang.cn/tags/%E5%8D%9A%E5%AE%A2/"/>
     
   </entry>
   
   <entry>
     <title>Mac Use Homebrew Install Mongodb</title>
-    <link href="http://github.com/2018/05/29/use%20homebrew%20install%20mongodb/"/>
-    <id>http://github.com/2018/05/29/use homebrew install mongodb/</id>
+    <link href="https://hotkang.cn/2018/05/29/use%20homebrew%20install%20mongodb/"/>
+    <id>https://hotkang.cn/2018/05/29/use homebrew install mongodb/</id>
     <published>2018-05-29T07:38:51.000Z</published>
     <updated>2018-06-27T16:02:36.039Z</updated>
     
@@ -365,19 +365,19 @@
     
     </summary>
     
-      <category term="Install" scheme="http://github.com/categories/Install/"/>
+      <category term="Install" scheme="https://hotkang.cn/categories/Install/"/>
     
     
-      <category term="Homebrew" scheme="http://github.com/tags/Homebrew/"/>
+      <category term="Homebrew" scheme="https://hotkang.cn/tags/Homebrew/"/>
     
-      <category term="Mongodb" scheme="http://github.com/tags/Mongodb/"/>
+      <category term="Mongodb" scheme="https://hotkang.cn/tags/Mongodb/"/>
     
   </entry>
   
   <entry>
     <title>高性能网站建设指南14条规则</title>
-    <link href="http://github.com/2018/05/29/%E9%AB%98%E6%80%A7%E8%83%BD%E7%BD%91%E7%AB%99%E5%BB%BA%E8%AE%BE%E6%8C%87%E5%8D%9714%E6%9D%A1%E8%A7%84%E5%88%99/"/>
-    <id>http://github.com/2018/05/29/高性能网站建设指南14条规则/</id>
+    <link href="https://hotkang.cn/2018/05/29/%E9%AB%98%E6%80%A7%E8%83%BD%E7%BD%91%E7%AB%99%E5%BB%BA%E8%AE%BE%E6%8C%87%E5%8D%9714%E6%9D%A1%E8%A7%84%E5%88%99/"/>
+    <id>https://hotkang.cn/2018/05/29/高性能网站建设指南14条规则/</id>
     <published>2018-05-29T00:54:54.000Z</published>
     <updated>2018-06-19T13:52:27.846Z</updated>
     
@@ -391,17 +391,17 @@
     
     </summary>
     
-      <category term="换个角度看性能优化" scheme="http://github.com/categories/%E6%8D%A2%E4%B8%AA%E8%A7%92%E5%BA%A6%E7%9C%8B%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96/"/>
+      <category term="换个角度看性能优化" scheme="https://hotkang.cn/categories/%E6%8D%A2%E4%B8%AA%E8%A7%92%E5%BA%A6%E7%9C%8B%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96/"/>
     
     
-      <category term="性能优化" scheme="http://github.com/tags/%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96/"/>
+      <category term="性能优化" scheme="https://hotkang.cn/tags/%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96/"/>
     
   </entry>
   
   <entry>
     <title>7类35条网页性能优化</title>
-    <link href="http://github.com/2018/05/29/7%E7%B1%BB35%E6%9D%A1%E7%BD%91%E9%A1%B5%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96/"/>
-    <id>http://github.com/2018/05/29/7类35条网页性能优化/</id>
+    <link href="https://hotkang.cn/2018/05/29/7%E7%B1%BB35%E6%9D%A1%E7%BD%91%E9%A1%B5%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96/"/>
+    <id>https://hotkang.cn/2018/05/29/7类35条网页性能优化/</id>
     <published>2018-05-29T00:52:55.000Z</published>
     <updated>2018-06-19T13:51:19.789Z</updated>
     
@@ -415,17 +415,17 @@
     
     </summary>
     
-      <category term="换个角度看性能优化" scheme="http://github.com/categories/%E6%8D%A2%E4%B8%AA%E8%A7%92%E5%BA%A6%E7%9C%8B%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96/"/>
+      <category term="换个角度看性能优化" scheme="https://hotkang.cn/categories/%E6%8D%A2%E4%B8%AA%E8%A7%92%E5%BA%A6%E7%9C%8B%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96/"/>
     
     
-      <category term="性能优化" scheme="http://github.com/tags/%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96/"/>
+      <category term="性能优化" scheme="https://hotkang.cn/tags/%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96/"/>
     
   </entry>
   
   <entry>
     <title>从浏览器请求和响应过程来谈性能优化</title>
-    <link href="http://github.com/2018/05/29/%E4%BB%8E%E6%B5%8F%E8%A7%88%E5%99%A8%E8%AF%B7%E6%B1%82%E5%92%8C%E5%93%8D%E5%BA%94%E8%BF%87%E7%A8%8B%E6%9D%A5%E8%B0%88%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96/"/>
-    <id>http://github.com/2018/05/29/从浏览器请求和响应过程来谈性能优化/</id>
+    <link href="https://hotkang.cn/2018/05/29/%E4%BB%8E%E6%B5%8F%E8%A7%88%E5%99%A8%E8%AF%B7%E6%B1%82%E5%92%8C%E5%93%8D%E5%BA%94%E8%BF%87%E7%A8%8B%E6%9D%A5%E8%B0%88%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96/"/>
+    <id>https://hotkang.cn/2018/05/29/从浏览器请求和响应过程来谈性能优化/</id>
     <published>2018-05-29T00:52:08.000Z</published>
     <updated>2018-05-30T16:32:16.917Z</updated>
     
@@ -439,10 +439,10 @@
     
     </summary>
     
-      <category term="换个角度看性能优化" scheme="http://github.com/categories/%E6%8D%A2%E4%B8%AA%E8%A7%92%E5%BA%A6%E7%9C%8B%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96/"/>
+      <category term="换个角度看性能优化" scheme="https://hotkang.cn/categories/%E6%8D%A2%E4%B8%AA%E8%A7%92%E5%BA%A6%E7%9C%8B%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96/"/>
     
     
-      <category term="性能优化" scheme="http://github.com/tags/%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96/"/>
+      <category term="性能优化" scheme="https://hotkang.cn/tags/%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96/"/>
     
   </entry>
   

@@ -493,7 +493,7 @@ pre,
 }
 pre,
 code {
-  font-family: 'Weibei SC', consolas, Menlo, "PingFang SC", "Microsoft YaHei", monospace;
+  font-family: 'STXingkai', consolas, Menlo, "PingFang SC", "Microsoft YaHei", monospace;
 }
 code {
   padding: 2px 4px;
@@ -1715,7 +1715,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #776aff;
+  background: #fc3e63;
 }
 .links-of-blogroll {
   font-size: 13px;

@@ -91,7 +91,7 @@
   
     
     
-    <link href="//fonts.googleapis.com/css?family=Hannotate SC:300,300italic,400,400italic,700,700italic|Yuanti SC:300,300italic,400,400italic,700,700italic|Weibei SC:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+    <link href="//fonts.googleapis.com/css?family=Hannotate SC:300,300italic,400,400italic,700,700italic|Yuanti SC:300,300italic,400,400italic,700,700italic|STXingkai:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
   
 
 
@@ -134,18 +134,18 @@
 
 
 
-<meta name="description" content="优化博客 [待完善] 搜索了很多Next主题的效果，总结了下常用的效果~">
+<meta name="description" content="优化博客 [持续完善] 搜索了很多Next主题的效果，总结了下常用的效果~">
 <meta name="keywords" content="hexo,博客">
 <meta property="og:type" content="article">
 <meta property="og:title" content="用hexo搭建github博客二">
 <meta property="og:url" content="https://hotkang.cn/2018/05/29/用hexo搭建github博客二/index.html">
 <meta property="og:site_name" content="hotYan&#39;s Blog">
-<meta property="og:description" content="优化博客 [待完善] 搜索了很多Next主题的效果，总结了下常用的效果~">
+<meta property="og:description" content="优化博客 [持续完善] 搜索了很多Next主题的效果，总结了下常用的效果~">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-07-08T09:41:08.059Z">
+<meta property="og:updated_time" content="2018-07-11T17:03:56.467Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="用hexo搭建github博客二">
-<meta name="twitter:description" content="优化博客 [待完善] 搜索了很多Next主题的效果，总结了下常用的效果~">
+<meta name="twitter:description" content="优化博客 [持续完善] 搜索了很多Next主题的效果，总结了下常用的效果~">
 
 
 
@@ -413,7 +413,7 @@
       
 
       
-        <h2 id="优化博客-待完善"><a href="#优化博客-待完善" class="headerlink" title="优化博客 [待完善]"></a>优化博客 <span style="font-size:.5em">[待完善]</span></h2><blockquote>
+        <h2 id="优化博客-持续完善"><a href="#优化博客-持续完善" class="headerlink" title="优化博客 [持续完善]"></a>优化博客 <span style="font-size:.5em">[持续完善]</span></h2><blockquote>
 <p>搜索了很多Next主题的效果，总结了下常用的效果~  </p>
 </blockquote>
 <a id="more"></a>
@@ -687,7 +687,20 @@ passage_end_tag:
 &lt;script type=&quot;text/javascript&quot; src=&quot;/js/src/love.js&quot;&gt;&lt;/script&gt;
 </code></pre></li>
 </ol>
+<p>【我发现在文章详情界面,没有效果,理论上应该是有效果的吧？？可能源码被我改砸了。。】</p>
+<h2 id="十四、取消文章目录自动编号"><a href="#十四、取消文章目录自动编号" class="headerlink" title="十四、取消文章目录自动编号"></a>十四、取消文章目录自动编号</h2><blockquote>
+<p>修改themes/next/_config.yml文件toc属性  </p>
+</blockquote>
+<pre><code># Table Of Contents in the Sidebar
+toc:
+  enable: true
 
+# Automatically add list number to toc.
+  number: false      /*修改这里*/
+
+# If true, all words will placed on next lines if header width longer then sidebar width.
+  wrap: false
+</code></pre>
       
     </div>
     
@@ -730,8 +743,8 @@ passage_end_tag:
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/05/29/用hexo搭建github博客一/" rel="next" title="用hexo搭建github博客一">
-                <i class="fa fa-chevron-left"></i> 用hexo搭建github博客一
+              <a href="/2018/05/29/use homebrew install mongodb/" rel="next" title="Mac Use Homebrew Install Mongodb">
+                <i class="fa fa-chevron-left"></i> Mac Use Homebrew Install Mongodb
               </a>
             
           </div>
@@ -905,7 +918,7 @@ passage_end_tag:
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#优化博客-待完善"><span class="nav-text">优化博客 [待完善]</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#链接自取"><span class="nav-text">链接自取</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#一、修改Next主题模式"><span class="nav-text">一、修改Next主题模式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#二、设置首页预览摘要"><span class="nav-text">二、设置首页预览摘要</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#三、侧边栏显示效果"><span class="nav-text">三、侧边栏显示效果</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#四、侧边栏社交链接"><span class="nav-text">四、侧边栏社交链接</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#五、设置RSS"><span class="nav-text">五、设置RSS</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#六、添加菜单选项"><span class="nav-text">六、添加菜单选项</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#七、修改文章底部标签样式"><span class="nav-text">七、修改文章底部标签样式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#八、文章末尾添加结束标记"><span class="nav-text">八、文章末尾添加结束标记</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#九、访问量统计"><span class="nav-text">九、访问量统计</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#十、修改头像"><span class="nav-text">十、修改头像</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#十一、添加背景图"><span class="nav-text">十一、添加背景图</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#十二、修改各版块透明度"><span class="nav-text">十二、修改各版块透明度</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#十三、点击出现桃心"><span class="nav-text">十三、点击出现桃心</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#优化博客-持续完善"><span class="nav-text">优化博客 [持续完善]</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#链接自取"><span class="nav-text">链接自取</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#一、修改Next主题模式"><span class="nav-text">一、修改Next主题模式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#二、设置首页预览摘要"><span class="nav-text">二、设置首页预览摘要</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#三、侧边栏显示效果"><span class="nav-text">三、侧边栏显示效果</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#四、侧边栏社交链接"><span class="nav-text">四、侧边栏社交链接</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#五、设置RSS"><span class="nav-text">五、设置RSS</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#六、添加菜单选项"><span class="nav-text">六、添加菜单选项</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#七、修改文章底部标签样式"><span class="nav-text">七、修改文章底部标签样式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#八、文章末尾添加结束标记"><span class="nav-text">八、文章末尾添加结束标记</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#九、访问量统计"><span class="nav-text">九、访问量统计</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#十、修改头像"><span class="nav-text">十、修改头像</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#十一、添加背景图"><span class="nav-text">十一、添加背景图</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#十二、修改各版块透明度"><span class="nav-text">十二、修改各版块透明度</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#十三、点击出现桃心"><span class="nav-text">十三、点击出现桃心</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#十四、取消文章目录自动编号"><span class="nav-text">十四、取消文章目录自动编号</span></a></li></ol></div>
             
 
           </div>

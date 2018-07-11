@@ -91,7 +91,7 @@
   
     
     
-    <link href="//fonts.googleapis.com/css?family=Hannotate SC:300,300italic,400,400italic,700,700italic|Yuanti SC:300,300italic,400,400italic,700,700italic|STXingkai:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+    <link href="//fonts.googleapis.com/css?family=Yuanti SC:300,300italic,400,400italic,700,700italic|Hannotate SC:300,300italic,400,400italic,700,700italic|STXingkai:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
   
 
 
@@ -142,7 +142,7 @@
 <meta property="og:site_name" content="hotYan&#39;s Blog">
 <meta property="og:description" content="优化博客 [持续完善] 搜索了很多Next主题的效果，总结了下常用的效果~">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-07-11T17:28:37.291Z">
+<meta property="og:updated_time" content="2018-07-11T17:41:23.241Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="用hexo搭建github博客二">
 <meta name="twitter:description" content="优化博客 [持续完善] 搜索了很多Next主题的效果，总结了下常用的效果~">
@@ -559,7 +559,9 @@ type: &quot;tags&quot;
 </blockquote>
 <pre><code>&lt;div class=&quot;post-tags&quot;&gt;
     {% for tag in post.tags %}
+---
                 <a href="{{ url_for(tag.path) }}" rel="tag"><i class="fa fa-tag"></i> {{ tag.name }}</a>
+---
             {% endfor %}
 &lt;/div&gt;
 </code></pre><p>搜索 <code>rel=&quot;tag&quot;&gt;#</code>，将 <code>#</code> 换成<code>&lt;i class=&quot;fa fa-tag&quot;&gt;&lt;/i&gt;</code></p>
@@ -572,7 +574,9 @@ type: &quot;tags&quot;
 <p>添加以下内容</p>
 <pre><code>&lt;div&gt;
     {% if not is_index %}
-                <div style="text-align:center;color: #555;font-size:14px;"> - END - </div>
+---
+               <div style="text-align:center;color: #555;font-size:14px;"> - END - </div>
+---
             {% endif %}
 &lt;/div&gt;
 </code></pre><blockquote>
@@ -584,7 +588,7 @@ type: &quot;tags&quot;
 /*插入代码如下*/
 &lt;div&gt;
 {% if not is_index %}
-            {% include 'passage-end-tag.swig' %}
+                {% include'passage-end-tag.swig' %}
         {% endif %}
 &lt;/div&gt;
 /*插入到此处结束*/
@@ -689,7 +693,7 @@ passage_end_tag:
 &lt;script type=&quot;text/javascript&quot; src=&quot;/js/src/love.js&quot;&gt;&lt;/script&gt;
 </code></pre></li>
 </ol>
-<p>【我发现在文章详情界面,没有效果,理论上应该是有效果的吧？？可能源码被我改砸了。。】</p>
+<p>【我发现在文章详情界面,没有效果,理论上应该是有效果的吧？？可能源码被我改砸了？？】</p>
 <h2 id="十四、取消文章目录自动编号"><a href="#十四、取消文章目录自动编号" class="headerlink" title="十四、取消文章目录自动编号"></a>十四、取消文章目录自动编号</h2><blockquote>
 <p>修改themes/next/_config.yml文件toc属性  </p>
 </blockquote>

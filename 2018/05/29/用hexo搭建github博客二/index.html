@@ -142,7 +142,7 @@
 <meta property="og:site_name" content="hotYan&#39;s Blog">
 <meta property="og:description" content="优化博客 [持续完善] 搜索了很多Next主题的效果，总结了下常用的效果~">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-07-11T17:41:23.241Z">
+<meta property="og:updated_time" content="2018-07-11T17:48:00.060Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="用hexo搭建github博客二">
 <meta name="twitter:description" content="优化博客 [持续完善] 搜索了很多Next主题的效果，总结了下常用的效果~">
@@ -559,9 +559,13 @@ type: &quot;tags&quot;
 </blockquote>
 <pre><code>&lt;div class=&quot;post-tags&quot;&gt;
     {% for tag in post.tags %}
+
 ---
-                <a href="{{ url_for(tag.path) }}" rel="tag"><i class="fa fa-tag"></i> {{ tag.name }}</a>
+
+>       <a href="{{ url_for(tag.path) }}" rel="tag"><i class="fa fa-tag"></i> {{ tag.name }}</a>
+
 ---
+
             {% endfor %}
 &lt;/div&gt;
 </code></pre><p>搜索 <code>rel=&quot;tag&quot;&gt;#</code>，将 <code>#</code> 换成<code>&lt;i class=&quot;fa fa-tag&quot;&gt;&lt;/i&gt;</code></p>
@@ -574,9 +578,13 @@ type: &quot;tags&quot;
 <p>添加以下内容</p>
 <pre><code>&lt;div&gt;
     {% if not is_index %}
+
 ---
-               <div style="text-align:center;color: #555;font-size:14px;"> - END - </div>
+
+>               <div style="text-align:center;color: #555;font-size:14px;"> - END - </div>
+
 ---
+
             {% endif %}
 &lt;/div&gt;
 </code></pre><blockquote>
@@ -588,7 +596,7 @@ type: &quot;tags&quot;
 /*插入代码如下*/
 &lt;div&gt;
 {% if not is_index %}
-                {% include'passage-end-tag.swig' %}
+        {% include'passage-end-tag.swig' %}
         {% endif %}
 &lt;/div&gt;
 /*插入到此处结束*/

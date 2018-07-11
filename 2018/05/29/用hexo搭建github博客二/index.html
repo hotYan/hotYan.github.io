@@ -142,7 +142,7 @@
 <meta property="og:site_name" content="hotYan&#39;s Blog">
 <meta property="og:description" content="优化博客 [持续完善] 搜索了很多Next主题的效果，总结了下常用的效果~">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-07-11T18:10:35.045Z">
+<meta property="og:updated_time" content="2018-07-11T18:15:51.316Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="用hexo搭建github博客二">
 <meta name="twitter:description" content="优化博客 [持续完善] 搜索了很多Next主题的效果，总结了下常用的效果~">
@@ -558,7 +558,7 @@ type: &quot;tags&quot;
 <p>修改/themes/next/layout/_macro/post.swig文件</p>
 </blockquote>
 <pre><code>&lt;div class=&quot;post-tags&quot;&gt;  
-</code></pre>  
+</code></pre><p><code></code></p>
 <pre><code>&lt;/div&gt;
 </code></pre><p>搜索 <code>rel=&quot;tag&quot;&gt;#</code>，将 <code>#</code> 换成<code>&lt;i class=&quot;fa fa-tag&quot;&gt;&lt;/i&gt;</code></p>
 <blockquote>
@@ -573,7 +573,7 @@ type: &quot;tags&quot;
 
 ---
 
->               <div style="text-align:center;color: #555;font-size:14px;"> - END - </div>
+>`<div style="text-align:center;color: #555;font-size:14px;"> - END - </div>`
 
 ---
 
@@ -583,7 +583,10 @@ type: &quot;tags&quot;
 <p>修改/themes/next/layout/_macro/post.swig文件  </p>
 </blockquote>
 <p>在下面相应的位置添加添加相应的代码  </p>
-<pre><code>...
+<pre><code>``
+\
+
+...
 
 /*插入代码如下*/
 &lt;div&gt;

@@ -758,18 +758,20 @@ toc:
 <div id="comments">
 <div class="post-header bg-">
   <h1 class="h1 post-title">评论</h1>
+  <h1 >评论</h1>
+  <p>本站评论搭建在 Github Issue 上,请点击下面按钮进行评论。</p>
+  <hr/>
 </div>
 
 <article class="post-content">
-<p>本站评论搭建在 Github Issue 上（就是这么神奇），请点击下面按钮进行评论。<br/>
-Comment on Github Issue for this article(Yup I know it's cool)! click below button!</p>
+<p>本站评论搭建在 Github Issue 上,请点击下面按钮进行评论。</p>
 </article>
 </div>
 
 <script type="text/javascript">
   function loadComments(data) {
   	var commentUrl = "window.open('https://github.com/hotyan/hotyan.github.io/issues/1')"
-    $("#comments").append('<div class="submit-comment" style="text-align: center"><button onclick=' + commentUrl + ' class="btn btn-primary">评论</button></div>')
+    $("#comments").append('<div class="submit-comment" style="text-align: center"><button onclick=' + commentUrl + ' class="btn btn-primary">评&nbsp;论</button></div>')
 
     for (var i=0; i<data.length; i++) {
       var cuser = data[i].user.login;

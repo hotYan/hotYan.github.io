@@ -5,7 +5,7 @@
     
   <url>
     <loc>https://hotkang.cn/2018/05/29/%E7%94%A8hexo%E6%90%AD%E5%BB%BAgithub%E5%8D%9A%E5%AE%A2%E4%BA%8C/</loc>
-    <lastmod>2018-07-11T18:33:40.342Z</lastmod>
+    <lastmod>2018-07-18T10:44:43.223Z</lastmod>
     <data>
         <display>
         <title>用hexo搭建github博客二</title>
@@ -19,6 +19,30 @@
            
              
               <breadCrumb title="hotYan_博客之路" url="https://hotkang.cn/categories/hotYan-%E5%8D%9A%E5%AE%A2%E4%B9%8B%E8%B7%AF/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://hotkang.cn/2018/05/31/%E7%83%82%E7%AC%94%E5%A4%B4%E4%B9%8BJS/</loc>
+    <lastmod>2018-07-17T18:03:08.107Z</lastmod>
+    <data>
+        <display>
+        <title>烂笔头之JS</title>
+        <pubTime>2018-05-31T11:13:13.000Z</pubTime>
+        
+        <tag>notes</tag>
+         
+        <tag>JS</tag>
+         
+        <tag>面试</tag>
+         
+         
+           
+             
+              <breadCrumb title="好记性不如烂笔头" url="https://hotkang.cn/categories/%E5%A5%BD%E8%AE%B0%E6%80%A7%E4%B8%8D%E5%A6%82%E7%83%82%E7%AC%94%E5%A4%B4/"/>
           
         </display>
     </data>
@@ -240,30 +264,6 @@
 
     
   <url>
-    <loc>https://hotkang.cn/2018/05/31/%E7%83%82%E7%AC%94%E5%A4%B4%E4%B9%8BJS/</loc>
-    <lastmod>2018-07-10T11:04:42.431Z</lastmod>
-    <data>
-        <display>
-        <title>烂笔头之JS</title>
-        <pubTime>2018-05-31T11:13:13.000Z</pubTime>
-        
-        <tag>notes</tag>
-         
-        <tag>JS</tag>
-         
-        <tag>面试</tag>
-         
-         
-           
-             
-              <breadCrumb title="好记性不如烂笔头" url="https://hotkang.cn/categories/%E5%A5%BD%E8%AE%B0%E6%80%A7%E4%B8%8D%E5%A6%82%E7%83%82%E7%AC%94%E5%A4%B4/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>https://hotkang.cn/2018/05/31/%E7%83%82%E7%AC%94%E5%A4%B4%E4%B9%8BCSS/</loc>
     <lastmod>2018-07-10T11:03:47.953Z</lastmod>
     <data>
@@ -271,11 +271,11 @@
         <title>烂笔头之CSS</title>
         <pubTime>2018-05-31T11:12:32.000Z</pubTime>
         
-        <tag>CSS</tag>
-         
         <tag>notes</tag>
          
         <tag>面试</tag>
+         
+        <tag>CSS</tag>
          
          
            

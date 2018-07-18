@@ -143,7 +143,7 @@
 <meta property="og:description" content="关于JS [持续更新]">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="https://hotkang.cn/img/JS.jpg">
-<meta property="og:updated_time" content="2018-07-10T11:04:42.431Z">
+<meta property="og:updated_time" content="2018-07-17T18:03:08.107Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="烂笔头之JS">
 <meta name="twitter:description" content="关于JS [持续更新]">
@@ -178,6 +178,8 @@
 
 
   <link rel="canonical" href="https://hotkang.cn/2018/05/31/烂笔头之JS/"/>
+
+
 
 
 
@@ -503,28 +505,33 @@
 <li>事件加不加on</li>
 <li>this指向问题<h3 id="call、apply、bind的区别"><a href="#call、apply、bind的区别" class="headerlink" title="call、apply、bind的区别"></a>call、apply、bind的区别</h3><h4 id="call、apply"><a href="#call、apply" class="headerlink" title="call、apply"></a>call、apply</h4></li>
 <li>改变函数体内部 this 的指向。</li>
-<li>作用完全一样，只是接受参数的方式不太一样</li>
-<li>call 需要把参数按顺序传递进去，而 apply 则是把参数放在数组里。　　<h4 id="call、apply、bind"><a href="#call、apply、bind" class="headerlink" title="call、apply、bind"></a>call、apply、bind</h4></li>
+<li>作用完全一样，接受参数的方式不太一样</li>
+<li>call:把参数按顺序传递进去</li>
+<li>apply:把参数放在数组里。　　<h4 id="call、apply、bind"><a href="#call、apply、bind" class="headerlink" title="call、apply、bind"></a>call、apply、bind</h4></li>
 <li>apply 、 call 、bind 三者都是用来改变函数的this对象的指向的；</li>
 <li>apply 、 call 、bind 三者第一个参数都是this要指向的对象，也就是想指定的上下文；</li>
 <li>apply 、 call 、bind 三者都可以利用后续参数传参；</li>
-<li>bind 是返回对应函数，便于稍后调用；apply 、call 则是立即调用 。</li>
+<li><p>bind 是返回对应函数，便于稍后调用；apply 、call 则是立即调用 。</p>
+</li>
+<li><p><a href="http://www.cnblogs.com/coco1s/p/4833199.html" target="_blank" rel="noopener">查看更多&gt;</a></p>
+</li>
 </ul>
-<p><a href="http://www.cnblogs.com/coco1s/p/4833199.html" target="_blank" rel="noopener">查看更多&gt;</a></p>
-<h2 id="原型链"><a href="#原型链" class="headerlink" title="原型链"></a>原型链</h2><ul>
-<li><p>对象的属性和方法，有可能是定义在自身，也有可能是定义在它的原型对象上。由于原型本身也是对象，又有自己的原型，所以形成了一条原型链（prototype chain）。</p>
+<h2 id="原型链"><a href="#原型链" class="headerlink" title="原型链"></a>原型链</h2><ol>
+<li><p>对象的<strong>属性和方法</strong>，定义在<strong>自身</strong>或定义在<strong>它的原型对象上</strong>。由于原型本身也是对象，又有自己的原型，所以形成了一条原型链（prototype chain）。</p>
 </li>
 <li><p>如果一层层地上溯，所有对象的原型最终都可以上溯到Object.prototype，即Object构造函数的prototype属性指向的那个对象。而Object.prototype对象的原型就是没有任何属性和方法的null对象，而null对象没有自己的原型。</p>
 </li>
-<li><p>“原型链”的作用是，读取对象的某个属性时，JavaScript 引擎先寻找对象本身的属性，如果找不到，就到它的原型去找，如果还是找不到，就到原型的原型去找。如果直到最顶层的Object.prototype还是找不到，则返回undefined。</p>
+<li><p>读取对象的某个属性时:</p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">JavaScript 引擎先寻找对象本身的属性,</span><br><span class="line"></span><br><span class="line">找不到?就到它的原型去找,</span><br><span class="line"></span><br><span class="line">还是找不到?就到原型的原型去找。</span><br><span class="line"></span><br><span class="line">直到最顶层的Object.prototype还是找不到?则返回undefined。</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>如果对象自身和它的原型，都定义了一个同名属性，那么优先读取对象自身的属性，这叫做“覆盖”（overriding）。</p>
 </li>
 <li><p>需要注意的是，一级级向上，在原型链寻找某个属性，对性能是有影响的。所寻找的属性在越上层的原型对象，对性能的影响越大。如果寻找某个不存在的属性，将会遍历整个原型链。  </p>
 </li>
-</ul>
-<p><a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Inheritance_and_the_prototype_chain" target="_blank" rel="noopener">查看更多&gt;</a></p>
-<h2 id="面向对象"><a href="#面向对象" class="headerlink" title="面向对象"></a>面向对象</h2><ul>
+<li><p><a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Inheritance_and_the_prototype_chain" target="_blank" rel="noopener">查看更多&gt;</a></p>
+</li>
+</ol>
+<h2 id="面向对象编程"><a href="#面向对象编程" class="headerlink" title="面向对象编程"></a>面向对象编程</h2><h3 id="理解面向对象"><a href="#理解面向对象" class="headerlink" title="理解面向对象"></a>理解面向对象</h3><ul>
 <li><a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/A_re-introduction_to_JavaScript" target="_blank" rel="noopener">重新介绍JavaScript</a></li>
 </ul>
 
@@ -591,6 +598,8 @@
       
 
       
+      
+
       
 
       
@@ -747,7 +756,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#关于JS-持续更新"><span class="nav-text">关于JS [持续更新]</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#JS定义"><span class="nav-text">JS定义</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#组成"><span class="nav-text">组成</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#JS数据类型"><span class="nav-text">JS数据类型</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#变量提升"><span class="nav-text">变量提升</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#闭包"><span class="nav-text"> 闭包 </span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#typeof返回哪些数据类型"><span class="nav-text">typeof返回哪些数据类型</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3种强制类型转换"><span class="nav-text">3种强制类型转换</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2种隐式转换"><span class="nav-text">2种隐式转换</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#split-）"><span class="nav-text">split(）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#join"><span class="nav-text">join()</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#IE和DOM事件流的区别"><span class="nav-text">IE和DOM事件流的区别</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#call、apply、bind的区别"><span class="nav-text">call、apply、bind的区别</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#call、apply"><span class="nav-text">call、apply</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#call、apply、bind"><span class="nav-text">call、apply、bind</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#原型链"><span class="nav-text">原型链</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#面向对象"><span class="nav-text">面向对象</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#关于JS-持续更新"><span class="nav-text">关于JS [持续更新]</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#JS定义"><span class="nav-text">JS定义</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#组成"><span class="nav-text">组成</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#JS数据类型"><span class="nav-text">JS数据类型</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#变量提升"><span class="nav-text">变量提升</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#闭包"><span class="nav-text"> 闭包 </span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#typeof返回哪些数据类型"><span class="nav-text">typeof返回哪些数据类型</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3种强制类型转换"><span class="nav-text">3种强制类型转换</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2种隐式转换"><span class="nav-text">2种隐式转换</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#split-）"><span class="nav-text">split(）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#join"><span class="nav-text">join()</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#IE和DOM事件流的区别"><span class="nav-text">IE和DOM事件流的区别</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#call、apply、bind的区别"><span class="nav-text">call、apply、bind的区别</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#call、apply"><span class="nav-text">call、apply</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#call、apply、bind"><span class="nav-text">call、apply、bind</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#原型链"><span class="nav-text">原型链</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#面向对象编程"><span class="nav-text">面向对象编程</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#理解面向对象"><span class="nav-text">理解面向对象</span></a></li></ol></li></ol></div>
             
 
           </div>

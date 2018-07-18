@@ -121,7 +121,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="Github,SSH," />
 
 
 
@@ -134,17 +134,18 @@
 
 
 
-<meta name="description" content="毒鸡汤Yan">
+<meta name="description" content="添加SSH密钥 [完结]">
+<meta name="keywords" content="Github,SSH">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Github添加SSH密钥">
 <meta property="og:url" content="https://hotkang.cn/2018/07/18/Github添加SSH密钥/index.html">
 <meta property="og:site_name" content="hotYan&#39;s Blog">
-<meta property="og:description" content="毒鸡汤Yan">
+<meta property="og:description" content="添加SSH密钥 [完结]">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-07-18T13:33:55.392Z">
+<meta property="og:updated_time" content="2018-07-18T16:33:42.084Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Github添加SSH密钥">
-<meta name="twitter:description" content="毒鸡汤Yan">
+<meta name="twitter:description" content="添加SSH密钥 [完结]">
 
 
 
@@ -360,6 +361,28 @@
           </span>
 
           
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Github/" itemprop="url" rel="index">
+                    <span itemprop="name">Github</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
 
           
             
@@ -392,7 +415,49 @@
       
 
       
-        
+        <h2 id="添加SSH密钥-完结"><a href="#添加SSH密钥-完结" class="headerlink" title="添加SSH密钥 [完结]"></a>添加SSH密钥 <span style="font-size:.5em">[完结]</span></h2><a id="more"></a>
+<h2 id="链接自取"><a href="#链接自取" class="headerlink" title="链接自取"></a>链接自取</h2><blockquote>
+<p>个人比较喜欢先甩参考链接,可以选择直接去看参考链接。</p>
+<ul>
+<li><a href="https://help.github.com/articles/connecting-to-github-with-ssh/" target="_blank" rel="noopener">GitHub Help</a></li>
+<li><a href="http://www.cnblogs.com/ayseeing/p/3572582.html" target="_blank" rel="noopener">参考连接</a></li>
+</ul>
+</blockquote>
+<p>【参考链接有整体的流程总结。跟着步骤来没有问题。但我会觉得GitHub Help比较官方？权威？】</p>
+<hr>
+<h2 id="查看现有的SSH密钥"><a href="#查看现有的SSH密钥" class="headerlink" title="查看现有的SSH密钥"></a>查看现有的SSH密钥</h2><pre><code>$ ls -al ~/.ssh
+</code></pre><h2 id="生成新SSH密钥"><a href="#生成新SSH密钥" class="headerlink" title="生成新SSH密钥"></a>生成新SSH密钥</h2><pre><code>$ ssh-keygen -t rsa -b 4096 -C &quot;your_email@example.com&quot; 
+/*根据实际情况填写GitHub电子邮件地址*/
+</code></pre><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Enter file in which to save the key (/Users/hotkang/.ssh/id_rsa): [Press enter]  </span><br><span class="line">/*按回车默认文件生成位置*/</span><br></pre></td></tr></table></figure>
+<pre><code>Enter passphrase (empty for no passphrase):
+Enter same passphrase again: 
+/*设置push文件时的密码,回车默认没有密码*/
+</code></pre><h2 id="添加密钥到GitHub"><a href="#添加密钥到GitHub" class="headerlink" title="添加密钥到GitHub"></a>添加密钥到GitHub</h2><blockquote>
+<p>打开 /.ssh/id_rsa.pub 文件,将内容复制到剪贴板</p>
+</blockquote>
+<blockquote>
+<p>单击右上角头像 </p>
+</blockquote>
+<blockquote>
+<p>单击 <span id="inline-green">Settings </span></p>
+</blockquote>
+<blockquote>
+<p>单击 <span id="inline-green">SSH and GPG keys  </span></p>
+</blockquote>
+<blockquote>
+<p>单击 <span id="inline-green">New SSH Key</span> </p>
+</blockquote>
+<blockquote>
+<p>填写<span id="inline-green">Title</span>并将/.ssh/id_rsa.pub文件内容粘贴到”<span id="inline-green">Key</span></p>
+</blockquote>
+<blockquote>
+<p>单击<span id="inline-green">Add SSH Key</span>完成</p>
+</blockquote>
+<blockquote>
+<p>如果出现提示,请确认你的GitHub密码</p>
+</blockquote>
+<h2 id="测试SSH连接"><a href="#测试SSH连接" class="headerlink" title="测试SSH连接"></a>测试SSH连接</h2><pre><code>$ ssh -T git@github.com
+</code></pre>
       
     </div>
     
@@ -417,6 +482,14 @@
     </div>
 
     <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Github/" rel="tag"><i class="fa fa-tag"></i> Github</a>
+          
+            <a href="/tags/SSH/" rel="tag"><i class="fa fa-tag"></i> SSH</a>
+          
+        </div>
       
 
       
@@ -493,8 +566,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -524,7 +606,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">7</span>
+                  <span class="site-state-item-count">8</span>
                   <span class="site-state-item-name">categories</span>
                 </a>
               </div>
@@ -535,7 +617,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">19</span>
+                  <span class="site-state-item-count">22</span>
                   <span class="site-state-item-name">tags</span>
                 </a>
               </div>
@@ -581,6 +663,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#添加SSH密钥-完结"><span class="nav-text">添加SSH密钥 [完结]</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#链接自取"><span class="nav-text">链接自取</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#查看现有的SSH密钥"><span class="nav-text">查看现有的SSH密钥</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#生成新SSH密钥"><span class="nav-text">生成新SSH密钥</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#添加密钥到GitHub"><span class="nav-text">添加密钥到GitHub</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#测试SSH连接"><span class="nav-text">测试SSH连接</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       

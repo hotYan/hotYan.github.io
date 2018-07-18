@@ -142,7 +142,7 @@
 <meta property="og:site_name" content="hotYan&#39;s Blog">
 <meta property="og:description" content="优化博客 [持续完善] 搜索了很多Next主题的效果，总结了下常用的效果~">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-07-18T13:16:07.326Z">
+<meta property="og:updated_time" content="2018-07-18T17:21:58.183Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="用hexo搭建github博客二">
 <meta name="twitter:description" content="优化博客 [持续完善] 搜索了很多Next主题的效果，总结了下常用的效果~">
@@ -178,8 +178,6 @@
   <link rel="canonical" href="https://hotkang.cn/2018/05/29/用hexo搭建github博客二/"/>
 
 
-
-  <script src="https://cdn.bootcss.com/jquery/3.1.1/jquery.min.js"></script>
 
 
 
@@ -686,7 +684,22 @@ toc:
 
 # If true, all words will placed on next lines if header width longer then sidebar width.
   wrap: false
-</code></pre><h2 id="十五、博文置顶"><a href="#十五、博文置顶" class="headerlink" title="十五、博文置顶"></a>十五、博文置顶</h2><h2 id="十六、基于Github-Issue的评论"><a href="#十六、基于Github-Issue的评论" class="headerlink" title="十六、基于Github Issue的评论"></a>十六、基于Github Issue的评论</h2><h2 id="十七、博客压缩"><a href="#十七、博客压缩" class="headerlink" title="十七、博客压缩"></a>十七、博客压缩</h2>
+</code></pre><h2 id="十五、博文置顶"><a href="#十五、博文置顶" class="headerlink" title="十五、博文置顶"></a>十五、博文置顶</h2><blockquote>
+<p>修改 node_modules/hexo-generator-index/lib/generator.js 文件 </p>
+</blockquote>
+<p>代码全部替换为<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line">&apos;use strict&apos;;</span><br><span class="line">var pagination = require(&apos;hexo-pagination&apos;);</span><br><span class="line">module.exports = function(locals)&#123;</span><br><span class="line">  var config = this.config;</span><br><span class="line">  var posts = locals.posts;</span><br><span class="line">    posts.data = posts.data.sort(function(a, b) &#123;</span><br><span class="line">        if(a.top &amp;&amp; b.top) &#123; // 两篇文章top都有定义</span><br><span class="line">            if(a.top == b.top) return b.date - a.date; // 若top值一样则按照文章日期降序排</span><br><span class="line">            else return b.top - a.top; // 否则按照top值降序排</span><br><span class="line">        &#125;</span><br><span class="line">        else if(a.top &amp;&amp; !b.top) &#123; // 以下是只有一篇文章top有定义，那么将有top的排在前面（这里用异或操作居然不行233）</span><br><span class="line">            return -1;</span><br><span class="line">        &#125;</span><br><span class="line">        else if(!a.top &amp;&amp; b.top) &#123;</span><br><span class="line">            return 1;</span><br><span class="line">        &#125;</span><br><span class="line">        else return b.date - a.date; // 都没定义按照文章日期降序排</span><br><span class="line">    &#125;);</span><br><span class="line">  var paginationDir = config.pagination_dir || &apos;page&apos;;</span><br><span class="line">  return pagination(&apos;&apos;, posts, &#123;</span><br><span class="line">    perPage: config.index_generator.per_page,</span><br><span class="line">    layout: [&apos;index&apos;, &apos;archive&apos;],</span><br><span class="line">    format: paginationDir + &apos;/%d/&apos;,</span><br><span class="line">    data: &#123;</span><br><span class="line">      __index: true</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;);</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure></p>
+<blockquote>
+<p>在文章添加top字段<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">title: 我是置顶博文</span><br><span class="line">date: 2018-07-18 21:30:35</span><br><span class="line">tags: 留言板</span><br><span class="line">categories: hotYan_博客之路</span><br><span class="line">top: 100                   //值越大,越靠前</span><br><span class="line">commentIssueId: 1</span><br><span class="line">---</span><br></pre></td></tr></table></figure></p>
+</blockquote>
+<h2 id="十六、博客压缩"><a href="#十六、博客压缩" class="headerlink" title="十六、博客压缩"></a>十六、博客压缩</h2><h2 id="十七、精简部署命令"><a href="#十七、精简部署命令" class="headerlink" title="十七、精简部署命令"></a>十七、精简部署命令</h2><blockquote>
+<p>修改根目录下/package.json文件</p>
+</blockquote>
+<p>添加下面代码<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&quot;scripts&quot;: &#123;</span><br><span class="line">    &quot;update&quot;: &quot;hexo clean &amp;&amp; hexo g &amp;&amp; hexo d&quot;</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure></p>
+<blockquote>
+<p>更新Hexo部署</p>
+</blockquote>
+<pre><code>$ npm run update
+</code></pre>
       
     </div>
     
@@ -750,155 +763,6 @@ toc:
       
       
 
-      
-        <!doctype html>
-<html>
-<div class="clearfix"></div>
-<br>
-<div id="comments">
-    <div class="post-header bg-">
-    <h1 >评论</h1>
-    <p>本站评论搭建在 Github Issue 上,请点击下面按钮进行评论。</p>
-    <hr/>
-    </div>
-</div>
-
-<script type="text/javascript">
-  function loadComments(data) {
-  	var commentUrl = "window.open('https://github.com/hotyan/hotyan.github.io/issues/1')"
-    $("#comments").append('<div class="submit-comment" style="text-align: center"><button onclick=' + commentUrl + ' class="btn btn-primary">评&nbsp;论</button></div>')
-
-    for (var i=0; i<data.length; i++) {
-      var cuser = data[i].user.login;
-      var cuserlink = data[i].user.html_url;
-      var avatarlink = data[i].user.avatar_url;
-      var clink = data[i].html_url;
-      var cbody = data[i].body_html;
-      var cavatarlink = data[i].user.avatar_url;      
-      var cdate = new Date(data[i].created_at);
-      var dopts = { month: 'short', day: 'numeric', year: 'numeric' }
-
-      $("#comments").append('<div class="timeline-comment-wrapper"><div class="avatar-parent-child timeline-comment-avatar"><a href="' + cuserlink +'"><img width="44" height="44" class="avatar rounded-1" src="' + avatarlink + '"></a></div><div class="timeline-comment current-user"><div class="timeline-comment-header"><h3 class="timeline-comment-header-text text-normal f5"><strong>' + cuser + '</strong><span class="post-meta">' + cdate.toLocaleDateString("en", dopts) + '</span></h3></div><div style="display: block !important; padding: 15px;"><article class="post-content">' + cbody + '</article></div></div></div>');
-    }
-  }
-  $.ajax("https://api.github.com/repos/hotyan/hotyan.github.io/issues/1/comments", {
-    headers: {Accept: "application/vnd.github.v3.html+json"},
-    dataType: "json",
-    success: function(msg){
-      console.log(msg);
-      loadComments(msg);
-   }
-  });
-</script>
-
-
-<style type="text/css">
-.timeline-comment-wrapper {
-    margin-top: 0;
-    position: relative;
-    padding-left: 60px;
-    margin-top: 15px;
-    margin-bottom: 15px;
-    border-top: 2px solid #fff;
-    border-bottom: 2px solid #fff;
-}
-.timeline-comment-avatar {
-    float: left;
-    margin-left: -60px;
-    border-radius: 3px;
-}
-.avatar-parent-child {
-    position: relative;
-}
-.timeline-comment-wrapper a {
-    color: #0366d6;
-    text-decoration: none;
-    background-color: transparent;
-}
-.timeline-comment-wrapper .avatar {
-    display: inline-block;
-    overflow: hidden;
-    line-height: 1;
-    vertical-align: middle;
-    border-radius: 3px;
-}
-.timeline-comment-wrapper .rounded-1 {
-    border-radius: 3px !important;
-}
-.timeline-comment.current-user {
-    border-color: #c0d3eb;
-}
-.timeline-comment {
-	position: relative;
-    background-color: #fff;
-    border: 1px solid #d1d5da;
-    border-radius: 3px;
-}
-.timeline-comment.current-user .timeline-comment-header {
-    background-color: #f1f8ff;
-    border-bottom-color: #c0d3eb;
-}
-.timeline-comment-header {
-	padding-right: 15px;
-    padding-left: 15px;
-    color: #586069;
-    background-color: #f6f8fa;
-    border-bottom: 1px solid #d1d5da;
-    border-top-left-radius: 3px;
-    border-top-right-radius: 3px;
-}
-.timeline-comment-header-text {
-    padding-top: 10px;
-    padding-bottom: 10px;
-}
-.timeline-comment-header h3 {
-    margin-top: 0px;
-    margin-bottom: 0px;
-}
-.timeline-comment-header-text .post-meta {
-	margin-left: 6px;
-}
-.timeline-comment article p {
-	margin: 0px;
-}
-.text-normal {
-    font-weight: normal !important;
-}
-.f5 {
-    font-size: 14px !important;
-}
-.submit-comment .btn {
-    position: relative;
-    display: inline-block;
-    padding: 6px 12px;
-    font-size: 14px;
-    font-weight: 600;
-    line-height: 20px;
-    white-space: nowrap;
-    vertical-align: middle;
-    cursor: pointer;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-    background-repeat: repeat-x;
-    background-position: -1px -1px;
-    background-size: 110% 110%;
-    border: 1px solid rgba(27,31,35,0.2);
-    border-radius: 0.25em;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-}
-.submit-comment .btn-primary {
-    color: #fff;
-    background-color: #28a745;
-    background-image: -webkit-linear-gradient(270deg, #34d058 0%, #28a745 90%);
-    background-image: linear-gradient(-180deg, #34d058 0%, #28a745 90%);
-}
-</style>
-
-</html>
       
 
       
@@ -988,7 +852,7 @@ toc:
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">7</span>
+                  <span class="site-state-item-count">8</span>
                   <span class="site-state-item-name">categories</span>
                 </a>
               </div>
@@ -999,7 +863,7 @@ toc:
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">19</span>
+                  <span class="site-state-item-count">22</span>
                   <span class="site-state-item-name">tags</span>
                 </a>
               </div>
@@ -1055,7 +919,7 @@ toc:
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#优化博客-持续完善"><span class="nav-text">优化博客 [持续完善]</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#链接自取"><span class="nav-text">链接自取</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#一、修改Next主题模式"><span class="nav-text">一、修改Next主题模式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#二、设置首页预览摘要"><span class="nav-text">二、设置首页预览摘要</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#三、侧边栏显示效果"><span class="nav-text">三、侧边栏显示效果</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#四、侧边栏社交链接"><span class="nav-text">四、侧边栏社交链接</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#五、设置RSS"><span class="nav-text">五、设置RSS</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#六、添加菜单选项"><span class="nav-text">六、添加菜单选项</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#七、修改文章底部标签样式"><span class="nav-text">七、修改文章底部标签样式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#八、文章末尾添加结束标记"><span class="nav-text">八、文章末尾添加结束标记</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#九、访问量统计"><span class="nav-text">九、访问量统计</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#十、修改头像"><span class="nav-text">十、修改头像</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#十一、添加背景图"><span class="nav-text">十一、添加背景图</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#十二、修改各版块透明度"><span class="nav-text">十二、修改各版块透明度</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#十三、点击出现桃心"><span class="nav-text">十三、点击出现桃心</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#十四、取消文章目录自动编号"><span class="nav-text">十四、取消文章目录自动编号</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#十五、博文置顶"><span class="nav-text">十五、博文置顶</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#十六、基于Github-Issue的评论"><span class="nav-text">十六、基于Github Issue的评论</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#十七、博客压缩"><span class="nav-text">十七、博客压缩</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#优化博客-持续完善"><span class="nav-text">优化博客 [持续完善]</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#链接自取"><span class="nav-text">链接自取</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#一、修改Next主题模式"><span class="nav-text">一、修改Next主题模式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#二、设置首页预览摘要"><span class="nav-text">二、设置首页预览摘要</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#三、侧边栏显示效果"><span class="nav-text">三、侧边栏显示效果</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#四、侧边栏社交链接"><span class="nav-text">四、侧边栏社交链接</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#五、设置RSS"><span class="nav-text">五、设置RSS</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#六、添加菜单选项"><span class="nav-text">六、添加菜单选项</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#七、修改文章底部标签样式"><span class="nav-text">七、修改文章底部标签样式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#八、文章末尾添加结束标记"><span class="nav-text">八、文章末尾添加结束标记</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#九、访问量统计"><span class="nav-text">九、访问量统计</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#十、修改头像"><span class="nav-text">十、修改头像</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#十一、添加背景图"><span class="nav-text">十一、添加背景图</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#十二、修改各版块透明度"><span class="nav-text">十二、修改各版块透明度</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#十三、点击出现桃心"><span class="nav-text">十三、点击出现桃心</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#十四、取消文章目录自动编号"><span class="nav-text">十四、取消文章目录自动编号</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#十五、博文置顶"><span class="nav-text">十五、博文置顶</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#十六、博客压缩"><span class="nav-text">十六、博客压缩</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#十七、精简部署命令"><span class="nav-text">十七、精简部署命令</span></a></li></ol></div>
             
 
           </div>

@@ -4,8 +4,26 @@
 
     
   <url>
-    <loc>https://hotkang.cn/%E5%9F%BA%E4%BA%8EGitHubIssue%E7%9A%84%E8%AF%84%E8%AE%BA%E5%8A%9F%E8%83%BD.html</loc>
-    <lastmod>2018-08-03T07:02:59.293Z</lastmod>
+    <loc>https://hotkang.cn/%E6%88%91%E6%98%AF%E7%BD%AE%E9%A1%B6%E5%8D%9A%E6%96%87/</loc>
+    <lastmod>2018-08-03T07:25:54.147Z</lastmod>
+    <data>
+        <display>
+        <title>我是置顶博文</title>
+        <pubTime>2018-07-18T13:30:35.000Z</pubTime>
+        
+         
+           
+             
+              <breadCrumb title="hotYan_博客之路" url="https://hotkang.cn/categories/hotYan-%E5%8D%9A%E5%AE%A2%E4%B9%8B%E8%B7%AF/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://hotkang.cn/%E5%9F%BA%E4%BA%8EGitHubIssue%E7%9A%84%E8%AF%84%E8%AE%BA%E5%8A%9F%E8%83%BD/</loc>
+    <lastmod>2018-08-03T07:24:42.874Z</lastmod>
     <data>
         <display>
         <title>基于GitHubIssue的评论功能</title>
@@ -30,8 +48,8 @@
 
     
   <url>
-    <loc>https://hotkang.cn/%E7%94%A8hexo%E6%90%AD%E5%BB%BAgithub%E5%8D%9A%E5%AE%A2%E4%BA%8C.html</loc>
-    <lastmod>2018-08-03T07:02:40.036Z</lastmod>
+    <loc>https://hotkang.cn/%E7%94%A8hexo%E6%90%AD%E5%BB%BAgithub%E5%8D%9A%E5%AE%A2%E4%BA%8C/</loc>
+    <lastmod>2018-08-03T07:23:25.416Z</lastmod>
     <data>
         <display>
         <title>用hexo搭建github博客二</title>
@@ -54,25 +72,7 @@
 
     
   <url>
-    <loc>https://hotkang.cn/%E6%88%91%E6%98%AF%E7%BD%AE%E9%A1%B6%E5%8D%9A%E6%96%87.html</loc>
-    <lastmod>2018-08-02T15:20:55.943Z</lastmod>
-    <data>
-        <display>
-        <title>我是置顶博文</title>
-        <pubTime>2018-07-18T13:30:35.000Z</pubTime>
-        
-         
-           
-             
-              <breadCrumb title="hotYan_博客之路" url="https://hotkang.cn/categories/hotYan-%E5%8D%9A%E5%AE%A2%E4%B9%8B%E8%B7%AF/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://hotkang.cn/%E5%9C%A8GitHub-Pages%E4%B8%8A%E9%83%A8%E7%BD%B2%E8%87%AA%E5%B7%B1%E7%9A%84%E7%AE%80%E5%8E%86.html</loc>
+    <loc>https://hotkang.cn/%E5%9C%A8GitHub-Pages%E4%B8%8A%E9%83%A8%E7%BD%B2%E8%87%AA%E5%B7%B1%E7%9A%84%E7%AE%80%E5%8E%86/</loc>
     <lastmod>2018-08-02T15:18:24.985Z</lastmod>
     <data>
         <display>
@@ -94,7 +94,7 @@
 
     
   <url>
-    <loc>https://hotkang.cn/ToDoList.html</loc>
+    <loc>https://hotkang.cn/ToDoList/</loc>
     <lastmod>2018-08-01T09:36:26.082Z</lastmod>
     <data>
         <display>
@@ -112,7 +112,7 @@
 
     
   <url>
-    <loc>https://hotkang.cn/Notes-CSS.html</loc>
+    <loc>https://hotkang.cn/Notes-CSS/</loc>
     <lastmod>2018-08-01T09:27:40.148Z</lastmod>
     <data>
         <display>
@@ -136,7 +136,7 @@
 
     
   <url>
-    <loc>https://hotkang.cn/Notes-JS.html</loc>
+    <loc>https://hotkang.cn/Notes-JS/</loc>
     <lastmod>2018-08-01T09:27:30.884Z</lastmod>
     <data>
         <display>
@@ -145,9 +145,9 @@
         
         <tag>Notes</tag>
          
-        <tag>面试</tag>
-         
         <tag>JS</tag>
+         
+        <tag>面试</tag>
          
          
            
@@ -160,7 +160,7 @@
 
     
   <url>
-    <loc>https://hotkang.cn/Notes-HTML.html</loc>
+    <loc>https://hotkang.cn/Notes-HTML/</loc>
     <lastmod>2018-08-01T09:27:25.963Z</lastmod>
     <data>
         <display>
@@ -169,9 +169,9 @@
         
         <tag>Notes</tag>
          
-        <tag>HTML</tag>
-         
         <tag>面试</tag>
+         
+        <tag>HTML</tag>
          
          
            
@@ -184,7 +184,7 @@
 
     
   <url>
-    <loc>https://hotkang.cn/JavaScript%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B%E4%B8%80.html</loc>
+    <loc>https://hotkang.cn/JavaScript%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B%E4%B8%80/</loc>
     <lastmod>2018-07-28T07:42:49.703Z</lastmod>
     <data>
         <display>
@@ -210,7 +210,7 @@
 
     
   <url>
-    <loc>https://hotkang.cn/JavaScript%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B%E4%BA%8C.html</loc>
+    <loc>https://hotkang.cn/JavaScript%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B%E4%BA%8C/</loc>
     <lastmod>2018-07-28T07:40:20.082Z</lastmod>
     <data>
         <display>
@@ -230,7 +230,7 @@
 
     
   <url>
-    <loc>https://hotkang.cn/JavaScript%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B%E4%B8%89.html</loc>
+    <loc>https://hotkang.cn/JavaScript%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B%E4%B8%89/</loc>
     <lastmod>2018-07-28T07:26:54.757Z</lastmod>
     <data>
         <display>
@@ -250,7 +250,7 @@
 
     
   <url>
-    <loc>https://hotkang.cn/%E5%9B%BE%E4%B9%A6%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F%E5%9B%9B.html</loc>
+    <loc>https://hotkang.cn/%E5%9B%BE%E4%B9%A6%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F%E5%9B%9B/</loc>
     <lastmod>2018-07-28T06:36:56.199Z</lastmod>
     <data>
         <display>
@@ -270,7 +270,7 @@
 
     
   <url>
-    <loc>https://hotkang.cn/%E5%9B%BE%E4%B9%A6%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F%E4%B8%89.html</loc>
+    <loc>https://hotkang.cn/%E5%9B%BE%E4%B9%A6%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F%E4%B8%89/</loc>
     <lastmod>2018-07-28T06:36:46.317Z</lastmod>
     <data>
         <display>
@@ -299,7 +299,7 @@
 
     
   <url>
-    <loc>https://hotkang.cn/%E5%9B%BE%E4%B9%A6%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F%E4%BA%8C.html</loc>
+    <loc>https://hotkang.cn/%E5%9B%BE%E4%B9%A6%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F%E4%BA%8C/</loc>
     <lastmod>2018-07-28T06:36:36.532Z</lastmod>
     <data>
         <display>
@@ -325,7 +325,7 @@
 
     
   <url>
-    <loc>https://hotkang.cn/%E5%9B%BE%E4%B9%A6%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F%E4%B8%80.html</loc>
+    <loc>https://hotkang.cn/%E5%9B%BE%E4%B9%A6%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F%E4%B8%80/</loc>
     <lastmod>2018-07-28T06:36:23.782Z</lastmod>
     <data>
         <display>
@@ -334,11 +334,11 @@
         
         <tag>图书管理系统</tag>
          
+        <tag>Node.js</tag>
+         
         <tag>Express</tag>
          
         <tag>EJS</tag>
-         
-        <tag>Node.js</tag>
          
          
            
@@ -351,7 +351,7 @@
 
     
   <url>
-    <loc>https://hotkang.cn/%E7%94%A8hexo%E6%90%AD%E5%BB%BAgithub%E5%8D%9A%E5%AE%A2%E4%B8%80.html</loc>
+    <loc>https://hotkang.cn/%E7%94%A8hexo%E6%90%AD%E5%BB%BAgithub%E5%8D%9A%E5%AE%A2%E4%B8%80/</loc>
     <lastmod>2018-07-28T06:34:45.107Z</lastmod>
     <data>
         <display>
@@ -373,7 +373,7 @@
 
     
   <url>
-    <loc>https://hotkang.cn/use%20homebrew%20install%20mongodb.html</loc>
+    <loc>https://hotkang.cn/use%20homebrew%20install%20mongodb/</loc>
     <lastmod>2018-07-26T18:28:45.276Z</lastmod>
     <data>
         <display>
@@ -398,7 +398,7 @@
 
     
   <url>
-    <loc>https://hotkang.cn/%E7%94%A8nvm%E8%A3%85node-js.html</loc>
+    <loc>https://hotkang.cn/%E7%94%A8nvm%E8%A3%85node-js/</loc>
     <lastmod>2018-07-26T18:20:14.569Z</lastmod>
     <data>
         <display>
@@ -425,7 +425,7 @@
 
     
   <url>
-    <loc>https://hotkang.cn/Mysql%E5%91%BD%E4%BB%A4%E5%B0%8F%E7%BB%93.html</loc>
+    <loc>https://hotkang.cn/Mysql%E5%91%BD%E4%BB%A4%E5%B0%8F%E7%BB%93/</loc>
     <lastmod>2018-07-26T18:16:42.613Z</lastmod>
     <data>
         <display>
@@ -450,7 +450,7 @@
 
     
   <url>
-    <loc>https://hotkang.cn/GitHub%E4%BF%AE%E6%94%B9%E9%82%AE%E7%AE%B1%E5%90%8E.html</loc>
+    <loc>https://hotkang.cn/GitHub%E4%BF%AE%E6%94%B9%E9%82%AE%E7%AE%B1%E5%90%8E/</loc>
     <lastmod>2018-07-26T18:05:46.246Z</lastmod>
     <data>
         <display>
@@ -468,7 +468,7 @@
 
     
   <url>
-    <loc>https://hotkang.cn/CSS-%E5%B1%9E%E6%80%A7%E7%BB%A7%E6%89%BF.html</loc>
+    <loc>https://hotkang.cn/CSS-%E5%B1%9E%E6%80%A7%E7%BB%A7%E6%89%BF/</loc>
     <lastmod>2018-07-26T16:56:52.791Z</lastmod>
     <data>
         <display>
@@ -490,7 +490,7 @@
 
     
   <url>
-    <loc>https://hotkang.cn/Github%E6%B7%BB%E5%8A%A0SSH%E5%AF%86%E9%92%A5.html</loc>
+    <loc>https://hotkang.cn/Github%E6%B7%BB%E5%8A%A0SSH%E5%AF%86%E9%92%A5/</loc>
     <lastmod>2018-07-26T15:31:03.791Z</lastmod>
     <data>
         <display>
@@ -510,7 +510,7 @@
 
     
   <url>
-    <loc>https://hotkang.cn/7%E7%B1%BB35%E6%9D%A1%E7%BD%91%E9%A1%B5%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96.html</loc>
+    <loc>https://hotkang.cn/7%E7%B1%BB35%E6%9D%A1%E7%BD%91%E9%A1%B5%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96/</loc>
     <lastmod>2018-07-19T15:42:13.678Z</lastmod>
     <data>
         <display>
@@ -530,7 +530,7 @@
 
     
   <url>
-    <loc>https://hotkang.cn/%E4%BB%8E%E6%B5%8F%E8%A7%88%E5%99%A8%E8%AF%B7%E6%B1%82%E5%92%8C%E5%93%8D%E5%BA%94%E8%BF%87%E7%A8%8B%E6%9D%A5%E8%B0%88%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96.html</loc>
+    <loc>https://hotkang.cn/%E4%BB%8E%E6%B5%8F%E8%A7%88%E5%99%A8%E8%AF%B7%E6%B1%82%E5%92%8C%E5%93%8D%E5%BA%94%E8%BF%87%E7%A8%8B%E6%9D%A5%E8%B0%88%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96/</loc>
     <lastmod>2018-07-19T15:35:12.649Z</lastmod>
     <data>
         <display>
@@ -550,7 +550,7 @@
 
     
   <url>
-    <loc>https://hotkang.cn/%E9%AB%98%E6%80%A7%E8%83%BD%E7%BD%91%E7%AB%99%E5%BB%BA%E8%AE%BE%E6%8C%87%E5%8D%9714%E6%9D%A1%E8%A7%84%E5%88%99.html</loc>
+    <loc>https://hotkang.cn/%E9%AB%98%E6%80%A7%E8%83%BD%E7%BD%91%E7%AB%99%E5%BB%BA%E8%AE%BE%E6%8C%87%E5%8D%9714%E6%9D%A1%E8%A7%84%E5%88%99/</loc>
     <lastmod>2018-07-10T11:03:36.002Z</lastmod>
     <data>
         <display>

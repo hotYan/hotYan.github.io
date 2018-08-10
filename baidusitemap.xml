@@ -5,7 +5,7 @@
     
   <url>
     <loc>https://hotkang.cn/2018/JavaScript%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B%E4%B8%89/</loc>
-    <lastmod>2018-08-10T13:01:34.475Z</lastmod>
+    <lastmod>2018-08-10T13:27:28.761Z</lastmod>
     <data>
         <display>
         <title>JavaScript面向对象编程三</title>
@@ -235,11 +235,11 @@
         <title>JavaScript面向对象编程一</title>
         <pubTime>2018-07-26T07:04:41.000Z</pubTime>
         
+        <tag>继承</tag>
+         
         <tag>面向对象</tag>
          
         <tag>封装</tag>
-         
-        <tag>继承</tag>
          
         <tag>多态</tag>
          
@@ -361,9 +361,9 @@
          
         <tag>博客</tag>
          
-        <tag>GitHub Issue</tag>
-         
         <tag>Next</tag>
+         
+        <tag>GitHub Issue</tag>
          
          
            

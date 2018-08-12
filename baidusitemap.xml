@@ -4,8 +4,26 @@
 
     
   <url>
+    <loc>https://hotkang.cn/2018/%E6%88%91%E6%98%AF%E7%BD%AE%E9%A1%B6%E5%8D%9A%E6%96%87/</loc>
+    <lastmod>2018-08-12T05:39:11.889Z</lastmod>
+    <data>
+        <display>
+        <title>我是置顶博文</title>
+        <pubTime>2018-07-18T13:30:35.000Z</pubTime>
+        
+         
+           
+             
+              <breadCrumb title="hotYan_博客之路" url="https://hotkang.cn/categories/hotYan-%E5%8D%9A%E5%AE%A2%E4%B9%8B%E8%B7%AF/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>https://hotkang.cn/2018/Notes-JS/</loc>
-    <lastmod>2018-08-12T05:30:28.820Z</lastmod>
+    <lastmod>2018-08-12T05:37:25.469Z</lastmod>
     <data>
         <display>
         <title>Notes_JS</title>
@@ -21,24 +39,6 @@
            
              
               <breadCrumb title="好记性不如烂笔头" url="https://hotkang.cn/categories/%E5%A5%BD%E8%AE%B0%E6%80%A7%E4%B8%8D%E5%A6%82%E7%83%82%E7%AC%94%E5%A4%B4/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://hotkang.cn/2018/%E6%88%91%E6%98%AF%E7%BD%AE%E9%A1%B6%E5%8D%9A%E6%96%87/</loc>
-    <lastmod>2018-08-12T04:54:02.305Z</lastmod>
-    <data>
-        <display>
-        <title>我是置顶博文</title>
-        <pubTime>2018-07-18T13:30:35.000Z</pubTime>
-        
-         
-           
-             
-              <breadCrumb title="hotYan_博客之路" url="https://hotkang.cn/categories/hotYan-%E5%8D%9A%E5%AE%A2%E4%B9%8B%E8%B7%AF/"/>
           
         </display>
     </data>
@@ -277,11 +277,11 @@
         <title>JavaScript面向对象编程一</title>
         <pubTime>2018-07-26T07:04:41.000Z</pubTime>
         
-        <tag>继承</tag>
-         
         <tag>面向对象</tag>
          
         <tag>封装</tag>
+         
+        <tag>继承</tag>
          
         <tag>多态</tag>
          

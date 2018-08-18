@@ -5,7 +5,7 @@
     
   <url>
     <loc>https://hotkang.cn/2018/Effects/</loc>
-    <lastmod>2018-08-18T17:37:38.315Z</lastmod>
+    <lastmod>2018-08-18T17:50:05.419Z</lastmod>
     <data>
         <display>
         <title>Effects</title>
@@ -99,9 +99,9 @@
          
         <tag>博客</tag>
          
-        <tag>Next</tag>
-         
         <tag>GitHub Issue</tag>
+         
+        <tag>Next</tag>
          
          
            
@@ -345,11 +345,11 @@
         <title>JavaScript面向对象编程一</title>
         <pubTime>2018-07-26T07:04:41.000Z</pubTime>
         
-        <tag>继承</tag>
-         
         <tag>面向对象</tag>
          
         <tag>封装</tag>
+         
+        <tag>继承</tag>
          
         <tag>多态</tag>
          

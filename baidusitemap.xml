@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://hotkang.cn/2018/JS%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/</loc>
+    <lastmod>2018-11-30T10:18:05.653Z</lastmod>
+  </url>  <url>
     <loc>https://hotkang.cn/2018/%E6%88%91%E6%98%AF%E7%BD%AE%E9%A1%B6%E5%8D%9A%E6%96%87/</loc>
     <lastmod>2018-10-25T06:02:51.675Z</lastmod>
   </url>  <url>
@@ -36,9 +39,6 @@
   </url>  <url>
     <loc>https://hotkang.cn/2018/%E7%94%A8hexo%E6%90%AD%E5%BB%BAgithub%E5%8D%9A%E5%AE%A2%E4%B8%80/</loc>
     <lastmod>2018-10-25T05:39:24.180Z</lastmod>
-  </url>  <url>
-    <loc>https://hotkang.cn/2018/JS%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/</loc>
-    <lastmod>2018-09-02T06:20:21.307Z</lastmod>
   </url>  <url>
     <loc>https://hotkang.cn/2018/Effects/</loc>
     <lastmod>2018-08-29T07:22:42.899Z</lastmod>

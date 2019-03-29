@@ -45,30 +45,6 @@
   </entry>
   
   <entry>
-    <title>Notes_PHP</title>
-    <link href="https://hotkang.cn/2019/Notes-PHP/"/>
-    <id>https://hotkang.cn/2019/Notes-PHP/</id>
-    <published>2019-02-27T07:06:06.000Z</published>
-    <updated>2019-03-25T04:45:12.178Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="PHP学习笔记-持续完善"><a href="#PHP学习笔记-持续完善" class="headerlink" title="PHP学习笔记 [持续完善]"></a>PHP学习笔记 <span style="font-size:.5em">[持续完善]</span></h2><a id="more"></a><p><br></p><h2 id="参考链接"><a href="#参考链接" class="headerlink" title="参考链接"></a>参考链接</h2><h2 id="运行环境"><a href="#运行环境" class="headerlink" title="运行环境"></a>运行环境</h2><h2 id="Notes"><a href="#Notes" class="headerlink" title="Notes"></a>Notes</h2><h3 id="PHP语法"><a href="#PHP语法" class="headerlink" title="PHP语法"></a>PHP语法</h3><ul><li><p>所有用户定义的函数，类和关键字大小写不敏感</p><ul><li>if</li><li>else</li><li>echo</li></ul></li><li>变量，大小写敏感</li></ul><p><br></p><h3 id="PHP变量规则"><a href="#PHP变量规则" class="headerlink" title="PHP变量规则"></a>PHP变量规则</h3><ol><li>只能包含：数字、字母、下划线</li><li>$ 开头，接变量名：第一个字字符必须是<strong>字母</strong>或<strong>下划线</strong>，不能是数字</li><li>大小写敏感</li></ol><blockquote><h3 id="JS变量规则"><a href="#JS变量规则" class="headerlink" title="JS变量规则"></a>JS变量规则</h3><ol><li>只能包含：数字、字母、下划线、$</li><li>第一个字符必须是：<strong>字母</strong>或<strong>下划线</strong>或 $</li><li>大小写敏感</li></ol></blockquote><p><br></p><h3 id="PHP-变量作用域"><a href="#PHP-变量作用域" class="headerlink" title="PHP 变量作用域"></a>PHP 变量作用域</h3><ol><li><p>local</p></li><li><p>global<br>用于函数内访问全局变量</p></li><li><p>static<br>保留局部变量不被删除</p></li><li><p>parameter</p></li></ol><p><br></p><h3 id="PHP-echo-和-print"><a href="#PHP-echo-和-print" class="headerlink" title="PHP echo 和 print"></a>PHP echo 和 print</h3><ul><li>echo： 可以输出一个或多个字符串</li><li>print：只能输出一个字符串，返回值总为1</li></ul><p><br></p><h3 id="PHP-EOF"><a href="#PHP-EOF" class="headerlink" title="PHP EOF"></a>PHP EOF</h3><p>以<code>&lt;&lt;&lt;EOF</code> 开始标记开始，以<code>EOF</code>结束标记结束(顶头写，不缩进和空格)，末尾必须有分号<code>;</code></p><p><br></p><h3 id="PHP5数据类型"><a href="#PHP5数据类型" class="headerlink" title="PHP5数据类型"></a>PHP5数据类型</h3><ul><li>string</li><li>integer整数</li><li>float浮点数</li><li>boolean(true/false)</li><li>array数组</li><li>object对象</li></ul><p><code>var_dump()</code>函数返回变量的数据型和值。</p><blockquote><h3 id="JS数据类型"><a href="#JS数据类型" class="headerlink" title="JS数据类型"></a>JS数据类型</h3><ul><li>基本数据类型<ul><li>undefined</li><li>null</li><li>number</li><li>string</li><li>boolean</li></ul></li><li>引用类型<ul><li>Object</li><li>Array</li><li>Function</li><li>RegExp</li><li>Date</li></ul></li></ul></blockquote><p><br></p><h3 id="PHP常量"><a href="#PHP常量" class="headerlink" title="PHP常量"></a>PHP常量</h3><ol><li><p>define(name,value,[true|false])</p><pre><code>&lt;?php// 区分大小写的常量名,默认大小写敏感，即falsedefine(&quot;GREETING&quot;, &quot;欢迎访问 Runoob.com&quot;);echo GREETING;    // 输出 &quot;欢迎访问 Runoob.com&quot;echo &apos;&lt;br&gt;&apos;;echo greeting;   // 输出 &quot;greeting&quot;?&gt;</code></pre></li></ol><p><br></p><h4 id="PHP-字符串变量"><a href="#PHP-字符串变量" class="headerlink" title="PHP 字符串变量"></a>PHP 字符串变量</h4><ol><li><p>并置运算符(./,)</p><pre><code>&lt;?php $txt1=&quot;Hello world! &quot;; $txt2=&quot; What a nice day!&quot;; echo $txt1 .  $txt2;    //Hello world!  What a nice day!?&gt;</code></pre></li><li><p><strong>strlen()</strong><br>返回字符串的长度:</p><pre><code>strlen(&apos;hello world!&apos;);  //12</code></pre></li></ol><ol start="2"><li><p><strong>strpos()</strong><br>匹配指定字符或文本，返回字符位置，否则false:</p><pre><code>strpos(&apos;hello world!&apos;,&apos;world&apos;);    //6</code></pre></li></ol><p><br></p><h4 id="PHP魔术常量"><a href="#PHP魔术常量" class="headerlink" title="PHP魔术常量"></a>PHP魔术常量</h4><ul><li><code>_LINE_</code>:依赖于在脚本中所处的行来决定</li><li><code>_FILE_</code>:文件的完整路径和文件名</li><li><code>_DIR_</code>:文件目录</li><li><code>_FUNCTION_</code>:函数名称，4.3新增，5之后区分大小写</li><li><code>_CLASS_</code>:类名称，4.3新增，5之后区分大小写</li><li><code>_TRAIT_</code>:trait的名称，代码复用的一个方法，5.4.0新加</li><li><code>_METHOD_</code>:类的方法名，5.0.0新加，区分大小写</li><li><code>_NAMESPACE_</code>:当前命名空间的名称，5.3.0新增，区分大小写</li></ul><p><br></p><h4 id="超级全局变量"><a href="#超级全局变量" class="headerlink" title="超级全局变量"></a>超级全局变量</h4><ul><li><code>$GLOBALS</code></li><li><code>$_SERVER</code></li><li><code>$_REQUEST</code></li><li><code>$_POST</code></li><li><code>$_GET</code></li><li><code>$_FILES</code></li><li><code>$_ENV</code></li><li><code>$_COOKIE</code></li><li><code>$_SESSION</code></li></ul><p><br></p><h4 id="PHP文件处理"><a href="#PHP文件处理" class="headerlink" title="PHP文件处理"></a>PHP文件处理</h4><ul><li><p>打开指定文件<code>fopen(file_name,打开模式r|w|x);</code></p><pre><code>&lt;?php $file=fopen(&quot;hotyan.txt&quot;,&quot;r&quot;) or exit(&quot;Unable to open file!&quot;);//以只读打开hotyan.txt文件 ?&gt;</code></pre></li><li><p>关闭文件<code>fclose($file);</code></p><pre><code>&lt;?php$file = fopen(&quot;hotyan.txt&quot;,&quot;r&quot;);//do somethingfclose($file);//关闭前面打开的文件?&gt;</code></pre></li><li><p>逐行读取文件<code>fgets($file);</code></p><pre><code>&lt;?php$file = fopen(&quot;hotyan.txt&quot;,&quot;r&quot;) or exit(&quot;无法打开文件!&quot;);while(!feof($file)){//读取文件每一行，直到文件结尾        echo fgets($file).&quot;&lt;br/&gt;&quot;;}fclose($file);?&gt;</code></pre></li><li><p>逐字符读取文件<code>fgetc($file)</code></p><pre><code>&lt;?php$file = fopen(&quot;hotyan.txt&quot;,&quot;r&quot;) or exit(&quot;无法打开文件!&quot;);while(!feof($file)){        echo fgetc($file);}fclose($file);?&gt;</code></pre><p><br></p></li></ul><h4 id="PHP-Cookie"><a href="#PHP-Cookie" class="headerlink" title="PHP Cookie"></a>PHP Cookie</h4><pre><code>setcookie(name,value,expire,path,domain);</code></pre>]]></content>
-    
-    <summary type="html">
-    
-      &lt;h2 id=&quot;PHP学习笔记-持续完善&quot;&gt;&lt;a href=&quot;#PHP学习笔记-持续完善&quot; class=&quot;headerlink&quot; title=&quot;PHP学习笔记 [持续完善]&quot;&gt;&lt;/a&gt;PHP学习笔记 &lt;span style=&quot;font-size:.5em&quot;&gt;[持续完善]&lt;/span&gt;&lt;/h2&gt;
-    
-    </summary>
-    
-      <category term="好记性不如烂笔头" scheme="https://hotkang.cn/categories/%E5%A5%BD%E8%AE%B0%E6%80%A7%E4%B8%8D%E5%A6%82%E7%83%82%E7%AC%94%E5%A4%B4/"/>
-    
-    
-      <category term="Notes" scheme="https://hotkang.cn/tags/Notes/"/>
-    
-      <category term="PHP" scheme="https://hotkang.cn/tags/PHP/"/>
-    
-  </entry>
-  
-  <entry>
     <title>使用Homestead搭建Laravel开发环境</title>
     <link href="https://hotkang.cn/2019/%E4%BD%BF%E7%94%A8Homestead%E6%90%AD%E5%BB%BALaravel%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83/"/>
     <id>https://hotkang.cn/2019/使用Homestead搭建Laravel开发环境/</id>
@@ -236,11 +212,11 @@
       <category term="面向对象编程" scheme="https://hotkang.cn/categories/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B/"/>
     
     
-      <category term="继承" scheme="https://hotkang.cn/tags/%E7%BB%A7%E6%89%BF/"/>
-    
       <category term="面向对象" scheme="https://hotkang.cn/tags/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/"/>
     
       <category term="封装" scheme="https://hotkang.cn/tags/%E5%B0%81%E8%A3%85/"/>
+    
+      <category term="继承" scheme="https://hotkang.cn/tags/%E7%BB%A7%E6%89%BF/"/>
     
       <category term="多态" scheme="https://hotkang.cn/tags/%E5%A4%9A%E6%80%81/"/>
     
@@ -457,11 +433,11 @@
     
       <category term="图书管理系统" scheme="https://hotkang.cn/tags/%E5%9B%BE%E4%B9%A6%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F/"/>
     
-      <category term="Node.js" scheme="https://hotkang.cn/tags/Node-js/"/>
-    
       <category term="Mysql" scheme="https://hotkang.cn/tags/Mysql/"/>
     
       <category term="Homebrew" scheme="https://hotkang.cn/tags/Homebrew/"/>
+    
+      <category term="Node.js" scheme="https://hotkang.cn/tags/Node-js/"/>
     
   </entry>
   
@@ -485,11 +461,11 @@
     
       <category term="图书管理系统" scheme="https://hotkang.cn/tags/%E5%9B%BE%E4%B9%A6%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F/"/>
     
+      <category term="Mysql" scheme="https://hotkang.cn/tags/Mysql/"/>
+    
       <category term="Express" scheme="https://hotkang.cn/tags/Express/"/>
     
       <category term="EJS" scheme="https://hotkang.cn/tags/EJS/"/>
-    
-      <category term="Mysql" scheme="https://hotkang.cn/tags/Mysql/"/>
     
   </entry>
   

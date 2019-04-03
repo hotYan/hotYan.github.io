@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://hotkang.cn/about/index.html</loc>
+    
+    <lastmod>2019-04-03T07:55:31.326Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://hotkang.cn/2018/%E7%94%A8hexo%E6%90%AD%E5%BB%BAgithub%E5%8D%9A%E5%AE%A2%E4%BA%8C/</loc>
     
     <lastmod>2019-04-03T07:46:01.974Z</lastmod>
@@ -166,13 +173,6 @@
     <loc>https://hotkang.cn/2018/CSS-%E5%B1%9E%E6%80%A7%E7%BB%A7%E6%89%BF/</loc>
     
     <lastmod>2018-08-18T17:34:10.831Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://hotkang.cn/about/index.html</loc>
-    
-    <lastmod>2018-08-09T16:57:53.618Z</lastmod>
     
   </url>
   

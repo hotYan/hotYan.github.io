@@ -2,6 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://hotkang.cn/2018/%E7%94%A8nvm%E8%A3%85node-js/</loc>
+    
+    <lastmod>2019-04-03T07:35:27.452Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://hotkang.cn/2018/use%20homebrew%20install%20mongodb/</loc>
+    
+    <lastmod>2019-04-03T07:34:49.332Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://hotkang.cn/2018/%E5%9B%BE%E4%B9%A6%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F%E4%B8%89/</loc>
     
     <lastmod>2019-04-03T07:31:22.422Z</lastmod>
@@ -170,23 +184,9 @@
   </url>
   
   <url>
-    <loc>https://hotkang.cn/2018/%E7%94%A8nvm%E8%A3%85node-js/</loc>
-    
-    <lastmod>2018-08-03T16:42:39.371Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://hotkang.cn/2018/Github%E6%B7%BB%E5%8A%A0SSH%E5%AF%86%E9%92%A5/</loc>
     
     <lastmod>2018-08-03T10:00:23.531Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://hotkang.cn/2018/use%20homebrew%20install%20mongodb/</loc>
-    
-    <lastmod>2018-08-03T08:38:33.827Z</lastmod>
     
   </url>
   

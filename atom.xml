@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://hotkang.cn/"/>
-  <updated>2019-04-03T07:27:56.853Z</updated>
+  <updated>2019-05-24T13:24:23.282Z</updated>
   <id>https://hotkang.cn/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>MySQL8.0 登录密码</title>
+    <link href="https://hotkang.cn/2019/MySQL8-0-%E7%99%BB%E5%BD%95%E5%AF%86%E7%A0%81/"/>
+    <id>https://hotkang.cn/2019/MySQL8-0-登录密码/</id>
+    <published>2019-05-24T11:19:09.000Z</published>
+    <updated>2019-05-24T13:24:23.282Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="内容概览-mac-完善"><a href="#内容概览-mac-完善" class="headerlink" title="内容概览[mac][完善]"></a>内容概览[mac]<span style="font-size:.5em">[完善]</span></h2><ol><li>Client does not support authentication protocol requested by server; consider upgrading MySQL client.</li><li>Your password does not satisfy the current policy requirements.</li><li>Unknown system variable ‘validate_password_policy’.</li></ol><a id="more"></a><p><br></p><h2 id="链接自取"><a href="#链接自取" class="headerlink" title="链接自取"></a>链接自取</h2><blockquote><ul><li><a href="https://stackoverflow.com/questions/50093144/mysql-8-0-client-does-not-support-authentication-protocol-requested-by-server" target="_blank" rel="noopener">报错①，StackOverflow</a></li><li><a href="https://www.cnblogs.com/ivictor/p/5142809.html" target="_blank" rel="noopener">报错②</a></li><li><a href="https://blog.csdn.net/HaHa_Sir/article/details/80552663" target="_blank" rel="noopener">报错③</a></li></ul></blockquote><p><br></p><h2 id="一、发现问题"><a href="#一、发现问题" class="headerlink" title="一、发现问题"></a>一、发现问题</h2><p>使用Express 链接数据库，在通过界面表单提交数据，向MySQL数据库插入数据时，程序报错①：</p><pre><code>Error: ER_NOT_SUPPORTED_AUTH_MODE: Client does not support authentication protocol requested by server; consider upgrading MySQL client</code></pre><p><br></p><h2 id="二、尝试解决问题"><a href="#二、尝试解决问题" class="headerlink" title="二、尝试解决问题"></a>二、尝试解决问题</h2><p>在连接MySQL的时候，没有输入密码，直接回车就连上了。是因为目前版本的MySQL为root用户随机生成了一个密码。然而当通过express连接MySQL时，需要填写password字段。因此我们需要修改密码，命令如下：</p><pre><code>mysql&gt; ALTER USER &apos;root&apos;@&apos;localhost&apos; IDENTIFIED WITH mysql_native_password BY &apos;newpassword&apos;;mysql&gt; FLUSH PRIVILEGES;</code></pre><p><br></p><p>当我输入如下命令：</p><pre><code>mysql&gt; ALTER USER &apos;root&apos;@&apos;localhost&apos; IDENTIFIED WITH mysql_native_password BY &apos;root&apos;;//将新密码改为root</code></pre><p>报错②：</p><pre><code>ERROR 1819 (HY000): Your password does not satisfy the current policy requirements</code></pre><p><br></p><p>原因是密码过于简单，不符合MySQL密码规范，通过如下命令查看密码规范：</p><pre><code>mysql&gt; SHOW VARIABLES LIKE &apos;validate_password%&apos;;+--------------------------------------+--------+| Variable_name                        | Value  |+--------------------------------------+--------+| validate_password.check_user_name    | ON     | //用户名检测，默认关闭| validate_password.dictionary_file    |        || validate_password.length             | 8      |//长度至少为8位| validate_password.mixed_case_count   | 1      |//至少有一个大写小字母| validate_password.number_count       | 1      |//至少有一个数字| validate_password.policy             | MEDIUM |//安全策略(MEDIUM|0、LOW|1、STRONG|2)| validate_password.special_char_count | 1      |//至少一个特殊字符+--------------------------------------+--------+</code></pre><ul><li><p>安全策略参数说明：</p><ul><li>LOW :策略仅测试密码长度。密码长度必须至少为8个字符。</li><li>MEDIUM :策略添加了密码必须至少包含<strong>1个数字字符</strong>，<strong>1个小写字符</strong>，<strong>1个大写字符</strong>和<strong>1个特殊</strong>（非字母数字）字符的条件。</li><li>STRONG :策略添加了长度为4或更长的密码子字符串不能匹配字典文件中的字词（如果已经指定）的条件。</li></ul></li></ul><p><br></p><p>修改密码规范：</p><pre><code>mysql&gt; set global validate_password.policy=0;//将安全策略降低mysql&gt; set global validate_password.length=1;//将密码长度降低</code></pre><p>报错③：</p><pre><code>ERROR 1193 (HY000): Unknown system variable &apos;validate_password_policy&apos;</code></pre><p><br></p><p>先修改一个满足条件的密码，解决③：</p><pre><code>mysql&gt; ALTER USER &apos;root&apos;@&apos;localhost&apos; IDENTIFIED WITH mysql_native_password BY &apos;Root123@&apos;;//至少含一个大写字母、小写字母、数字、特殊符号mysql&gt;  FLUSH PRIVILEGES;</code></pre><p>再修改密码规范，解决②：</p><pre><code>mysql&gt; set global validate_password.policy=0;mysql&gt; set global validate_password.length=1;</code></pre><p>最后修改简单密码成功：</p><pre><code>mysql&gt; ALTER USER &apos;root&apos;@&apos;localhost&apos; IDENTIFIED WITH mysql_native_password BY &apos;root&apos;;mysql&gt; FLUSH PRIVILEGES;</code></pre><p><br></p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;内容概览-mac-完善&quot;&gt;&lt;a href=&quot;#内容概览-mac-完善&quot; class=&quot;headerlink&quot; title=&quot;内容概览[mac][完善]&quot;&gt;&lt;/a&gt;内容概览[mac]&lt;span style=&quot;font-size:.5em&quot;&gt;[完善]&lt;/span&gt;&lt;/h2&gt;&lt;ol&gt;&lt;li&gt;Client does not support authentication protocol requested by server; consider upgrading MySQL client.&lt;/li&gt;&lt;li&gt;Your password does not satisfy the current policy requirements.&lt;/li&gt;&lt;li&gt;Unknown system variable ‘validate_password_policy’.&lt;/li&gt;&lt;/ol&gt;
+    
+    </summary>
+    
+      <category term="MySQL" scheme="https://hotkang.cn/categories/MySQL/"/>
+    
+    
+      <category term="MySQL" scheme="https://hotkang.cn/tags/MySQL/"/>
+    
+  </entry>
   
   <entry>
     <title>Take notes with GitBook</title>
@@ -441,7 +463,7 @@
     <link href="https://hotkang.cn/2018/%E5%9B%BE%E4%B9%A6%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F%E4%B8%89/"/>
     <id>https://hotkang.cn/2018/图书管理系统三/</id>
     <published>2018-06-11T15:24:23.000Z</published>
-    <updated>2019-04-16T10:46:41.258Z</updated>
+    <updated>2019-05-24T11:22:21.250Z</updated>
     
     <content type="html"><![CDATA[<h2 id="内容概览-mac-完善"><a href="#内容概览-mac-完善" class="headerlink" title="内容概览[mac][完善]"></a>内容概览[mac]<span style="font-size:.5em">[完善]</span></h2><ol><li>install Homebrew</li><li>install MySQL</li><li>uninstall MySQL</li><li>MySQL and Mariadb</li></ol><a id="more"></a><p><br></p><h2 id="链接自取"><a href="#链接自取" class="headerlink" title="链接自取"></a>链接自取</h2><blockquote><ul><li><a href="https://dev.mysql.com/doc/refman/8.0/en/installing.html" target="_blank" rel="noopener">MySQL官网</a></li><li><a href="https://dev.mysql.com/doc/refman/8.0/en/osx-installation.html" target="_blank" rel="noopener">在macOS上安装MySQL</a></li><li><a href="https://brew.sh/" target="_blank" rel="noopener">homebrew官网</a></li><li><a href="https://aaaaaashu.gitbooks.io/mac-dev-setup/content/Homebrew/index.html" target="_blank" rel="noopener">本文参考链接</a></li><li><a href="https://aaaaaashu.gitbooks.io/mac-dev-setup/content/MySql/index.html" target="_blank" rel="noopener">YouTube视频教程</a>(划重点,是这个视频让我成功的！！！)</li></ul></blockquote><hr><h2 id="一、安装homebrew"><a href="#一、安装homebrew" class="headerlink" title="一、安装homebrew"></a>一、安装homebrew</h2><p>默认安装了homebrew，没有请参考<a href="https://hotyan.github.io/2018/use%20homebrew%20install%20mongodb" target="_blank" rel="noopener">Mac Use Homebrew Install Mongodb</a>,不再赘述。</p><p><br></p><h2 id="二、安装MySQL"><a href="#二、安装MySQL" class="headerlink" title="二、安装MySQL"></a>二、安装MySQL</h2><ol><li><p>终端下运行以下命令</p><pre><code>$ brew install mysql</code></pre><p>【暂时忽略你看到的一些提示！！！】</p></li></ol><p><br></p><ol start="2"><li><p>启动MySQL服务器</p><p>先把服务器start再说</p><pre><code>$ brew services start mysql</code></pre><p>【现在可以跟着你看到的提示一步一步来！！！】</p></li></ol><p><br></p><ol start="3"><li><p>先安全登录MySQL</p><p>运行提示一:</p><pre><code>$ mysql_secure_installation  </code></pre><ul><li><p>根据提示设置user root密码</p><pre><code>Enter password for user root：（此处输入你的密码）</code></pre></li><li><p>根据提示进行设置</p><pre><code>可一路yes</code></pre></li><li><p>设置完后，你会看到提示</p><pre><code>All done！</code></pre></li></ul></li></ol><p><br></p><ol start="4"><li><p>连接MySQL</p><p>运行提示二:</p><pre><code>$ mysql -uroot</code></pre><p>或者</p><pre><code>$ mysql -u root -p    </code></pre><p>回车后,输入刚刚设置的密码：</p><pre><code>Enter password：</code></pre></li></ol><p><br></p><ol start="5"><li><p>success！</p><p>成功之后,就可以对Mysql进行操作啦</p></li><li><p>退出MySQL</p><pre><code>mysql&gt; exit        Bye</code></pre></li><li><p>关闭MySQL服务器</p><pre><code>$ brew services stop mysql</code></pre></li></ol><p><br></p><ol start="8"><li><p>配置.bash_profile</p><p>先查看你的mysql安装在哪:</p><pre><code>$ which mysql</code></pre><p>比如我返回的是:</p><pre><code>/usr/local/Cellar/mysql/5.7.22/bin/mysql</code></pre><p>打开.bash_profile文件:</p><pre><code>$ open ~/.bash_profile</code></pre><p>将下面这行代码加入.bash_profile文件:</p><pre><code>export PATH=&quot;/usr/local/Cellar/mysql/5.7.22/bin:$PATH&quot;</code></pre><p>保存,退出后,保存新配置:</p><pre><code>$ source ~/.bash_profile</code></pre></li></ol><p><br></p><ol start="9"><li><p>运行流程</p><p>开启服务器:</p><pre><code>$ brew services start mysql</code></pre><p>登录Mysql:</p><pre><code>$ mysql -u root -p</code></pre><p>操作Mysql:</p><p>【<a href="https://hotyan.github.io/2018/Mysql%E5%91%BD%E4%BB%A4%E5%B0%8F%E7%BB%93" target="_blank" rel="noopener">Mysql指令小结</a> 】</p><p>退出Mysql:</p><pre><code>mysql&gt;exitBye</code></pre><p>关闭服务器:</p><pre><code>$ brew services stop mysql</code></pre></li></ol><p><br></p><ol start="10"><li><p>基本完成</p><p>其实我遇到过很多问题，也尝试解决，Google了很多，并没有很成功的解决问题，课设期间时间也比较有限，所以在尝试解决不成功后，出现问题我选择卸载，重新安装~</p><p>根据上面打开流程，基本不会再出差啦</p></li></ol><p><br></p><h2 id="三、卸载MySQL"><a href="#三、卸载MySQL" class="headerlink" title="三、卸载MySQL"></a>三、卸载MySQL</h2><ol><li><p>打开终端,依次输入</p><pre><code>$ brew remove mysql$ brew cleanup$ sudo rm /usr/local/mysql$ sudo rm -rf /usr/local/var/mysql$ sudo rm -rf /usr/local/mysql*$ sudo rm ~/Library/LaunchAgents/homebrew.mxcl.mysql.plist$ sudo rm -rf /Library/StartupItems/MySQLCOM$ sudo rm -rf /Library/PreferencePanes/My*</code></pre></li></ol><p><br></p><ol start="2"><li><p>查看是否成功</p><pre><code>$ mysql</code></pre><p>提示mysql 没有发现，多半就可以了。（其实我也不确定哈，只是我这样就可以~）</p></li><li><h5 id="最后重启电脑重新安装即可"><a href="#最后重启电脑重新安装即可" class="headerlink" title="最后重启电脑重新安装即可"></a>最后重启电脑重新安装即可</h5></li></ol><p><br></p><h2 id="四、MySQL遇见mariadb-2019-03-25更"><a href="#四、MySQL遇见mariadb-2019-03-25更" class="headerlink" title="四、MySQL遇见mariadb(2019/03/25更)"></a>四、MySQL遇见mariadb(2019/03/25更)</h2><p>最近尝试用homebrew 安装了mariadb，然后<code>brew services start mariadb</code>成功，但是运行<code>mysql -uroot</code>连接数据库时报错：</p><pre><code>Can&apos;t connect to local MySQL server through socket &apos;/tmp/mysql.sock&apos; (2)</code></pre><p>尝试解决未果！决定放弃mariadb，用回MySQL。故卸载mariadb，用<code>brew services start mysql</code>启动成功，但是<code>mysql -uroot</code>依旧报错；故卸载重装Mysql，用<code>brew services start mysql</code>启动成功，依旧连不上（尝试修改my.cnf，PATH来解决，未果）！！！！</p><p>1.<code>brew info mysql</code>如下</p><pre><code>HotkangdeMacBook-Pro:~ hotkang$ brew info mysqlmysql: stable 8.0.15 (bottled)Open source relational database management systemhttps://dev.mysql.com/doc/refman/8.0/en/Conflicts with:    mariadb (because mysql, mariadb, and percona install the same binaries.)    mariadb-connector-c (because both install plugins)    mysql-cluster (because mysql, mariadb, and percona install the same binaries.)    mysql-connector-c (because both install MySQL client libraries)    percona-server (because mysql, mariadb, and percona install the same binaries.)/usr/local/Cellar/mysql/8.0.15 (267 files, 234.6MB) *    Poured from bottle on 2019-03-25 at 12:38:07From: https://github.com/Homebrew/homebrew-core/blob/master/Formula/mysql.rb==&gt; DependenciesBuild: cmake ✘Required: openssl ✔==&gt; RequirementsRequired: macOS &gt;= 10.10 ✔==&gt; CaveatsWe&apos;ve installed your MySQL database without a root password. To secure it run:    mysql_secure_installationMySQL is configured to only allow connections from localhost by defaultTo connect run:    mysql -urootTo have launchd start mysql now and restart at login:    brew services start mysqlOr, if you don&apos;t want/need a background service you can just run:    mysql.server start</code></pre><p><br></p><ol start="2"><li><p>解决办法</p><ul><li><p>卸载MySQL(卸载同上,甚至卸载Homebrew，重启电脑)</p></li><li><p>重新下载homebrew(可跳过)</p><pre><code>//安装$ /usr/bin/ruby -e &quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)&quot;//卸载$ /usr/bin/ruby -e &quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/uninstall)&quot;</code></pre></li><li><p>下载MySQL</p><pre><code>$ brew install mysql//其他常用命令$ brew search mysql$ brew info mysql</code></pre></li><li><p>启动MySQL</p><pre><code>$ mysql.server start//其他常用命令$ mysql.server restart //重启$ mysql.server stop    //停止</code></pre></li></ul></li></ol><p><br></p><ol start="3"><li><p>总结</p><pre><code>Conflicts with:    mariadb (because mysql, mariadb, and percona install the same binaries.)    mariadb-connector-c (because both install plugins)    mysql-cluster (because mysql, mariadb, and percona install the samebinaries.)    mysql-connector-c (because both install MySQL client libraries)    percona-server (because mysql, mariadb, and percona install the same binaries.)</code></pre></li></ol><p>由于用<code>brew services start mysql</code>报错，用<code>mysql.server start</code>正常。结合上面的<code>Conflicts with:...because mysql, mariadb, and percona install the same binaries...</code>,猜测，下载了mariadb的情况下，建议使用<code>mysql.server start</code>来启动MySQL。</p>]]></content>
     
@@ -451,16 +473,16 @@
     
     </summary>
     
+      <category term="MySQL" scheme="https://hotkang.cn/categories/MySQL/"/>
+    
       <category term="Install" scheme="https://hotkang.cn/categories/Install/"/>
     
       <category term="Express+ejs+Mysql图书管理系统" scheme="https://hotkang.cn/categories/Express-ejs-Mysql%E5%9B%BE%E4%B9%A6%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F/"/>
     
-      <category term="MySQL" scheme="https://hotkang.cn/categories/MySQL/"/>
     
+      <category term="MySQL" scheme="https://hotkang.cn/tags/MySQL/"/>
     
       <category term="图书管理系统" scheme="https://hotkang.cn/tags/%E5%9B%BE%E4%B9%A6%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F/"/>
-    
-      <category term="Mysql" scheme="https://hotkang.cn/tags/Mysql/"/>
     
       <category term="Homebrew" scheme="https://hotkang.cn/tags/Homebrew/"/>
     
@@ -577,30 +599,6 @@
   </entry>
   
   <entry>
-    <title>Mac Use Homebrew Install Mongodb</title>
-    <link href="https://hotkang.cn/2018/use%20homebrew%20install%20mongodb/"/>
-    <id>https://hotkang.cn/2018/use homebrew install mongodb/</id>
-    <published>2018-05-29T07:38:51.000Z</published>
-    <updated>2019-04-03T07:34:49.332Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="Mac-Use-Homebrew-Install-Mongodb-完结"><a href="#Mac-Use-Homebrew-Install-Mongodb-完结" class="headerlink" title="Mac Use Homebrew Install Mongodb [完结]"></a>Mac Use Homebrew Install Mongodb <span style="font-size:.5em">[完结]</span></h2><blockquote><p>图书管理系统,一开始是打算用Express+ejs+Mongodb,但是后期,使用mongoose出现了问题,尝试解决,没有成功后,就放弃了,转而使用Mysql。将安装过程记录一下。</p></blockquote><a id="more"></a><p><br></p><h2 id="链接自取"><a href="#链接自取" class="headerlink" title="链接自取"></a>链接自取</h2><blockquote><p>个人比较喜欢先甩参考链接,可以选择直接去看参考链接,以下内容作为我的个人记录,以我的角度去记录,总结。</p><ul><li><a href="https://brew.sh/" target="_blank" rel="noopener">homebrew官网</a></li><li><a href="https://aaaaaashu.gitbooks.io/mac-dev-setup/content/Homebrew/index.html" target="_blank" rel="noopener">参考链接</a></li></ul></blockquote><hr><h2 id="一、安装Homebrew"><a href="#一、安装Homebrew" class="headerlink" title="一、安装Homebrew"></a>一、安装Homebrew</h2><p>打开Terminal并运行以下命令</p><pre><code>$ /usr/bin/ruby -e &quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)&quot;</code></pre><p>【注意】 Homebrew将作为安装过程的一部分下载并安装Xcode 8.0的命令行工具。</p><p><br></p><h2 id="二、安装MongoDB"><a href="#二、安装MongoDB" class="headerlink" title="二、安装MongoDB"></a>二、安装MongoDB</h2><ol><li><p>运行以下命令进行安装mongodb</p><pre><code>$ brew install mongodb</code></pre></li><li><p>将mongodb升级，确保版本最新</p><pre><code>$ brew upgrade mongodb</code></pre></li><li><p>创建一个目录，用来保存mongo默认的数据</p><pre><code>$ mkdir -p /data/db</code></pre></li><li><p>给目录以可读可写的权限</p><pre><code>$ chown `id -u` /data/db</code></pre></li><li><p>启动</p><pre><code>$ brew services start mongodb</code></pre></li></ol><p><br></p><h2 id="三、未正常关闭导致数据库突然启动不了"><a href="#三、未正常关闭导致数据库突然启动不了" class="headerlink" title="三、未正常关闭导致数据库突然启动不了"></a>三、未正常关闭导致数据库突然启动不了</h2><ol><li>删除掉mongod.lock文件，然后重新启动</li></ol><ol start="2"><li><p>如果还是不可以，先查看一下进程</p><pre><code>$ ps -aef | grep mongo</code></pre></li><li><p>然后根据进程ID杀掉进程</p><pre><code>$ sudo kill 6955</code></pre></li><li><p>重新启动mongodb服务</p><pre><code>$ brew services start mongodb</code></pre></li></ol>]]></content>
-    
-    <summary type="html">
-    
-      &lt;h2 id=&quot;Mac-Use-Homebrew-Install-Mongodb-完结&quot;&gt;&lt;a href=&quot;#Mac-Use-Homebrew-Install-Mongodb-完结&quot; class=&quot;headerlink&quot; title=&quot;Mac Use Homebrew Install Mongodb [完结]&quot;&gt;&lt;/a&gt;Mac Use Homebrew Install Mongodb &lt;span style=&quot;font-size:.5em&quot;&gt;[完结]&lt;/span&gt;&lt;/h2&gt;&lt;blockquote&gt;&lt;p&gt;图书管理系统,一开始是打算用Express+ejs+Mongodb,但是后期,使用mongoose出现了问题,尝试解决,没有成功后,就放弃了,转而使用Mysql。将安装过程记录一下。&lt;/p&gt;&lt;/blockquote&gt;
-    
-    </summary>
-    
-      <category term="Install" scheme="https://hotkang.cn/categories/Install/"/>
-    
-    
-      <category term="Homebrew" scheme="https://hotkang.cn/tags/Homebrew/"/>
-    
-      <category term="Mongodb" scheme="https://hotkang.cn/tags/Mongodb/"/>
-    
-  </entry>
-  
-  <entry>
     <title>用hexo搭建github博客一</title>
     <link href="https://hotkang.cn/2018/%E7%94%A8hexo%E6%90%AD%E5%BB%BAgithub%E5%8D%9A%E5%AE%A2%E4%B8%80/"/>
     <id>https://hotkang.cn/2018/用hexo搭建github博客一/</id>
@@ -621,6 +619,30 @@
       <category term="Hexo" scheme="https://hotkang.cn/tags/Hexo/"/>
     
       <category term="博客" scheme="https://hotkang.cn/tags/%E5%8D%9A%E5%AE%A2/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Mac Use Homebrew Install Mongodb</title>
+    <link href="https://hotkang.cn/2018/use%20homebrew%20install%20mongodb/"/>
+    <id>https://hotkang.cn/2018/use homebrew install mongodb/</id>
+    <published>2018-05-29T07:38:51.000Z</published>
+    <updated>2019-04-03T07:34:49.332Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="Mac-Use-Homebrew-Install-Mongodb-完结"><a href="#Mac-Use-Homebrew-Install-Mongodb-完结" class="headerlink" title="Mac Use Homebrew Install Mongodb [完结]"></a>Mac Use Homebrew Install Mongodb <span style="font-size:.5em">[完结]</span></h2><blockquote><p>图书管理系统,一开始是打算用Express+ejs+Mongodb,但是后期,使用mongoose出现了问题,尝试解决,没有成功后,就放弃了,转而使用Mysql。将安装过程记录一下。</p></blockquote><a id="more"></a><p><br></p><h2 id="链接自取"><a href="#链接自取" class="headerlink" title="链接自取"></a>链接自取</h2><blockquote><p>个人比较喜欢先甩参考链接,可以选择直接去看参考链接,以下内容作为我的个人记录,以我的角度去记录,总结。</p><ul><li><a href="https://brew.sh/" target="_blank" rel="noopener">homebrew官网</a></li><li><a href="https://aaaaaashu.gitbooks.io/mac-dev-setup/content/Homebrew/index.html" target="_blank" rel="noopener">参考链接</a></li></ul></blockquote><hr><h2 id="一、安装Homebrew"><a href="#一、安装Homebrew" class="headerlink" title="一、安装Homebrew"></a>一、安装Homebrew</h2><p>打开Terminal并运行以下命令</p><pre><code>$ /usr/bin/ruby -e &quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)&quot;</code></pre><p>【注意】 Homebrew将作为安装过程的一部分下载并安装Xcode 8.0的命令行工具。</p><p><br></p><h2 id="二、安装MongoDB"><a href="#二、安装MongoDB" class="headerlink" title="二、安装MongoDB"></a>二、安装MongoDB</h2><ol><li><p>运行以下命令进行安装mongodb</p><pre><code>$ brew install mongodb</code></pre></li><li><p>将mongodb升级，确保版本最新</p><pre><code>$ brew upgrade mongodb</code></pre></li><li><p>创建一个目录，用来保存mongo默认的数据</p><pre><code>$ mkdir -p /data/db</code></pre></li><li><p>给目录以可读可写的权限</p><pre><code>$ chown `id -u` /data/db</code></pre></li><li><p>启动</p><pre><code>$ brew services start mongodb</code></pre></li></ol><p><br></p><h2 id="三、未正常关闭导致数据库突然启动不了"><a href="#三、未正常关闭导致数据库突然启动不了" class="headerlink" title="三、未正常关闭导致数据库突然启动不了"></a>三、未正常关闭导致数据库突然启动不了</h2><ol><li>删除掉mongod.lock文件，然后重新启动</li></ol><ol start="2"><li><p>如果还是不可以，先查看一下进程</p><pre><code>$ ps -aef | grep mongo</code></pre></li><li><p>然后根据进程ID杀掉进程</p><pre><code>$ sudo kill 6955</code></pre></li><li><p>重新启动mongodb服务</p><pre><code>$ brew services start mongodb</code></pre></li></ol>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;Mac-Use-Homebrew-Install-Mongodb-完结&quot;&gt;&lt;a href=&quot;#Mac-Use-Homebrew-Install-Mongodb-完结&quot; class=&quot;headerlink&quot; title=&quot;Mac Use Homebrew Install Mongodb [完结]&quot;&gt;&lt;/a&gt;Mac Use Homebrew Install Mongodb &lt;span style=&quot;font-size:.5em&quot;&gt;[完结]&lt;/span&gt;&lt;/h2&gt;&lt;blockquote&gt;&lt;p&gt;图书管理系统,一开始是打算用Express+ejs+Mongodb,但是后期,使用mongoose出现了问题,尝试解决,没有成功后,就放弃了,转而使用Mysql。将安装过程记录一下。&lt;/p&gt;&lt;/blockquote&gt;
+    
+    </summary>
+    
+      <category term="Install" scheme="https://hotkang.cn/categories/Install/"/>
+    
+    
+      <category term="Homebrew" scheme="https://hotkang.cn/tags/Homebrew/"/>
+    
+      <category term="Mongodb" scheme="https://hotkang.cn/tags/Mongodb/"/>
     
   </entry>
   

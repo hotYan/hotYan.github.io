@@ -262,11 +262,11 @@
       <category term="面向对象编程" scheme="https://hotkang.cn/categories/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B/"/>
     
     
-      <category term="继承" scheme="https://hotkang.cn/tags/%E7%BB%A7%E6%89%BF/"/>
-    
       <category term="面向对象" scheme="https://hotkang.cn/tags/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/"/>
     
       <category term="封装" scheme="https://hotkang.cn/tags/%E5%B0%81%E8%A3%85/"/>
+    
+      <category term="继承" scheme="https://hotkang.cn/tags/%E7%BB%A7%E6%89%BF/"/>
     
       <category term="多态" scheme="https://hotkang.cn/tags/%E5%A4%9A%E6%80%81/"/>
     
@@ -475,9 +475,9 @@
     
       <category term="MySQL" scheme="https://hotkang.cn/categories/MySQL/"/>
     
-      <category term="Express+ejs+Mysql图书管理系统" scheme="https://hotkang.cn/categories/Express-ejs-Mysql%E5%9B%BE%E4%B9%A6%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F/"/>
-    
       <category term="Install" scheme="https://hotkang.cn/categories/Install/"/>
+    
+      <category term="Express+ejs+Mysql图书管理系统" scheme="https://hotkang.cn/categories/Express-ejs-Mysql%E5%9B%BE%E4%B9%A6%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F/"/>
     
     
       <category term="MySQL" scheme="https://hotkang.cn/tags/MySQL/"/>
@@ -599,30 +599,6 @@
   </entry>
   
   <entry>
-    <title>Mac Use Homebrew Install Mongodb</title>
-    <link href="https://hotkang.cn/2018/use%20homebrew%20install%20mongodb/"/>
-    <id>https://hotkang.cn/2018/use homebrew install mongodb/</id>
-    <published>2018-05-29T07:38:51.000Z</published>
-    <updated>2019-04-03T07:34:49.332Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="Mac-Use-Homebrew-Install-Mongodb-完结"><a href="#Mac-Use-Homebrew-Install-Mongodb-完结" class="headerlink" title="Mac Use Homebrew Install Mongodb [完结]"></a>Mac Use Homebrew Install Mongodb <span style="font-size:.5em">[完结]</span></h2><blockquote><p>图书管理系统,一开始是打算用Express+ejs+Mongodb,但是后期,使用mongoose出现了问题,尝试解决,没有成功后,就放弃了,转而使用Mysql。将安装过程记录一下。</p></blockquote><a id="more"></a><p><br></p><h2 id="链接自取"><a href="#链接自取" class="headerlink" title="链接自取"></a>链接自取</h2><blockquote><p>个人比较喜欢先甩参考链接,可以选择直接去看参考链接,以下内容作为我的个人记录,以我的角度去记录,总结。</p><ul><li><a href="https://brew.sh/" target="_blank" rel="noopener">homebrew官网</a></li><li><a href="https://aaaaaashu.gitbooks.io/mac-dev-setup/content/Homebrew/index.html" target="_blank" rel="noopener">参考链接</a></li></ul></blockquote><hr><h2 id="一、安装Homebrew"><a href="#一、安装Homebrew" class="headerlink" title="一、安装Homebrew"></a>一、安装Homebrew</h2><p>打开Terminal并运行以下命令</p><pre><code>$ /usr/bin/ruby -e &quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)&quot;</code></pre><p>【注意】 Homebrew将作为安装过程的一部分下载并安装Xcode 8.0的命令行工具。</p><p><br></p><h2 id="二、安装MongoDB"><a href="#二、安装MongoDB" class="headerlink" title="二、安装MongoDB"></a>二、安装MongoDB</h2><ol><li><p>运行以下命令进行安装mongodb</p><pre><code>$ brew install mongodb</code></pre></li><li><p>将mongodb升级，确保版本最新</p><pre><code>$ brew upgrade mongodb</code></pre></li><li><p>创建一个目录，用来保存mongo默认的数据</p><pre><code>$ mkdir -p /data/db</code></pre></li><li><p>给目录以可读可写的权限</p><pre><code>$ chown `id -u` /data/db</code></pre></li><li><p>启动</p><pre><code>$ brew services start mongodb</code></pre></li></ol><p><br></p><h2 id="三、未正常关闭导致数据库突然启动不了"><a href="#三、未正常关闭导致数据库突然启动不了" class="headerlink" title="三、未正常关闭导致数据库突然启动不了"></a>三、未正常关闭导致数据库突然启动不了</h2><ol><li>删除掉mongod.lock文件，然后重新启动</li></ol><ol start="2"><li><p>如果还是不可以，先查看一下进程</p><pre><code>$ ps -aef | grep mongo</code></pre></li><li><p>然后根据进程ID杀掉进程</p><pre><code>$ sudo kill 6955</code></pre></li><li><p>重新启动mongodb服务</p><pre><code>$ brew services start mongodb</code></pre></li></ol>]]></content>
-    
-    <summary type="html">
-    
-      &lt;h2 id=&quot;Mac-Use-Homebrew-Install-Mongodb-完结&quot;&gt;&lt;a href=&quot;#Mac-Use-Homebrew-Install-Mongodb-完结&quot; class=&quot;headerlink&quot; title=&quot;Mac Use Homebrew Install Mongodb [完结]&quot;&gt;&lt;/a&gt;Mac Use Homebrew Install Mongodb &lt;span style=&quot;font-size:.5em&quot;&gt;[完结]&lt;/span&gt;&lt;/h2&gt;&lt;blockquote&gt;&lt;p&gt;图书管理系统,一开始是打算用Express+ejs+Mongodb,但是后期,使用mongoose出现了问题,尝试解决,没有成功后,就放弃了,转而使用Mysql。将安装过程记录一下。&lt;/p&gt;&lt;/blockquote&gt;
-    
-    </summary>
-    
-      <category term="Install" scheme="https://hotkang.cn/categories/Install/"/>
-    
-    
-      <category term="Homebrew" scheme="https://hotkang.cn/tags/Homebrew/"/>
-    
-      <category term="Mongodb" scheme="https://hotkang.cn/tags/Mongodb/"/>
-    
-  </entry>
-  
-  <entry>
     <title>用hexo搭建github博客一</title>
     <link href="https://hotkang.cn/2018/%E7%94%A8hexo%E6%90%AD%E5%BB%BAgithub%E5%8D%9A%E5%AE%A2%E4%B8%80/"/>
     <id>https://hotkang.cn/2018/用hexo搭建github博客一/</id>
@@ -643,6 +619,30 @@
       <category term="Hexo" scheme="https://hotkang.cn/tags/Hexo/"/>
     
       <category term="博客" scheme="https://hotkang.cn/tags/%E5%8D%9A%E5%AE%A2/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Mac Use Homebrew Install Mongodb</title>
+    <link href="https://hotkang.cn/2018/use%20homebrew%20install%20mongodb/"/>
+    <id>https://hotkang.cn/2018/use homebrew install mongodb/</id>
+    <published>2018-05-29T07:38:51.000Z</published>
+    <updated>2019-04-03T07:34:49.332Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="Mac-Use-Homebrew-Install-Mongodb-完结"><a href="#Mac-Use-Homebrew-Install-Mongodb-完结" class="headerlink" title="Mac Use Homebrew Install Mongodb [完结]"></a>Mac Use Homebrew Install Mongodb <span style="font-size:.5em">[完结]</span></h2><blockquote><p>图书管理系统,一开始是打算用Express+ejs+Mongodb,但是后期,使用mongoose出现了问题,尝试解决,没有成功后,就放弃了,转而使用Mysql。将安装过程记录一下。</p></blockquote><a id="more"></a><p><br></p><h2 id="链接自取"><a href="#链接自取" class="headerlink" title="链接自取"></a>链接自取</h2><blockquote><p>个人比较喜欢先甩参考链接,可以选择直接去看参考链接,以下内容作为我的个人记录,以我的角度去记录,总结。</p><ul><li><a href="https://brew.sh/" target="_blank" rel="noopener">homebrew官网</a></li><li><a href="https://aaaaaashu.gitbooks.io/mac-dev-setup/content/Homebrew/index.html" target="_blank" rel="noopener">参考链接</a></li></ul></blockquote><hr><h2 id="一、安装Homebrew"><a href="#一、安装Homebrew" class="headerlink" title="一、安装Homebrew"></a>一、安装Homebrew</h2><p>打开Terminal并运行以下命令</p><pre><code>$ /usr/bin/ruby -e &quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)&quot;</code></pre><p>【注意】 Homebrew将作为安装过程的一部分下载并安装Xcode 8.0的命令行工具。</p><p><br></p><h2 id="二、安装MongoDB"><a href="#二、安装MongoDB" class="headerlink" title="二、安装MongoDB"></a>二、安装MongoDB</h2><ol><li><p>运行以下命令进行安装mongodb</p><pre><code>$ brew install mongodb</code></pre></li><li><p>将mongodb升级，确保版本最新</p><pre><code>$ brew upgrade mongodb</code></pre></li><li><p>创建一个目录，用来保存mongo默认的数据</p><pre><code>$ mkdir -p /data/db</code></pre></li><li><p>给目录以可读可写的权限</p><pre><code>$ chown `id -u` /data/db</code></pre></li><li><p>启动</p><pre><code>$ brew services start mongodb</code></pre></li></ol><p><br></p><h2 id="三、未正常关闭导致数据库突然启动不了"><a href="#三、未正常关闭导致数据库突然启动不了" class="headerlink" title="三、未正常关闭导致数据库突然启动不了"></a>三、未正常关闭导致数据库突然启动不了</h2><ol><li>删除掉mongod.lock文件，然后重新启动</li></ol><ol start="2"><li><p>如果还是不可以，先查看一下进程</p><pre><code>$ ps -aef | grep mongo</code></pre></li><li><p>然后根据进程ID杀掉进程</p><pre><code>$ sudo kill 6955</code></pre></li><li><p>重新启动mongodb服务</p><pre><code>$ brew services start mongodb</code></pre></li></ol>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;Mac-Use-Homebrew-Install-Mongodb-完结&quot;&gt;&lt;a href=&quot;#Mac-Use-Homebrew-Install-Mongodb-完结&quot; class=&quot;headerlink&quot; title=&quot;Mac Use Homebrew Install Mongodb [完结]&quot;&gt;&lt;/a&gt;Mac Use Homebrew Install Mongodb &lt;span style=&quot;font-size:.5em&quot;&gt;[完结]&lt;/span&gt;&lt;/h2&gt;&lt;blockquote&gt;&lt;p&gt;图书管理系统,一开始是打算用Express+ejs+Mongodb,但是后期,使用mongoose出现了问题,尝试解决,没有成功后,就放弃了,转而使用Mysql。将安装过程记录一下。&lt;/p&gt;&lt;/blockquote&gt;
+    
+    </summary>
+    
+      <category term="Install" scheme="https://hotkang.cn/categories/Install/"/>
+    
+    
+      <category term="Homebrew" scheme="https://hotkang.cn/tags/Homebrew/"/>
+    
+      <category term="Mongodb" scheme="https://hotkang.cn/tags/Mongodb/"/>
     
   </entry>
   

@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://hotkang.cn/2019/%E5%9C%A8Homestead%E7%8E%AF%E5%A2%83%E9%83%A8%E7%BD%B2Laravel%E9%A1%B9%E7%9B%AE/</loc>
+    <lastmod>2019-07-02T06:53:03.667Z</lastmod>
+  </url>  <url>
     <loc>https://hotkang.cn/2018/%E7%94%A8hexo%E6%90%AD%E5%BB%BAgithub%E5%8D%9A%E5%AE%A2%E4%B8%80/</loc>
     <lastmod>2019-06-17T07:24:41.375Z</lastmod>
   </url>  <url>
@@ -33,9 +36,6 @@
   </url>  <url>
     <loc>https://hotkang.cn/2019/%E4%BD%BF%E7%94%A8Homestead%E6%90%AD%E5%BB%BALaravel%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83/</loc>
     <lastmod>2019-04-03T07:29:29.120Z</lastmod>
-  </url>  <url>
-    <loc>https://hotkang.cn/2019/%E5%9C%A8Homestead%E7%8E%AF%E5%A2%83%E9%83%A8%E7%BD%B2Laravel%E9%A1%B9%E7%9B%AE/</loc>
-    <lastmod>2019-04-03T07:28:42.365Z</lastmod>
   </url>  <url>
     <loc>https://hotkang.cn/2019/Take-notes-with-GitBook/</loc>
     <lastmod>2019-04-03T07:27:56.853Z</lastmod>

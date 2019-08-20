@@ -2,11 +2,11 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>HotYan&#39;s Blog</title>
   
-  <subtitle>程序媛</subtitle>
+  <subtitle>小可爱</subtitle>
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://hotkang.cn/"/>
-  <updated>2019-08-20T02:54:15.286Z</updated>
+  <updated>2019-08-20T03:09:33.803Z</updated>
   <id>https://hotkang.cn/</id>
   
   <author>
@@ -21,9 +21,9 @@
     <link href="https://hotkang.cn/2019/NPM-ERR/"/>
     <id>https://hotkang.cn/2019/NPM-ERR/</id>
     <published>2019-08-20T02:07:48.000Z</published>
-    <updated>2019-08-20T02:54:15.286Z</updated>
+    <updated>2019-08-20T03:09:33.803Z</updated>
     
-    <content type="html"><![CDATA[<h2 id="内容概览-mac-持续完善"><a href="#内容概览-mac-持续完善" class="headerlink" title="内容概览[mac][持续完善]"></a>内容概览[mac]<span style="font-size:.5em">[持续完善]</span></h2><ol><li>integrity checksum failed when using sha1…</li><li></li></ol><a id="more"></a><p><br></p><h2 id="2019-08-20"><a href="#2019-08-20" class="headerlink" title="2019.08.20"></a>2019.08.20</h2><h3 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h3><p>npm install 报错，如下：</p><pre><code>npm ERR! code EINTEGRITYnpm ERR! sha1-0B+mxlhZt2/PMbPLU6OCGjEdgFE= integrity checksum failed when using sha1: wanted sha1-0B+mxlhZt2/PMbPLU6OCGjEdgFE= but got sha512-HQStPIV4y3afTiCYVxirakhlCfGkI161c76kKFca7Fk1JusM//Qeo1ej2XaMniiNeaZklMVrh3vTtIzpzwbpmA== sha1-Co0Wc0odmvvIJLmd+H5zjlji2lk=. (9418 bytes)</code></pre><h3 id="参考链接"><a href="#参考链接" class="headerlink" title="参考链接"></a>参考链接</h3><blockquote><ol><li><a href="https://github.com/nodejs/node/issues/13635" target="_blank" rel="noopener">integrity checksum failed when using sha1 - Node v8+ #13635</a></li><li><a href="https://www.jianshu.com/p/2899bd2a0a20" target="_blank" rel="noopener">npm ERR! code EINTEGRITY 解决方案</a></li></ol></blockquote><h3 id="解决办法"><a href="#解决办法" class="headerlink" title="解决办法"></a>解决办法</h3><ol><li><p>运行参考链接1中的高赞</p><pre><code>$ npm install -g npm#结果如下：/Users/hotkang/.nvm/versions/node/v10.15.3/bin/npm -&gt; /Users/hotkang/.nvm/versions/node/v10.15.3/lib/node_modules/npm/bin/npm-cli.js/Users/hotkang/.nvm/versions/node/v10.15.3/bin/npx -&gt; /Users/hotkang/.nvm/versions/node/v10.15.3/lib/node_modules/npm/bin/npx-cli.js+ npm@6.10.3updated 1 package in 11.68s</code></pre><p>注：npm install 依旧不成功</p></li><li><p>删文件</p><p>删除<code>package-lock.json</code>、<code>node_modules</code>文件,清缓存：</p><pre><code>$ rm ./package-lock.json$ rm -r ./node_modules$ npm cache clear --force #报没有权限，根据提示给权限# To permanently fix this problem, please run:# npm ERR!   sudo chown -R 501:20 &quot;/Users/hotkang/.npm&quot;#给权限$ sudo chown -R 501:20 &quot;/Users/hotkang/.npm&quot;#再次清缓存$ npm cache clear --force </code></pre><p>注：npm install 成功！</p></li></ol><p><br></p>]]></content>
+    <content type="html"><![CDATA[<h2 id="内容概览-mac-持续完善"><a href="#内容概览-mac-持续完善" class="headerlink" title="内容概览[mac][持续完善]"></a>内容概览[mac]<span style="font-size:.5em">[持续完善]</span></h2><ol><li>integrity checksum failed when using sha1…</li><li></li></ol><a id="more"></a><p><br></p><h2 id="2019-08-20"><a href="#2019-08-20" class="headerlink" title="2019.08.20"></a>2019.08.20</h2><h3 id="一、问题描述"><a href="#一、问题描述" class="headerlink" title="一、问题描述"></a>一、问题描述</h3><p>npm install 报错，如下：</p><pre><code>npm ERR! code EINTEGRITYnpm ERR! sha1-0B+mxlhZt2/PMbPLU6OCGjEdgFE= integrity checksum failed when using sha1: wanted sha1-0B+mxlhZt2/PMbPLU6OCGjEdgFE= but got sha512-HQStPIV4y3afTiCYVxirakhlCfGkI161c76kKFca7Fk1JusM//Qeo1ej2XaMniiNeaZklMVrh3vTtIzpzwbpmA== sha1-Co0Wc0odmvvIJLmd+H5zjlji2lk=. (9418 bytes)</code></pre><h3 id="二、参考链接"><a href="#二、参考链接" class="headerlink" title="二、参考链接"></a>二、参考链接</h3><blockquote><ol><li><a href="https://github.com/nodejs/node/issues/13635" target="_blank" rel="noopener">integrity checksum failed when using sha1 - Node v8+ #13635</a></li><li><a href="https://www.jianshu.com/p/2899bd2a0a20" target="_blank" rel="noopener">npm ERR! code EINTEGRITY 解决方案</a></li></ol></blockquote><h3 id="三、解决办法"><a href="#三、解决办法" class="headerlink" title="三、解决办法"></a>三、解决办法</h3><ol><li><p>运行参考链接1中的高赞</p><pre><code>$ npm install -g npm#结果如下：/Users/hotkang/.nvm/versions/node/v10.15.3/bin/npm -&gt; /Users/hotkang/.nvm/versions/node/v10.15.3/lib/node_modules/npm/bin/npm-cli.js/Users/hotkang/.nvm/versions/node/v10.15.3/bin/npx -&gt; /Users/hotkang/.nvm/versions/node/v10.15.3/lib/node_modules/npm/bin/npx-cli.js+ npm@6.10.3updated 1 package in 11.68s</code></pre><p>注：npm install 依旧不成功</p></li><li><p>删文件</p><p>删除<code>package-lock.json</code>、<code>node_modules</code>文件,清缓存：</p><pre><code>$ rm ./package-lock.json$ rm -r ./node_modules$ npm cache clear --force #报没有权限，根据提示给权限# To permanently fix this problem, please run:# npm ERR!   sudo chown -R 501:20 &quot;/Users/hotkang/.npm&quot;#给权限$ sudo chown -R 501:20 &quot;/Users/hotkang/.npm&quot;#再次清缓存$ npm cache clear --force </code></pre><p>注：npm install 成功！</p></li></ol><p><br></p>]]></content>
     
     <summary type="html">
     
@@ -362,11 +362,11 @@
       <category term="面向对象编程" scheme="https://hotkang.cn/categories/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B/"/>
     
     
+      <category term="继承" scheme="https://hotkang.cn/tags/%E7%BB%A7%E6%89%BF/"/>
+    
       <category term="面向对象" scheme="https://hotkang.cn/tags/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/"/>
     
       <category term="封装" scheme="https://hotkang.cn/tags/%E5%B0%81%E8%A3%85/"/>
-    
-      <category term="继承" scheme="https://hotkang.cn/tags/%E7%BB%A7%E6%89%BF/"/>
     
       <category term="多态" scheme="https://hotkang.cn/tags/%E5%A4%9A%E6%80%81/"/>
     
@@ -552,9 +552,9 @@
       <category term="MySQL" scheme="https://hotkang.cn/categories/MySQL/"/>
     
     
-      <category term="MySQL" scheme="https://hotkang.cn/tags/MySQL/"/>
-    
       <category term="图书管理系统" scheme="https://hotkang.cn/tags/%E5%9B%BE%E4%B9%A6%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F/"/>
+    
+      <category term="MySQL" scheme="https://hotkang.cn/tags/MySQL/"/>
     
   </entry>
   
@@ -580,9 +580,9 @@
       <category term="Express+EJS+MySQL图书管理系统" scheme="https://hotkang.cn/categories/Express-EJS-MySQL%E5%9B%BE%E4%B9%A6%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F/"/>
     
     
-      <category term="MySQL" scheme="https://hotkang.cn/tags/MySQL/"/>
-    
       <category term="图书管理系统" scheme="https://hotkang.cn/tags/%E5%9B%BE%E4%B9%A6%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F/"/>
+    
+      <category term="MySQL" scheme="https://hotkang.cn/tags/MySQL/"/>
     
       <category term="Homebrew" scheme="https://hotkang.cn/tags/Homebrew/"/>
     
@@ -608,9 +608,9 @@
       <category term="Express+EJS+MySQL图书管理系统" scheme="https://hotkang.cn/categories/Express-EJS-MySQL%E5%9B%BE%E4%B9%A6%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F/"/>
     
     
-      <category term="MySQL" scheme="https://hotkang.cn/tags/MySQL/"/>
-    
       <category term="图书管理系统" scheme="https://hotkang.cn/tags/%E5%9B%BE%E4%B9%A6%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F/"/>
+    
+      <category term="MySQL" scheme="https://hotkang.cn/tags/MySQL/"/>
     
       <category term="Express" scheme="https://hotkang.cn/tags/Express/"/>
     

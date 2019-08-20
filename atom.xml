@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://hotkang.cn/"/>
-  <updated>2019-08-02T06:43:06.154Z</updated>
+  <updated>2019-08-20T02:54:15.286Z</updated>
   <id>https://hotkang.cn/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>NPM ERR</title>
+    <link href="https://hotkang.cn/2019/NPM-ERR/"/>
+    <id>https://hotkang.cn/2019/NPM-ERR/</id>
+    <published>2019-08-20T02:07:48.000Z</published>
+    <updated>2019-08-20T02:54:15.286Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="内容概览-mac-持续完善"><a href="#内容概览-mac-持续完善" class="headerlink" title="内容概览[mac][持续完善]"></a>内容概览[mac]<span style="font-size:.5em">[持续完善]</span></h2><ol><li>integrity checksum failed when using sha1…</li><li></li></ol><a id="more"></a><p><br></p><h2 id="2019-08-20"><a href="#2019-08-20" class="headerlink" title="2019.08.20"></a>2019.08.20</h2><h3 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h3><p>npm install 报错，如下：</p><pre><code>npm ERR! code EINTEGRITYnpm ERR! sha1-0B+mxlhZt2/PMbPLU6OCGjEdgFE= integrity checksum failed when using sha1: wanted sha1-0B+mxlhZt2/PMbPLU6OCGjEdgFE= but got sha512-HQStPIV4y3afTiCYVxirakhlCfGkI161c76kKFca7Fk1JusM//Qeo1ej2XaMniiNeaZklMVrh3vTtIzpzwbpmA== sha1-Co0Wc0odmvvIJLmd+H5zjlji2lk=. (9418 bytes)</code></pre><h3 id="参考链接"><a href="#参考链接" class="headerlink" title="参考链接"></a>参考链接</h3><blockquote><ol><li><a href="https://github.com/nodejs/node/issues/13635" target="_blank" rel="noopener">integrity checksum failed when using sha1 - Node v8+ #13635</a></li><li><a href="https://www.jianshu.com/p/2899bd2a0a20" target="_blank" rel="noopener">npm ERR! code EINTEGRITY 解决方案</a></li></ol></blockquote><h3 id="解决办法"><a href="#解决办法" class="headerlink" title="解决办法"></a>解决办法</h3><ol><li><p>运行参考链接1中的高赞</p><pre><code>$ npm install -g npm#结果如下：/Users/hotkang/.nvm/versions/node/v10.15.3/bin/npm -&gt; /Users/hotkang/.nvm/versions/node/v10.15.3/lib/node_modules/npm/bin/npm-cli.js/Users/hotkang/.nvm/versions/node/v10.15.3/bin/npx -&gt; /Users/hotkang/.nvm/versions/node/v10.15.3/lib/node_modules/npm/bin/npx-cli.js+ npm@6.10.3updated 1 package in 11.68s</code></pre><p>注：npm install 依旧不成功</p></li><li><p>删文件</p><p>删除<code>package-lock.json</code>、<code>node_modules</code>文件,清缓存：</p><pre><code>$ rm ./package-lock.json$ rm -r ./node_modules$ npm cache clear --force #报没有权限，根据提示给权限# To permanently fix this problem, please run:# npm ERR!   sudo chown -R 501:20 &quot;/Users/hotkang/.npm&quot;#给权限$ sudo chown -R 501:20 &quot;/Users/hotkang/.npm&quot;#再次清缓存$ npm cache clear --force </code></pre><p>注：npm install 成功！</p></li></ol><p><br></p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;内容概览-mac-持续完善&quot;&gt;&lt;a href=&quot;#内容概览-mac-持续完善&quot; class=&quot;headerlink&quot; title=&quot;内容概览[mac][持续完善]&quot;&gt;&lt;/a&gt;内容概览[mac]&lt;span style=&quot;font-size:.5em&quot;&gt;[持续完善]&lt;/span&gt;&lt;/h2&gt;&lt;ol&gt;&lt;li&gt;integrity checksum failed when using sha1…&lt;/li&gt;&lt;li&gt;&lt;/li&gt;&lt;/ol&gt;
+    
+    </summary>
+    
+      <category term="好记性不如烂笔头" scheme="https://hotkang.cn/categories/%E5%A5%BD%E8%AE%B0%E6%80%A7%E4%B8%8D%E5%A6%82%E7%83%82%E7%AC%94%E5%A4%B4/"/>
+    
+    
+      <category term="NPM" scheme="https://hotkang.cn/tags/NPM/"/>
+    
+  </entry>
   
   <entry>
     <title>Win10部署Homestead运行Laravel项目</title>
@@ -49,7 +71,7 @@
     <link href="https://hotkang.cn/2019/%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4%E5%B0%8F%E8%AE%B0/"/>
     <id>https://hotkang.cn/2019/常用命令小记/</id>
     <published>2019-07-19T06:55:05.000Z</published>
-    <updated>2019-07-19T07:31:59.054Z</updated>
+    <updated>2019-08-19T10:40:24.968Z</updated>
     
     <content type="html"><![CDATA[<h2 id="内容概览-mac-持续完善"><a href="#内容概览-mac-持续完善" class="headerlink" title="内容概览[mac][持续完善]"></a>内容概览[mac]<span style="font-size:.5em">[持续完善]</span></h2><ol><li>Git</li><li>终端</li></ol><a id="more"></a><p><br></p><h2 id="链接自取"><a href="#链接自取" class="headerlink" title="链接自取"></a>链接自取</h2><blockquote><ul><li><a href="https://dn-coding-net-production-pp.qbox.me/e8dd7837-b39d-413e-9beb-ed51984719e0.png" target="_blank" rel="noopener">Git 常用命令速查表</a></li></ul></blockquote><hr><p><br></p><h2 id="一、Git"><a href="#一、Git" class="headerlink" title="一、Git"></a>一、Git</h2><ol><li><p>查看分支</p><pre><code>$ git branch      //查看本地$ git branch -r   //查看远程$ git branch -a   //查看全部</code></pre></li><li><p>新建分支</p><pre><code>$ git branch xxx</code></pre></li><li><p>切换分支</p><pre><code>$ git checkout xxx</code></pre></li><li><p>新建并切换分支</p><pre><code>$ git checkout -b xxx</code></pre></li><li><p>删除分支</p><pre><code>$ git branch -d xxx     //删除本地分支$ git push origin :xxx     //删除远程分支$ git push origin xxx     //提交分支</code></pre></li><li><p>拉取远程最新代码</p><pre><code>$ git pull origin xxx   //xxx为分支，可mas-ter可任意</code></pre></li><li><p>提交本地最新代码</p><pre><code>$ git status      //查看状态，即修改了什么$ git add -A      //添加所有修改内容到仓库$ git commit -m &quot;解释说明&quot;    //提交内容到仓库，并解释说明$ git push origin xxx   //提交到远程xxx分支</code></pre></li><li><p>查看提交历史</p><pre><code>$ git log $ git log -p &lt;file&gt; //产看指定文件的提交历史</code></pre></li></ol><p><br></p><h2 id="二、终端"><a href="#二、终端" class="headerlink" title="二、终端"></a>二、终端</h2><ol><li><p>目录</p><pre><code>$ cd  $ ls $ ls -la   $ pwd   //打印当前目录$ mkdir xxx //创建目录$ rmdir xxx     //删除目录$ mvdir xxx     </code></pre></li><li><p>文件</p><pre><code>$ open xxx  //使用默认程序打开$ cp    //复制$ vim name.text //新增修改$ rm    //删除$ mv    //改变</code></pre></li></ol><p><br></p>]]></content>
     
@@ -121,7 +143,7 @@
     <link href="https://hotkang.cn/2019/Take-notes-with-GitBook/"/>
     <id>https://hotkang.cn/2019/Take-notes-with-GitBook/</id>
     <published>2019-04-02T09:38:32.000Z</published>
-    <updated>2019-07-22T06:31:11.490Z</updated>
+    <updated>2019-08-16T07:27:45.996Z</updated>
     
     <content type="html"><![CDATA[<h2 id="内容概览-mac-持续完善"><a href="#内容概览-mac-持续完善" class="headerlink" title="内容概览[mac][持续完善]"></a>内容概览[mac]<span style="font-size:.5em">[持续完善]</span></h2><ol><li>全局安装gitbook</li><li>初始化gitbook</li><li>启动 gitbook 本地服务器</li><li>将 GitBook 部署到 GitHub</li></ol><a id="more"></a><p><br></p><h2 id="链接自取"><a href="#链接自取" class="headerlink" title="链接自取"></a>链接自取</h2><blockquote><ul><li><a href="https://yc111.github.io/2018/10/05/%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8gitbook%E5%8F%91%E5%B8%83%E8%87%AA%E5%B7%B1%E7%9A%84%E4%B9%A6%E7%B1%8D/" target="_blank" rel="noopener">参考链接</a></li><li><a href="https://github.com/GitbookIO/gitbook" target="_blank" rel="noopener">gitbook.github</a></li></ul></blockquote><hr><p><br></p><h2 id="一、准备工作"><a href="#一、准备工作" class="headerlink" title="一、准备工作"></a>一、准备工作</h2><ol><li><p>默认已安装Node.js</p><p>没有安装node运行环境？请参考<a href="https://hotkang.cn/2018/%E7%94%A8nvm%E8%A3%85node-js/">用nvm装node.js</a>。</p></li></ol><ol start="2"><li><p>默认会用Markdown</p><p>不会编辑 .md 文件？请参考<a href="https://github.com/younghz/Markdown" target="_blank" rel="noopener">Markdown</a>。</p></li></ol><p><br></p><h2 id="二、本地运行"><a href="#二、本地运行" class="headerlink" title="二、本地运行"></a>二、本地运行</h2><ol><li><p>全局安装</p><pre><code>$ npm install gitbook-cli -g   //在你想放置项目的目录下运行</code></pre></li><li><p>查看版本</p><pre><code>$ gitbook -V //我的版本CLI version: 2.3.2GitBook version: 3.2.3</code></pre></li><li><p>初始化gitbook</p><pre><code>$ gitbook initinfo: create README.md info: create SUMMARY.md info: initialization is finished </code></pre></li><li><p>启动 gitbook 本地服务器</p><pre><code>$ gitbook serve  //浏览器访问http://localhost:4000#补充$ gitbook help  </code></pre></li></ol><p><br></p><h2 id="三、将-GitBook-部署到-GitHub"><a href="#三、将-GitBook-部署到-GitHub" class="headerlink" title="三、将 GitBook 部署到 GitHub"></a>三、将 GitBook 部署到 GitHub</h2><ol><li>新建远程仓库</li><li><p>将远程仓库克隆到本地</p><pre><code>$ git clone xxx</code></pre></li><li>编辑gitbook内容</li><li><p>本地查看gitbook</p><pre><code>$ gitbook serve</code></pre></li></ol><ol start="5"><li>将编译后的_book文件拷贝到本地仓库</li><li>push本地仓库到远程仓库</li></ol><p><br></p>]]></content>
     
@@ -642,11 +664,11 @@
       <category term="Install" scheme="https://hotkang.cn/categories/Install/"/>
     
     
+      <category term="NPM" scheme="https://hotkang.cn/tags/NPM/"/>
+    
       <category term="Node.js" scheme="https://hotkang.cn/tags/Node-js/"/>
     
       <category term="NVM" scheme="https://hotkang.cn/tags/NVM/"/>
-    
-      <category term="NPM" scheme="https://hotkang.cn/tags/NPM/"/>
     
   </entry>
   

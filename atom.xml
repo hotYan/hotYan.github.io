@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://hotkang.cn/"/>
-  <updated>2019-08-20T03:09:33.803Z</updated>
+  <updated>2019-09-19T10:55:12.276Z</updated>
   <id>https://hotkang.cn/</id>
   
   <author>
@@ -15,6 +15,34 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Vue+Larevel项目总结</title>
+    <link href="https://hotkang.cn/2019/Vue-Larevel%E9%A1%B9%E7%9B%AE%E6%80%BB%E7%BB%93/"/>
+    <id>https://hotkang.cn/2019/Vue-Larevel项目总结/</id>
+    <published>2019-09-19T02:39:28.000Z</published>
+    <updated>2019-09-19T10:55:12.276Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="内容概览-mac-持续完善"><a href="#内容概览-mac-持续完善" class="headerlink" title="内容概览[mac][持续完善]"></a>内容概览[mac]<span style="font-size:.5em">[持续完善]</span></h2><ol><li></li><li></li></ol><a id="more"></a><p><br></p><h2 id="链接自取"><a href="#链接自取" class="headerlink" title="链接自取"></a>链接自取</h2><blockquote><ul><li><a href="https://cn.vuejs.org/index.html" target="_blank" rel="noopener">Vue</a></li><li><a href="https://element.eleme.io/#/zh-CN" target="_blank" rel="noopener">Element</a></li><li><a href="https://laravel-china.org/docs/laravel-development-environment/5.7" target="_blank" rel="noopener">laravel 社区</a></li><li><a href="https://learnku.com/docs/dingo-api/2.0.0" target="_blank" rel="noopener">Dingo API</a></li></ul></blockquote><hr><p><br></p><h2 id="一、准备工作"><a href="#一、准备工作" class="headerlink" title="一、准备工作"></a>一、准备工作</h2><h3 id="1-1-默认配置好Homestead环境-mac"><a href="#1-1-默认配置好Homestead环境-mac" class="headerlink" title="1.1 默认配置好Homestead环境[mac]"></a>1.1 默认配置好Homestead环境[mac]</h3><ul><li><a href="https://hotkang.cn/2019/%E4%BD%BF%E7%94%A8Homestead%E6%90%AD%E5%BB%BALaravel%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83/">使用Homestead搭建Laravel开发环境</a></li></ul><h3 id="1-2-默认部署好Laravel项目-mac"><a href="#1-2-默认部署好Laravel项目-mac" class="headerlink" title="1.2 默认部署好Laravel项目[mac]"></a>1.2 默认部署好Laravel项目[mac]</h3><ul><li><a href="https://hotkang.cn/2019/%E5%9C%A8Homestead%E7%8E%AF%E5%A2%83%E9%83%A8%E7%BD%B2Laravel%E9%A1%B9%E7%9B%AE/">在Homestead环境部署Laravel项目</a></li></ul><h3 id="1-3-Windows系统"><a href="#1-3-Windows系统" class="headerlink" title="1.3 Windows系统"></a>1.3 Windows系统</h3><ul><li><a href="https://hotkang.cn/2019/Win10%E9%83%A8%E7%BD%B2Homestead%E8%BF%90%E8%A1%8CLaravel%E9%A1%B9%E7%9B%AE/">Win10部署Homestead运行Laravel项目</a></li></ul><p><br></p><h2 id="二、流程逻辑"><a href="#二、流程逻辑" class="headerlink" title="二、流程逻辑"></a>二、流程逻辑</h2><h3 id="2-1-数据表"><a href="#2-1-数据表" class="headerlink" title="2.1 数据表"></a>2.1 <a href="https://learnku.com/docs/laravel/6.x/migrations/5173" target="_blank" rel="noopener">数据表</a></h3><ol><li>设计表（略）</li><li><p>创建建表文件</p><pre><code>$ php artisan make:migrate create_hotyan_init_table --create=hotyan_init#以上命令会创建migrate文件，在database/migrations目录下生成新文件：date_create_hotyan_init_table.php</code></pre></li><li><p>编辑建表文件</p><pre><code>public function up() {     /*新增表：字段类型、字段修饰*/     Schema::create(&apos;hotyan_table&apos;, function (Blueprint $table) {         $table-&gt;increments(&apos;id&apos;)-&gt;comment(&apos;自增主键&apos;);         $table-&gt;string(&apos;name&apos;,25)-&gt;nullable()-&gt;comment(&apos;名字&apos;);         $table-&gt;integer(&apos;age&apos;)-&gt;default(10)-&gt;comment(&apos;年龄&apos;);         $table-&gt;date(&apos;created_at&apos;);         $table-&gt;timestamps();     });     /*修改表*/     Schema::table(&apos;hotyan_table&apos;, function (Blueprint $table) {         $table-&gt;string(&apos;sex&apos;)-&gt;comment(&apos;性别&apos;);     //新增sex         $table-&gt;integer(&apos;grade&apos;)-&gt;comment(&apos;成绩&apos;);  //新增grade         $table-&gt;string(&apos;name&apos;,50)-&gt;nullable()-&gt;comment(&apos;名字&apos;)-&gt;change();   //修改长度     }); } public function down() {     Schema::dropIfExists(&apos;hotyan_table&apos;);//删除     Schema::table(&apos;hotyan_table&apos;, function (Blueprint $table) {         $table-&gt;dropColumn([&apos;sex&apos;,&apos;grade&apos;]);    //删除sex，grade         $table-&gt;string(&apos;name&apos;,25)-&gt;nullable()-&gt;comment(&apos;名字&apos;)-&gt;change();   //修改之前     }); }</code></pre></li><li><p>生成数据表</p><pre><code>$ php artisan migrate   //数据库新增hotyan_table表</code></pre></li><li><p>查看新建表</p></li><li><p>添加数据表字段</p></li></ol><p><br></p><h3 id="2-2-Model"><a href="#2-2-Model" class="headerlink" title="2.2 Model"></a>2.2 Model</h3><h2 id="三、功能列表"><a href="#三、功能列表" class="headerlink" title="三、功能列表"></a>三、功能列表</h2><h3 id="1、添加用户"><a href="#1、添加用户" class="headerlink" title="1、添加用户"></a>1、添加用户</h3><h3 id="2、获取用户列表"><a href="#2、获取用户列表" class="headerlink" title="2、获取用户列表"></a>2、获取用户列表</h3><h3 id="3、编辑用户信息"><a href="#3、编辑用户信息" class="headerlink" title="3、编辑用户信息"></a>3、编辑用户信息</h3><h3 id="4、删除用户"><a href="#4、删除用户" class="headerlink" title="4、删除用户"></a>4、删除用户</h3><h3 id="5、分页"><a href="#5、分页" class="headerlink" title="5、分页"></a>5、分页</h3><h3 id="6、按需搜索"><a href="#6、按需搜索" class="headerlink" title="6、按需搜索"></a>6、按需搜索</h3><h3 id="7、上传资源"><a href="#7、上传资源" class="headerlink" title="7、上传资源"></a>7、上传资源</h3><h3 id="8、资源下载"><a href="#8、资源下载" class="headerlink" title="8、资源下载"></a>8、资源下载</h3><h3 id="9、日志管理"><a href="#9、日志管理" class="headerlink" title="9、日志管理"></a>9、日志管理</h3><h3 id="10、区域管理"><a href="#10、区域管理" class="headerlink" title="10、区域管理"></a>10、区域管理</h3>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;内容概览-mac-持续完善&quot;&gt;&lt;a href=&quot;#内容概览-mac-持续完善&quot; class=&quot;headerlink&quot; title=&quot;内容概览[mac][持续完善]&quot;&gt;&lt;/a&gt;内容概览[mac]&lt;span style=&quot;font-size:.5em&quot;&gt;[持续完善]&lt;/span&gt;&lt;/h2&gt;&lt;ol&gt;&lt;li&gt;&lt;/li&gt;&lt;li&gt;&lt;/li&gt;&lt;/ol&gt;
+    
+    </summary>
+    
+      <category term="好记性不如烂笔头" scheme="https://hotkang.cn/categories/%E5%A5%BD%E8%AE%B0%E6%80%A7%E4%B8%8D%E5%A6%82%E7%83%82%E7%AC%94%E5%A4%B4/"/>
+    
+      <category term="Laravel" scheme="https://hotkang.cn/categories/Laravel/"/>
+    
+    
+      <category term="Vue" scheme="https://hotkang.cn/tags/Vue/"/>
+    
+      <category term="Element" scheme="https://hotkang.cn/tags/Element/"/>
+    
+      <category term="Laravel" scheme="https://hotkang.cn/tags/Laravel/"/>
+    
+  </entry>
   
   <entry>
     <title>NPM ERR</title>
@@ -58,9 +86,9 @@
       <category term="Laravel" scheme="https://hotkang.cn/categories/Laravel/"/>
     
     
-      <category term="Homestead" scheme="https://hotkang.cn/tags/Homestead/"/>
-    
       <category term="Laravel" scheme="https://hotkang.cn/tags/Laravel/"/>
+    
+      <category term="Homestead" scheme="https://hotkang.cn/tags/Homestead/"/>
     
       <category term="Win10" scheme="https://hotkang.cn/tags/Win10/"/>
     
@@ -182,11 +210,11 @@
       <category term="Laravel" scheme="https://hotkang.cn/categories/Laravel/"/>
     
     
-      <category term="Homestead" scheme="https://hotkang.cn/tags/Homestead/"/>
+      <category term="Vue" scheme="https://hotkang.cn/tags/Vue/"/>
     
       <category term="Laravel" scheme="https://hotkang.cn/tags/Laravel/"/>
     
-      <category term="Vue" scheme="https://hotkang.cn/tags/Vue/"/>
+      <category term="Homestead" scheme="https://hotkang.cn/tags/Homestead/"/>
     
       <category term="Supervisor" scheme="https://hotkang.cn/tags/Supervisor/"/>
     
@@ -212,9 +240,9 @@
       <category term="Laravel" scheme="https://hotkang.cn/categories/Laravel/"/>
     
     
-      <category term="Homestead" scheme="https://hotkang.cn/tags/Homestead/"/>
-    
       <category term="Laravel" scheme="https://hotkang.cn/tags/Laravel/"/>
+    
+      <category term="Homestead" scheme="https://hotkang.cn/tags/Homestead/"/>
     
       <category term="composer" scheme="https://hotkang.cn/tags/composer/"/>
     
@@ -362,11 +390,11 @@
       <category term="面向对象编程" scheme="https://hotkang.cn/categories/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B/"/>
     
     
-      <category term="继承" scheme="https://hotkang.cn/tags/%E7%BB%A7%E6%89%BF/"/>
-    
       <category term="面向对象" scheme="https://hotkang.cn/tags/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/"/>
     
       <category term="封装" scheme="https://hotkang.cn/tags/%E5%B0%81%E8%A3%85/"/>
+    
+      <category term="继承" scheme="https://hotkang.cn/tags/%E7%BB%A7%E6%89%BF/"/>
     
       <category term="多态" scheme="https://hotkang.cn/tags/%E5%A4%9A%E6%80%81/"/>
     
@@ -575,18 +603,18 @@
     
       <category term="MySQL" scheme="https://hotkang.cn/categories/MySQL/"/>
     
-      <category term="Install" scheme="https://hotkang.cn/categories/Install/"/>
-    
       <category term="Express+EJS+MySQL图书管理系统" scheme="https://hotkang.cn/categories/Express-EJS-MySQL%E5%9B%BE%E4%B9%A6%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F/"/>
+    
+      <category term="Install" scheme="https://hotkang.cn/categories/Install/"/>
     
     
       <category term="MySQL" scheme="https://hotkang.cn/tags/MySQL/"/>
     
       <category term="图书管理系统" scheme="https://hotkang.cn/tags/%E5%9B%BE%E4%B9%A6%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F/"/>
     
-      <category term="Homebrew" scheme="https://hotkang.cn/tags/Homebrew/"/>
-    
       <category term="Node.js" scheme="https://hotkang.cn/tags/Node-js/"/>
+    
+      <category term="Homebrew" scheme="https://hotkang.cn/tags/Homebrew/"/>
     
   </entry>
   
@@ -638,11 +666,11 @@
     
       <category term="图书管理系统" scheme="https://hotkang.cn/tags/%E5%9B%BE%E4%B9%A6%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F/"/>
     
-      <category term="Node.js" scheme="https://hotkang.cn/tags/Node-js/"/>
-    
       <category term="Express" scheme="https://hotkang.cn/tags/Express/"/>
     
       <category term="EJS" scheme="https://hotkang.cn/tags/EJS/"/>
+    
+      <category term="Node.js" scheme="https://hotkang.cn/tags/Node-js/"/>
     
   </entry>
   
@@ -664,9 +692,9 @@
       <category term="Install" scheme="https://hotkang.cn/categories/Install/"/>
     
     
-      <category term="NPM" scheme="https://hotkang.cn/tags/NPM/"/>
-    
       <category term="Node.js" scheme="https://hotkang.cn/tags/Node-js/"/>
+    
+      <category term="NPM" scheme="https://hotkang.cn/tags/NPM/"/>
     
       <category term="NVM" scheme="https://hotkang.cn/tags/NVM/"/>
     

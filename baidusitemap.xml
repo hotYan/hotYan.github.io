@@ -1,8 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://hotkang.cn/2019/MySQL8-0-%E7%99%BB%E5%BD%95%E5%AF%86%E7%A0%81/</loc>
+    <lastmod>2020-07-21</lastmod>
+  </url>  <url>
+    <loc>https://hotkang.cn/2020/vue%E9%A1%B9%E7%9B%AE%E4%BD%BF%E7%94%A8%E9%AB%98%E5%BE%B7%E5%9C%B0%E5%9B%BE/</loc>
+    <lastmod>2020-06-29</lastmod>
+  </url>  <url>
     <loc>https://hotkang.cn/2019/%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4%E5%B0%8F%E8%AE%B0/</loc>
-    <lastmod>2020-06-19</lastmod>
+    <lastmod>2020-06-28</lastmod>
   </url>  <url>
     <loc>https://hotkang.cn/2019/%E5%AE%89%E8%A3%85%E5%B0%8F%E8%AE%B0/</loc>
     <lastmod>2020-06-18</lastmod>
@@ -66,9 +72,6 @@
   </url>  <url>
     <loc>https://hotkang.cn/2018/%E7%94%A8hexo%E6%90%AD%E5%BB%BAgithub%E5%8D%9A%E5%AE%A2%E4%B8%80/</loc>
     <lastmod>2019-06-17</lastmod>
-  </url>  <url>
-    <loc>https://hotkang.cn/2019/MySQL8-0-%E7%99%BB%E5%BD%95%E5%AF%86%E7%A0%81/</loc>
-    <lastmod>2019-05-24</lastmod>
   </url>  <url>
     <loc>https://hotkang.cn/2018/%E7%94%A8nvm%E8%A3%85node-js/</loc>
     <lastmod>2019-04-03</lastmod>

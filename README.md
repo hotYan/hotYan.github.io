@@ -1,2 +1,2 @@
 # HotYan's Blog
-[点击进入Blog](https://hotkang.cn/)
+[点击进入Blog](https://hotyan.github.io/)
